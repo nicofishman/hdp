@@ -1,0 +1,4250 @@
+{
+    "cartas": [
+        {
+            "id": 1,
+            "name": "Una maldición Gitana",
+            "color": "White",
+            "extension": "Base"
+        },
+        {
+            "id": 2,
+            "name": "Un minuto de silencio",
+            "color": "White",
+            "extension": "Base"
+        },
+        {
+            "id": 3,
+            "name": "Mucho pibe, poca mina",
+            "color": "White",
+            "extension": "Base"
+        },
+        {
+            "id": 4,
+            "name": "Un policía honesto, sin nada que perder",
+            "color": "White",
+            "extension": "Base"
+        },
+        {
+            "id": 5,
+            "name": "Hambruna",
+            "color": "White",
+            "extension": "Base"
+        },
+        {
+            "id": 6,
+            "name": "Bacteria come-carne",
+            "color": "White",
+            "extension": "Base"
+        },
+        {
+            "id": 7,
+            "name": "Serpientes sexuales voladoras",
+            "color": "White",
+            "extension": "Base"
+        },
+        {
+            "id": 8,
+            "name": "Que no te importe un carajo el tercer mundo",
+            "color": "White",
+            "extension": "Base"
+        },
+        {
+            "id": 9,
+            "name": "Sexting",
+            "color": "White",
+            "extension": "Base"
+        },
+        {
+            "id": 10,
+            "name": "Criaturas cambia-aspecto",
+            "color": "White",
+            "extension": "Base"
+        },
+        {
+            "id": 11,
+            "name": "Estrellas porno",
+            "color": "White",
+            "extension": "Base"
+        },
+        {
+            "id": 12,
+            "name": "Saquear y violar",
+            "color": "White",
+            "extension": "Base"
+        },
+        {
+            "id": 13,
+            "name": "72 vírgenes",
+            "color": "White",
+            "extension": "Base"
+        },
+        {
+            "id": 14,
+            "name": "Persecución y tiroteo",
+            "color": "White",
+            "extension": "Base"
+        },
+        {
+            "id": 15,
+            "name": "Una paradoja temporal",
+            "color": "White",
+            "extension": "Base"
+        },
+        {
+            "id": 16,
+            "name": "Auténtica comida mexicana",
+            "color": "White",
+            "extension": "Base"
+        },
+        {
+            "id": 17,
+            "name": "Bijouterie de Once",
+            "color": "White",
+            "extension": "Base"
+        },
+        {
+            "id": 18,
+            "name": "Consultores",
+            "color": "White",
+            "extension": "Base"
+        },
+        {
+            "id": 19,
+            "name": "Deuda impagable",
+            "color": "White",
+            "extension": "Base"
+        },
+        {
+            "id": 20,
+            "name": "Complejo de Elektra",
+            "color": "White",
+            "extension": "Base"
+        },
+        {
+            "id": 21,
+            "name": "El 10 de Pachano",
+            "color": "White",
+            "extension": "Base"
+        },
+        {
+            "id": 22,
+            "name": "Tirar un candelabro sobre tus enemigos y subir colgado de la soga",
+            "color": "White",
+            "extension": "Base"
+        },
+        {
+            "id": 23,
+            "name": "Carlos Saúl Menem",
+            "color": "White",
+            "extension": "Base"
+        },
+        {
+            "id": 24,
+            "name": "Desnudo frontal total",
+            "color": "White",
+            "extension": "Base"
+        },
+        {
+            "id": 25,
+            "name": "Inyecciones hormonales",
+            "color": "White",
+            "extension": "Base"
+        },
+        {
+            "id": 26,
+            "name": "Poner un huevo",
+            "color": "White",
+            "extension": "Base"
+        },
+        {
+            "id": 27,
+            "name": "Desnudarse y mirar Nickelodeon",
+            "color": "White",
+            "extension": "Base"
+        },
+        {
+            "id": 28,
+            "name": "Fingir que te importa",
+            "color": "White",
+            "extension": "Base"
+        },
+        {
+            "id": 29,
+            "name": "Hacer el rídiculo en publico",
+            "color": "White",
+            "extension": "Base"
+        },
+        {
+            "id": 30,
+            "name": "Compartir jeringas",
+            "color": "White",
+            "extension": "Base"
+        },
+        {
+            "id": 31,
+            "name": "Mocos",
+            "color": "White",
+            "extension": "Base"
+        },
+        {
+            "id": 32,
+            "name": "La inevitable muerte por calor del universo",
+            "color": "White",
+            "extension": "Base"
+        },
+        {
+            "id": 33,
+            "name": "El milagro del nacimiento",
+            "color": "White",
+            "extension": "Base"
+        },
+        {
+            "id": 34,
+            "name": "El Apocalipsis",
+            "color": "White",
+            "extension": "Base"
+        },
+        {
+            "id": 35,
+            "name": "Sacar el amigo",
+            "color": "White",
+            "extension": "Base"
+        },
+        {
+            "id": 36,
+            "name": "Privilegios de la gente blanca",
+            "color": "White",
+            "extension": "Base"
+        },
+        {
+            "id": 37,
+            "name": "Obligaciones de casada",
+            "color": "White",
+            "extension": "Base"
+        },
+        {
+            "id": 38,
+            "name": "El Hamburglar (McDonalds)",
+            "color": "White",
+            "extension": "Base"
+        },
+        {
+            "id": 39,
+            "name": "Desodorante AXE",
+            "color": "White",
+            "extension": "Base"
+        },
+        {
+            "id": 40,
+            "name": "La Sangre de Cristo",
+            "color": "White",
+            "extension": "Base"
+        },
+        {
+            "id": 41,
+            "name": "Accidentes horroríficos con láser para remoción de pelo",
+            "color": "White",
+            "extension": "Base"
+        },
+        {
+            "id": 42,
+            "name": "BATMAN!!!",
+            "color": "White",
+            "extension": "Base"
+        },
+        {
+            "id": 43,
+            "name": "Agricultura",
+            "color": "White",
+            "extension": "Base"
+        },
+        {
+            "id": 44,
+            "name": "Un mongoloide robusto",
+            "color": "White",
+            "extension": "Base"
+        },
+        {
+            "id": 45,
+            "name": "Selección natural",
+            "color": "White",
+            "extension": "Base"
+        },
+        {
+            "id": 46,
+            "name": "Abortos hechos con perchas",
+            "color": "White",
+            "extension": "Base"
+        },
+        {
+            "id": 47,
+            "name": "Comerse todas las galletitas antes de la venta de galletas para el SIDA",
+            "color": "White",
+            "extension": "Base"
+        },
+        {
+            "id": 48,
+            "name": "El escote de la diputada Hot",
+            "color": "White",
+            "extension": "Base"
+        },
+        {
+            "id": 49,
+            "name": "World of Warcraft",
+            "color": "White",
+            "extension": "Base"
+        },
+        {
+            "id": 50,
+            "name": "Proteger a una amiga de un hinchapelotas",
+            "color": "White",
+            "extension": "Base"
+        },
+        {
+            "id": 51,
+            "name": "Obesidad",
+            "color": "White",
+            "extension": "Base"
+        },
+        {
+            "id": 52,
+            "name": "Un montaje homoerótico de Vóleibol",
+            "color": "White",
+            "extension": "Base"
+        },
+        {
+            "id": 53,
+            "name": "Mandíbula trabada",
+            "color": "White",
+            "extension": "Base"
+        },
+        {
+            "id": 54,
+            "name": "Un ritual de apareamiento",
+            "color": "White",
+            "extension": "Base"
+        },
+        {
+            "id": 55,
+            "name": "Torsion testicular",
+            "color": "White",
+            "extension": "Base"
+        },
+        {
+            "id": 56,
+            "name": "Sushi de tenedor libre",
+            "color": "White",
+            "extension": "Base"
+        },
+        {
+            "id": 57,
+            "name": "Ricardo Fort",
+            "color": "White",
+            "extension": "Base"
+        },
+        {
+            "id": 58,
+            "name": "Queso caliente",
+            "color": "White",
+            "extension": "Base"
+        },
+        {
+            "id": 59,
+            "name": "Ataques de Velocirraptors",
+            "color": "White",
+            "extension": "Base"
+        },
+        {
+            "id": 60,
+            "name": "Sacarse la remera",
+            "color": "White",
+            "extension": "Base"
+        },
+        {
+            "id": 61,
+            "name": "Smegma",
+            "color": "White",
+            "extension": "Base"
+        },
+        {
+            "id": 62,
+            "name": "Alcoholismo",
+            "color": "White",
+            "extension": "Base"
+        },
+        {
+            "id": 63,
+            "name": "Un hombre de mediana edad andando en rollers",
+            "color": "White",
+            "extension": "Base"
+        },
+        {
+            "id": 64,
+            "name": "Super Rayo Cariñosito",
+            "color": "White",
+            "extension": "Base"
+        },
+        {
+            "id": 65,
+            "name": "Tener arcadas y vomitar",
+            "color": "White",
+            "extension": "Base"
+        },
+        {
+            "id": 66,
+            "name": "Chupetines demasiado grandes",
+            "color": "White",
+            "extension": "Base"
+        },
+        {
+            "id": 67,
+            "name": "Odiarse a uno mismo",
+            "color": "White",
+            "extension": "Base"
+        },
+        {
+            "id": 68,
+            "name": "Niños con correas",
+            "color": "White",
+            "extension": "Base"
+        },
+        {
+            "id": 69,
+            "name": "Juego previo de medio pelo",
+            "color": "White",
+            "extension": "Base"
+        },
+        {
+            "id": 70,
+            "name": "La Biblia",
+            "color": "White",
+            "extension": "Base"
+        },
+        {
+            "id": 71,
+            "name": "Porno extremo aleman",
+            "color": "White",
+            "extension": "Base"
+        },
+        {
+            "id": 72,
+            "name": "Estar prendido fuego",
+            "color": "White",
+            "extension": "Base"
+        },
+        {
+            "id": 73,
+            "name": "Embarazo adolescente",
+            "color": "White",
+            "extension": "Base"
+        },
+        {
+            "id": 74,
+            "name": "Gandhi",
+            "color": "White",
+            "extension": "Base"
+        },
+        {
+            "id": 75,
+            "name": "Dejar un mensaje de voz incómodo",
+            "color": "White",
+            "extension": "Base"
+        },
+        {
+            "id": 76,
+            "name": "Uppercuts",
+            "color": "White",
+            "extension": "Base"
+        },
+        {
+            "id": 77,
+            "name": "Representantes de Servicio al Consumidor",
+            "color": "White",
+            "extension": "Base"
+        },
+        {
+            "id": 78,
+            "name": "Una erección que dure más de 4 horas",
+            "color": "White",
+            "extension": "Base"
+        },
+        {
+            "id": 79,
+            "name": "Mis genitales",
+            "color": "White",
+            "extension": "Base"
+        },
+        {
+            "id": 80,
+            "name": "Ir de levante a una clínica de abortos",
+            "color": "White",
+            "extension": "Base"
+        },
+        {
+            "id": 81,
+            "name": "Ciencia",
+            "color": "White",
+            "extension": "Base"
+        },
+        {
+            "id": 82,
+            "name": "Sexo oral no reciprocado",
+            "color": "White",
+            "extension": "Base"
+        },
+        {
+            "id": 83,
+            "name": "Aves que no pueden volar",
+            "color": "White",
+            "extension": "Base"
+        },
+        {
+            "id": 84,
+            "name": "Una buena línea",
+            "color": "White",
+            "extension": "Base"
+        },
+        {
+            "id": 85,
+            "name": "Tortura por ahogamiento simulado",
+            "color": "White",
+            "extension": "Base"
+        },
+        {
+            "id": 86,
+            "name": "Un desayuno balanceado",
+            "color": "White",
+            "extension": "Base"
+        },
+        {
+            "id": 87,
+            "name": "El normal 4",
+            "color": "White",
+            "extension": "Base"
+        },
+        {
+            "id": 88,
+            "name": "Sacarle un dulce a un niño. De verdad.",
+            "color": "White",
+            "extension": "Base"
+        },
+        {
+            "id": 89,
+            "name": "Un Sol para los Chicos",
+            "color": "White",
+            "extension": "Base"
+        },
+        {
+            "id": 90,
+            "name": "Rascarse el culo a escondidas",
+            "color": "White",
+            "extension": "Base"
+        },
+        {
+            "id": 91,
+            "name": "Post-it pasivo-agresivos",
+            "color": "White",
+            "extension": "Base"
+        },
+        {
+            "id": 92,
+            "name": "El equipo de gimnasia de China",
+            "color": "White",
+            "extension": "Base"
+        },
+        {
+            "id": 93,
+            "name": "Pasarse a La Caja de Ahorro",
+            "color": "White",
+            "extension": "Base"
+        },
+        {
+            "id": 94,
+            "name": "Mear un poquito",
+            "color": "White",
+            "extension": "Base"
+        },
+        {
+            "id": 95,
+            "name": "Video casero de Claribel Medina llorando mientras come una viandita Cormillot",
+            "color": "White",
+            "extension": "Base"
+        },
+        {
+            "id": 96,
+            "name": "Eyaculaciones nocturnas",
+            "color": "White",
+            "extension": "Base"
+        },
+        {
+            "id": 97,
+            "name": "Los judíos",
+            "color": "White",
+            "extension": "Base"
+        },
+        {
+            "id": 98,
+            "name": "Mis curvas",
+            "color": "White",
+            "extension": "Base"
+        },
+        {
+            "id": 99,
+            "name": "Muslos poderosos",
+            "color": "White",
+            "extension": "Base"
+        },
+        {
+            "id": 100,
+            "name": "Guiñarle el ojo a gente mayor",
+            "color": "White",
+            "extension": "Base"
+        },
+        {
+            "id": 101,
+            "name": "Mr Músculo, saliendo de la nada",
+            "color": "White",
+            "extension": "Base"
+        },
+        {
+            "id": 102,
+            "name": "Una suave caricia en el interior del muslo",
+            "color": "White",
+            "extension": "Base"
+        },
+        {
+            "id": 103,
+            "name": "Tensión sexual",
+            "color": "White",
+            "extension": "Base"
+        },
+        {
+            "id": 104,
+            "name": "La fruta prohibida",
+            "color": "White",
+            "extension": "Base"
+        },
+        {
+            "id": 105,
+            "name": "Skeletor",
+            "color": "White",
+            "extension": "Base"
+        },
+        {
+            "id": 106,
+            "name": "Whiskas",
+            "color": "White",
+            "extension": "Base"
+        },
+        {
+            "id": 107,
+            "name": "Ser rico",
+            "color": "White",
+            "extension": "Base"
+        },
+        {
+            "id": 108,
+            "name": "Dulce venganza",
+            "color": "White",
+            "extension": "Base"
+        },
+        {
+            "id": 109,
+            "name": "Menemistas",
+            "color": "White",
+            "extension": "Base"
+        },
+        {
+            "id": 110,
+            "name": "Un antílope con gases",
+            "color": "White",
+            "extension": "Base"
+        },
+        {
+            "id": 111,
+            "name": "Natalie Portman",
+            "color": "White",
+            "extension": "Base"
+        },
+        {
+            "id": 112,
+            "name": "Una tocadita disimulada",
+            "color": "White",
+            "extension": "Base"
+        },
+        {
+            "id": 113,
+            "name": "Pilotos Kamikaze",
+            "color": "White",
+            "extension": "Base"
+        },
+        {
+            "id": 114,
+            "name": "Sean Connery",
+            "color": "White",
+            "extension": "Base"
+        },
+        {
+            "id": 115,
+            "name": "La legislación homosexual",
+            "color": "White",
+            "extension": "Base"
+        },
+        {
+            "id": 116,
+            "name": "Un paraguayo trabajador en serio",
+            "color": "White",
+            "extension": "Base"
+        },
+        {
+            "id": 117,
+            "name": "Un pájaro en una jaula cubierta",
+            "color": "White",
+            "extension": "Base"
+        },
+        {
+            "id": 118,
+            "name": "Monaguillos",
+            "color": "White",
+            "extension": "Base"
+        },
+        {
+            "id": 119,
+            "name": "La Caja Vengadora",
+            "color": "White",
+            "extension": "Base"
+        },
+        {
+            "id": 120,
+            "name": "Enojarte tanto que se te para",
+            "color": "White",
+            "extension": "Base"
+        },
+        {
+            "id": 121,
+            "name": "Muestras gratis",
+            "color": "White",
+            "extension": "Base"
+        },
+        {
+            "id": 122,
+            "name": "Mucho ruido y pocas nueces",
+            "color": "White",
+            "extension": "Base"
+        },
+        {
+            "id": 123,
+            "name": "Hacer lo correcto",
+            "color": "White",
+            "extension": "Base"
+        },
+        {
+            "id": 124,
+            "name": "La Asamblea del año XIII",
+            "color": "White",
+            "extension": "Base"
+        },
+        {
+            "id": 125,
+            "name": "Lactación",
+            "color": "White",
+            "extension": "Base"
+        },
+        {
+            "id": 126,
+            "name": "Paz mundial",
+            "color": "White",
+            "extension": "Base"
+        },
+        {
+            "id": 127,
+            "name": "RoboCop",
+            "color": "White",
+            "extension": "Base"
+        },
+        {
+            "id": 128,
+            "name": "Cabeza de termo",
+            "color": "White",
+            "extension": "Base"
+        },
+        {
+            "id": 129,
+            "name": "Justin Bieber",
+            "color": "White",
+            "extension": "Base"
+        },
+        {
+            "id": 130,
+            "name": "Oompa-Loompas",
+            "color": "White",
+            "extension": "Base"
+        },
+        {
+            "id": 131,
+            "name": "Gemido tirolés",
+            "color": "White",
+            "extension": "Base"
+        },
+        {
+            "id": 132,
+            "name": "Pubertad",
+            "color": "White",
+            "extension": "Base"
+        },
+        {
+            "id": 133,
+            "name": "Fantasmas",
+            "color": "White",
+            "extension": "Base"
+        },
+        {
+            "id": 134,
+            "name": "Lolas hechas asimétricas",
+            "color": "White",
+            "extension": "Base"
+        },
+        {
+            "id": 135,
+            "name": "Las Manos Mágicas",
+            "color": "White",
+            "extension": "Base"
+        },
+        {
+            "id": 136,
+            "name": "Colarse los dedos",
+            "color": "White",
+            "extension": "Base"
+        },
+        {
+            "id": 137,
+            "name": "Mariano Grondona agarrándose el escroto en un gancho de cortina",
+            "color": "White",
+            "extension": "Base"
+        },
+        {
+            "id": 138,
+            "name": "Naranju",
+            "color": "White",
+            "extension": "Base"
+        },
+        {
+            "id": 139,
+            "name": "Brutalidad policíaca",
+            "color": "White",
+            "extension": "Base"
+        },
+        {
+            "id": 140,
+            "name": "El Petiso Orejudo",
+            "color": "White",
+            "extension": "Base"
+        },
+        {
+            "id": 141,
+            "name": "Preadolescentes",
+            "color": "White",
+            "extension": "Base"
+        },
+        {
+            "id": 142,
+            "name": "Escalpar",
+            "color": "White",
+            "extension": "Base"
+        },
+        {
+            "id": 143,
+            "name": "Tweeting",
+            "color": "White",
+            "extension": "Base"
+        },
+        {
+            "id": 144,
+            "name": "Darth Vader",
+            "color": "White",
+            "extension": "Base"
+        },
+        {
+            "id": 145,
+            "name": "Una tirada de goma decepcionante",
+            "color": "White",
+            "extension": "Base"
+        },
+        {
+            "id": 146,
+            "name": "Exactamente lo que esperarías",
+            "color": "White",
+            "extension": "Base"
+        },
+        {
+            "id": 147,
+            "name": "Esperar un eructo y terminar vomitando en el piso",
+            "color": "White",
+            "extension": "Base"
+        },
+        {
+            "id": 148,
+            "name": "Células madre de embriones",
+            "color": "White",
+            "extension": "Base"
+        },
+        {
+            "id": 149,
+            "name": "Escote elegante y pronunciado",
+            "color": "White",
+            "extension": "Base"
+        },
+        {
+            "id": 150,
+            "name": "No ponerla nunca",
+            "color": "White",
+            "extension": "Base"
+        },
+        {
+            "id": 151,
+            "name": "Una lobotomía hecha con un picahielo",
+            "color": "White",
+            "extension": "Base"
+        },
+        {
+            "id": 152,
+            "name": "Tom Cruise",
+            "color": "White",
+            "extension": "Base"
+        },
+        {
+            "id": 153,
+            "name": "Herpes bucal",
+            "color": "White",
+            "extension": "Base"
+        },
+        {
+            "id": 154,
+            "name": "Cachalote",
+            "color": "White",
+            "extension": "Base"
+        },
+        {
+            "id": 155,
+            "name": "Gente sin casa",
+            "color": "White",
+            "extension": "Base"
+        },
+        {
+            "id": 156,
+            "name": "Tercera base",
+            "color": "White",
+            "extension": "Base"
+        },
+        {
+            "id": 157,
+            "name": "Incesto",
+            "color": "White",
+            "extension": "Base"
+        },
+        {
+            "id": 158,
+            "name": "Pac-man traga leche",
+            "color": "White",
+            "extension": "Base"
+        },
+        {
+            "id": 159,
+            "name": "Un mimo tendiendo un ataque",
+            "color": "White",
+            "extension": "Base"
+        },
+        {
+            "id": 160,
+            "name": "Hulk Hogan",
+            "color": "White",
+            "extension": "Base"
+        },
+        {
+            "id": 161,
+            "name": "Dios",
+            "color": "White",
+            "extension": "Base"
+        },
+        {
+            "id": 162,
+            "name": "Lavarse los pliegues",
+            "color": "White",
+            "extension": "Base"
+        },
+        {
+            "id": 163,
+            "name": "Lluvia dorada",
+            "color": "White",
+            "extension": "Base"
+        },
+        {
+            "id": 164,
+            "name": "Emociones",
+            "color": "White",
+            "extension": "Base"
+        },
+        {
+            "id": 165,
+            "name": "Lamer cosas para marcar territorio",
+            "color": "White",
+            "extension": "Base"
+        },
+        {
+            "id": 166,
+            "name": "Cerveza Patagonia",
+            "color": "White",
+            "extension": "Base"
+        },
+        {
+            "id": 167,
+            "name": "La Placenta",
+            "color": "White",
+            "extension": "Base"
+        },
+        {
+            "id": 168,
+            "name": "Combustión humana espontánea",
+            "color": "White",
+            "extension": "Base"
+        },
+        {
+            "id": 169,
+            "name": "Amigos con beneficios",
+            "color": "White",
+            "extension": "Base"
+        },
+        {
+            "id": 170,
+            "name": "Pintar con los dedos",
+            "color": "White",
+            "extension": "Base"
+        },
+        {
+            "id": 171,
+            "name": "Olor a abuelo",
+            "color": "White",
+            "extension": "Base"
+        },
+        {
+            "id": 172,
+            "name": "Morirse de cólera",
+            "color": "White",
+            "extension": "Base"
+        },
+        {
+            "id": 173,
+            "name": "Mis demonios internos",
+            "color": "White",
+            "extension": "Base"
+        },
+        {
+            "id": 174,
+            "name": "Un trapo de piso empapado en pis de gato",
+            "color": "White",
+            "extension": "Base"
+        },
+        {
+            "id": 175,
+            "name": "Domingo Cavallo",
+            "color": "White",
+            "extension": "Base"
+        },
+        {
+            "id": 176,
+            "name": "Acurrucarse",
+            "color": "White",
+            "extension": "Base"
+        },
+        {
+            "id": 177,
+            "name": "El porro",
+            "color": "White",
+            "extension": "Base"
+        },
+        {
+            "id": 178,
+            "name": "Peleas de gallos",
+            "color": "White",
+            "extension": "Base"
+        },
+        {
+            "id": 179,
+            "name": "Fuego aliado",
+            "color": "White",
+            "extension": "Base"
+        },
+        {
+            "id": 180,
+            "name": "Juan Domingo Perón",
+            "color": "White",
+            "extension": "Base"
+        },
+        {
+            "id": 181,
+            "name": "Una fiesta de cumpleaños decepcionante",
+            "color": "White",
+            "extension": "Base"
+        },
+        {
+            "id": 182,
+            "name": "Una mina canchera",
+            "color": "White",
+            "extension": "Base"
+        },
+        {
+            "id": 183,
+            "name": "El equipo de Olimpíadas de Matemática",
+            "color": "White",
+            "extension": "Base"
+        },
+        {
+            "id": 184,
+            "name": "Un pequeño caballito",
+            "color": "White",
+            "extension": "Base"
+        },
+        {
+            "id": 185,
+            "name": "William Shatner",
+            "color": "White",
+            "extension": "Base"
+        },
+        {
+            "id": 186,
+            "name": "Cabalgar hacia el horizonte",
+            "color": "White",
+            "extension": "Base"
+        },
+        {
+            "id": 187,
+            "name": "Un giro argumental de M. Night Shyamalan",
+            "color": "White",
+            "extension": "Base"
+        },
+        {
+            "id": 188,
+            "name": "Peies",
+            "color": "White",
+            "extension": "Base"
+        },
+        {
+            "id": 189,
+            "name": "Destrucción mutua garantizada",
+            "color": "White",
+            "extension": "Base"
+        },
+        {
+            "id": 190,
+            "name": "Pederastas",
+            "color": "White",
+            "extension": "Base"
+        },
+        {
+            "id": 191,
+            "name": "Levadura",
+            "color": "White",
+            "extension": "Base"
+        },
+        {
+            "id": 192,
+            "name": "Robo de tumbas",
+            "color": "White",
+            "extension": "Base"
+        },
+        {
+            "id": 193,
+            "name": "Comerse el ultimo yaguareté",
+            "color": "White",
+            "extension": "Base"
+        },
+        {
+            "id": 194,
+            "name": "Catapultas",
+            "color": "White",
+            "extension": "Base"
+        },
+        {
+            "id": 195,
+            "name": "Gente pobre",
+            "color": "White",
+            "extension": "Base"
+        },
+        {
+            "id": 196,
+            "name": "Olvidarte de la Vuelta de Obligado",
+            "color": "White",
+            "extension": "Base"
+        },
+        {
+            "id": 197,
+            "name": "El Meneadito",
+            "color": "White",
+            "extension": "Base"
+        },
+        {
+            "id": 198,
+            "name": "La Fuerza",
+            "color": "White",
+            "extension": "Base"
+        },
+        {
+            "id": 199,
+            "name": "El perreo",
+            "color": "White",
+            "extension": "Base"
+        },
+        {
+            "id": 200,
+            "name": "Diseño inteligente",
+            "color": "White",
+            "extension": "Base"
+        },
+        {
+            "id": 201,
+            "name": "Boca floja",
+            "color": "White",
+            "extension": "Base"
+        },
+        {
+            "id": 202,
+            "name": "SIDA",
+            "color": "White",
+            "extension": "Base"
+        },
+        {
+            "id": 203,
+            "name": "Fotos de tetas",
+            "color": "White",
+            "extension": "Base"
+        },
+        {
+            "id": 204,
+            "name": "The Übermensch",
+            "color": "White",
+            "extension": "Base"
+        },
+        {
+            "id": 205,
+            "name": "Lilita Carrió",
+            "color": "White",
+            "extension": "Base"
+        },
+        {
+            "id": 206,
+            "name": "Supermatch",
+            "color": "White",
+            "extension": "Base"
+        },
+        {
+            "id": 207,
+            "name": "Drogarse zarpado",
+            "color": "White",
+            "extension": "Base"
+        },
+        {
+            "id": 208,
+            "name": "Cientología",
+            "color": "White",
+            "extension": "Base"
+        },
+        {
+            "id": 209,
+            "name": "La envidia del pene",
+            "color": "White",
+            "extension": "Base"
+        },
+        {
+            "id": 210,
+            "name": "Rezar para curar lo gay",
+            "color": "White",
+            "extension": "Base"
+        },
+        {
+            "id": 211,
+            "name": "Retozar",
+            "color": "White",
+            "extension": "Base"
+        },
+        {
+            "id": 212,
+            "name": "Dos enanos cagando en un balde",
+            "color": "White",
+            "extension": "Base"
+        },
+        {
+            "id": 213,
+            "name": "El Ku Klux Klan",
+            "color": "White",
+            "extension": "Base"
+        },
+        {
+            "id": 214,
+            "name": "Genghis Khan",
+            "color": "White",
+            "extension": "Base"
+        },
+        {
+            "id": 215,
+            "name": "Metanfetamina",
+            "color": "White",
+            "extension": "Base"
+        },
+        {
+            "id": 216,
+            "name": "Servidumbre feudal",
+            "color": "White",
+            "extension": "Base"
+        },
+        {
+            "id": 217,
+            "name": "Ciudado con los extraños",
+            "color": "White",
+            "extension": "Base"
+        },
+        {
+            "id": 218,
+            "name": "Simón dice",
+            "color": "White",
+            "extension": "Base"
+        },
+        {
+            "id": 219,
+            "name": "La carrera actoral de Martín Palermo",
+            "color": "White",
+            "extension": "Base"
+        },
+        {
+            "id": 220,
+            "name": "Caminar dando saltitos de felicidad",
+            "color": "White",
+            "extension": "Base"
+        },
+        {
+            "id": 221,
+            "name": "Justicia por mano propia",
+            "color": "White",
+            "extension": "Base"
+        },
+        {
+            "id": 222,
+            "name": "Sobrecompensar",
+            "color": "White",
+            "extension": "Base"
+        },
+        {
+            "id": 223,
+            "name": "Un bukkake pixelado",
+            "color": "White",
+            "extension": "Base"
+        },
+        {
+            "id": 224,
+            "name": "Una vida de tristezas",
+            "color": "White",
+            "extension": "Base"
+        },
+        {
+            "id": 225,
+            "name": "Racismo",
+            "color": "White",
+            "extension": "Base"
+        },
+        {
+            "id": 226,
+            "name": "Lanzamiento de enanos",
+            "color": "White",
+            "extension": "Base"
+        },
+        {
+            "id": 227,
+            "name": "Sol y arcoíris",
+            "color": "White",
+            "extension": "Base"
+        },
+        {
+            "id": 228,
+            "name": "Un mono fumando un habano",
+            "color": "White",
+            "extension": "Base"
+        },
+        {
+            "id": 229,
+            "name": "Inundación instantanea",
+            "color": "White",
+            "extension": "Base"
+        },
+        {
+            "id": 230,
+            "name": "El testículo que le falta a Lance Armstrong",
+            "color": "White",
+            "extension": "Base"
+        },
+        {
+            "id": 231,
+            "name": "Arcadas",
+            "color": "White",
+            "extension": "Base"
+        },
+        {
+            "id": 232,
+            "name": "Los terroristas",
+            "color": "White",
+            "extension": "Base"
+        },
+        {
+            "id": 233,
+            "name": "Britney Spears a los 55 años",
+            "color": "White",
+            "extension": "Base"
+        },
+        {
+            "id": 234,
+            "name": "Actitud",
+            "color": "White",
+            "extension": "Base"
+        },
+        {
+            "id": 235,
+            "name": "Largarse a cantar y bailar",
+            "color": "White",
+            "extension": "Base"
+        },
+        {
+            "id": 236,
+            "name": "Lepra",
+            "color": "White",
+            "extension": "Base"
+        },
+        {
+            "id": 237,
+            "name": "Agujero de gloria",
+            "color": "White",
+            "extension": "Base"
+        },
+        {
+            "id": 238,
+            "name": "Pezones con piercings",
+            "color": "White",
+            "extension": "Base"
+        },
+        {
+            "id": 239,
+            "name": "El corazón de un niño",
+            "color": "White",
+            "extension": "Base"
+        },
+        {
+            "id": 240,
+            "name": "¡Cachorritos!",
+            "color": "White",
+            "extension": "Base"
+        },
+        {
+            "id": 241,
+            "name": "Despertar semi desnudo en el estacionamiento de un McDonalds",
+            "color": "White",
+            "extension": "Base"
+        },
+        {
+            "id": 242,
+            "name": "Tela quirúrgica",
+            "color": "White",
+            "extension": "Base"
+        },
+        {
+            "id": 243,
+            "name": "La vagina de Maitena",
+            "color": "White",
+            "extension": "Base"
+        },
+        {
+            "id": 244,
+            "name": "Ni cu ni Hue",
+            "color": "White",
+            "extension": "Base"
+        },
+        {
+            "id": 245,
+            "name": "Escuchar y parafrasear",
+            "color": "White",
+            "extension": "Base"
+        },
+        {
+            "id": 246,
+            "name": "Legalización en contra de una etnia",
+            "color": "White",
+            "extension": "Base"
+        },
+        {
+            "id": 247,
+            "name": "La Tortuga Manuelita",
+            "color": "White",
+            "extension": "Base"
+        },
+        {
+            "id": 248,
+            "name": "La mano invisible",
+            "color": "White",
+            "extension": "Base"
+        },
+        {
+            "id": 249,
+            "name": "Esperar hasta el casamiento",
+            "color": "White",
+            "extension": "Base"
+        },
+        {
+            "id": 250,
+            "name": "Una estupidez inimaginable",
+            "color": "White",
+            "extension": "Base"
+        },
+        {
+            "id": 251,
+            "name": "Euphoria™ by Calvin Klein",
+            "color": "White",
+            "extension": "Base"
+        },
+        {
+            "id": 252,
+            "name": "Regalar un regalo que te dieron",
+            "color": "White",
+            "extension": "Base"
+        },
+        {
+            "id": 253,
+            "name": "Auto canibalismo",
+            "color": "White",
+            "extension": "Base"
+        },
+        {
+            "id": 254,
+            "name": "Disfunción eréctil",
+            "color": "White",
+            "extension": "Base"
+        },
+        {
+            "id": 255,
+            "name": "Mi colección de juguetes sexuales de alta tecnología",
+            "color": "White",
+            "extension": "Base"
+        },
+        {
+            "id": 256,
+            "name": "El Papa",
+            "color": "White",
+            "extension": "Base"
+        },
+        {
+            "id": 257,
+            "name": "Gente blanca",
+            "color": "White",
+            "extension": "Base"
+        },
+        {
+            "id": 258,
+            "name": "Porno japonés con tentáculos",
+            "color": "White",
+            "extension": "Base"
+        },
+        {
+            "id": 259,
+            "name": "Mariano Grondona vomitando convulsamente mientras una camada de arañas cangrejo incuban en su cerebro y salen por sus conductos lagrimales",
+            "color": "White",
+            "extension": "Base"
+        },
+        {
+            "id": 260,
+            "name": "Demasiado gel para el pelo",
+            "color": "White",
+            "extension": "Base"
+        },
+        {
+            "id": 261,
+            "name": "Seppuku",
+            "color": "White",
+            "extension": "Base"
+        },
+        {
+            "id": 262,
+            "name": "Parejas de baile sobre hielo del mismo sexo",
+            "color": "White",
+            "extension": "Base"
+        },
+        {
+            "id": 263,
+            "name": "Hacer trampa en las Paralimpíadas",
+            "color": "White",
+            "extension": "Base"
+        },
+        {
+            "id": 264,
+            "name": "Carisma",
+            "color": "White",
+            "extension": "Base"
+        },
+        {
+            "id": 265,
+            "name": "Keanu Reeves",
+            "color": "White",
+            "extension": "Base"
+        },
+        {
+            "id": 266,
+            "name": "Sean Penn",
+            "color": "White",
+            "extension": "Base"
+        },
+        {
+            "id": 267,
+            "name": "Mambrú",
+            "color": "White",
+            "extension": "Base"
+        },
+        {
+            "id": 268,
+            "name": "Un vistazo",
+            "color": "White",
+            "extension": "Base"
+        },
+        {
+            "id": 269,
+            "name": "Bancarse la mierda del otro",
+            "color": "White",
+            "extension": "Base"
+        },
+        {
+            "id": 270,
+            "name": "La menstruación",
+            "color": "White",
+            "extension": "Base"
+        },
+        {
+            "id": 271,
+            "name": "Niños con cáncer en el culo",
+            "color": "White",
+            "extension": "Base"
+        },
+        {
+            "id": 272,
+            "name": "Una sorpresa láctea",
+            "color": "White",
+            "extension": "Base"
+        },
+        {
+            "id": 273,
+            "name": "El sur",
+            "color": "White",
+            "extension": "Base"
+        },
+        {
+            "id": 274,
+            "name": "La violación de nuestros mas básicos derechos humanos",
+            "color": "White",
+            "extension": "Base"
+        },
+        {
+            "id": 275,
+            "name": "NECESITÁS CONTRUIR MÁS PYLONS",
+            "color": "White",
+            "extension": "Base"
+        },
+        {
+            "id": 276,
+            "name": "Violación en una cita",
+            "color": "White",
+            "extension": "Base"
+        },
+        {
+            "id": 277,
+            "name": "Ser fabuloso/a",
+            "color": "White",
+            "extension": "Base"
+        },
+        {
+            "id": 278,
+            "name": "Necrofilia",
+            "color": "White",
+            "extension": "Base"
+        },
+        {
+            "id": 279,
+            "name": "Centauros",
+            "color": "White",
+            "extension": "Base"
+        },
+        {
+            "id": 280,
+            "name": "El mundo de Beakman",
+            "color": "White",
+            "extension": "Base"
+        },
+        {
+            "id": 281,
+            "name": "Negros",
+            "color": "White",
+            "extension": "Base"
+        },
+        {
+            "id": 282,
+            "name": "Caballerosidad",
+            "color": "White",
+            "extension": "Base"
+        },
+        {
+            "id": 283,
+            "name": "Sanguchitos de miga de kiosko",
+            "color": "White",
+            "extension": "Base"
+        },
+        {
+            "id": 284,
+            "name": "Perras!",
+            "color": "White",
+            "extension": "Base"
+        },
+        {
+            "id": 285,
+            "name": "Los extremadamente lisiados",
+            "color": "White",
+            "extension": "Base"
+        },
+        {
+            "id": 286,
+            "name": "Huérfanos adorables",
+            "color": "White",
+            "extension": "Base"
+        },
+        {
+            "id": 287,
+            "name": "MechaHitler",
+            "color": "White",
+            "extension": "Base"
+        },
+        {
+            "id": 288,
+            "name": "Diarrea explosiva",
+            "color": "White",
+            "extension": "Base"
+        },
+        {
+            "id": 289,
+            "name": "Otra maldita película de vampiros",
+            "color": "White",
+            "extension": "Base"
+        },
+        {
+            "id": 290,
+            "name": "Resortes enredados",
+            "color": "White",
+            "extension": "Base"
+        },
+        {
+            "id": 291,
+            "name": "El verdadero significado de la Navidad",
+            "color": "White",
+            "extension": "Base"
+        },
+        {
+            "id": 292,
+            "name": "Estrógeno",
+            "color": "White",
+            "extension": "Base"
+        },
+        {
+            "id": 293,
+            "name": "Choripan crudo de la Costanera",
+            "color": "White",
+            "extension": "Base"
+        },
+        {
+            "id": 294,
+            "name": "La cosa esa que electrocuta tus abdominales",
+            "color": "White",
+            "extension": "Base"
+        },
+        {
+            "id": 295,
+            "name": "Pasar un cálculo renal",
+            "color": "White",
+            "extension": "Base"
+        },
+        {
+            "id": 296,
+            "name": "Un orto desteñido",
+            "color": "White",
+            "extension": "Base"
+        },
+        {
+            "id": 297,
+            "name": "Michael Jackson",
+            "color": "White",
+            "extension": "Base"
+        },
+        {
+            "id": 298,
+            "name": "Implantes cibernéticos",
+            "color": "White",
+            "extension": "Base"
+        },
+        {
+            "id": 299,
+            "name": "Hombres que no llaman",
+            "color": "White",
+            "extension": "Base"
+        },
+        {
+            "id": 300,
+            "name": "Sábanas infectadas con viruela",
+            "color": "White",
+            "extension": "Base"
+        },
+        {
+            "id": 301,
+            "name": "Masturbación",
+            "color": "White",
+            "extension": "Base"
+        },
+        {
+            "id": 302,
+            "name": "Discurso oligarca",
+            "color": "White",
+            "extension": "Base"
+        },
+        {
+            "id": 303,
+            "name": "Pedos vaginales",
+            "color": "White",
+            "extension": "Base"
+        },
+        {
+            "id": 304,
+            "name": "Ocultar el mástil",
+            "color": "White",
+            "extension": "Base"
+        },
+        {
+            "id": 305,
+            "name": "Ropa interior comestible",
+            "color": "White",
+            "extension": "Base"
+        },
+        {
+            "id": 306,
+            "name": "Viagra",
+            "color": "White",
+            "extension": "Base"
+        },
+        {
+            "id": 307,
+            "name": "Sopa demasiado caliente",
+            "color": "White",
+            "extension": "Base"
+        },
+        {
+            "id": 308,
+            "name": "Mahoma (alabado sea él)",
+            "color": "White",
+            "extension": "Base"
+        },
+        {
+            "id": 309,
+            "name": "¡Sexo sorpresa!",
+            "color": "White",
+            "extension": "Base"
+        },
+        {
+            "id": 310,
+            "name": "Un pebete de $30",
+            "color": "White",
+            "extension": "Base"
+        },
+        {
+            "id": 311,
+            "name": "Emborracharse solo",
+            "color": "White",
+            "extension": "Base"
+        },
+        {
+            "id": 312,
+            "name": "Manos de manteca",
+            "color": "White",
+            "extension": "Base"
+        },
+        {
+            "id": 313,
+            "name": "Múltipes puñaladas",
+            "color": "White",
+            "extension": "Base"
+        },
+        {
+            "id": 314,
+            "name": "Cagarse encima",
+            "color": "White",
+            "extension": "Base"
+        },
+        {
+            "id": 315,
+            "name": "Abuso de menores",
+            "color": "White",
+            "extension": "Base"
+        },
+        {
+            "id": 316,
+            "name": "Bolas anales",
+            "color": "White",
+            "extension": "Base"
+        },
+        {
+            "id": 317,
+            "name": "Muerte de civiles",
+            "color": "White",
+            "extension": "Base"
+        },
+        {
+            "id": 318,
+            "name": "Sacarla y acabar afuera",
+            "color": "White",
+            "extension": "Base"
+        },
+        {
+            "id": 319,
+            "name": "Robert Downey Jr.",
+            "color": "White",
+            "extension": "Base"
+        },
+        {
+            "id": 320,
+            "name": "Mortadela",
+            "color": "White",
+            "extension": "Base"
+        },
+        {
+            "id": 321,
+            "name": "Alto sombrero",
+            "color": "White",
+            "extension": "Base"
+        },
+        {
+            "id": 322,
+            "name": "Kim Jong-il",
+            "color": "White",
+            "extension": "Base"
+        },
+        {
+            "id": 323,
+            "name": "Un vello púbico",
+            "color": "White",
+            "extension": "Base"
+        },
+        {
+            "id": 324,
+            "name": "Fraternidades judías",
+            "color": "White",
+            "extension": "Base"
+        },
+        {
+            "id": 325,
+            "name": "El negro que siempre muere primero",
+            "color": "White",
+            "extension": "Base"
+        },
+        {
+            "id": 326,
+            "name": "Hacerlo por atrás",
+            "color": "White",
+            "extension": "Base"
+        },
+        {
+            "id": 327,
+            "name": "Darle de comer a Lilita Carrió",
+            "color": "White",
+            "extension": "Base"
+        },
+        {
+            "id": 328,
+            "name": "Enseñarle a un robot a amar",
+            "color": "White",
+            "extension": "Base"
+        },
+        {
+            "id": 329,
+            "name": "Seguí así y cobrás",
+            "color": "White",
+            "extension": "Base"
+        },
+        {
+            "id": 330,
+            "name": "Un molino lleno de cadáveres",
+            "color": "White",
+            "extension": "Base"
+        },
+        {
+            "id": 331,
+            "name": "El tigre Tony",
+            "color": "White",
+            "extension": "Base"
+        },
+        {
+            "id": 332,
+            "name": "Usar la ropa interior al revés para no tener que lavar",
+            "color": "White",
+            "extension": "Base"
+        },
+        {
+            "id": 333,
+            "name": "Un rayo mortal",
+            "color": "White",
+            "extension": "Base"
+        },
+        {
+            "id": 334,
+            "name": "El techo laboral",
+            "color": "White",
+            "extension": "Base"
+        },
+        {
+            "id": 335,
+            "name": "Una heladerita llena de órganos",
+            "color": "White",
+            "extension": "Base"
+        },
+        {
+            "id": 336,
+            "name": "El sueño americano",
+            "color": "White",
+            "extension": "Base"
+        },
+        {
+            "id": 337,
+            "name": "Fondo blanco",
+            "color": "White",
+            "extension": "Base"
+        },
+        {
+            "id": 338,
+            "name": "Cuando te tirás un pedo y viene con sorpresita",
+            "color": "White",
+            "extension": "Base"
+        },
+        {
+            "id": 339,
+            "name": "Retractarse",
+            "color": "White",
+            "extension": "Base"
+        },
+        {
+            "id": 340,
+            "name": "Bebés muertos",
+            "color": "White",
+            "extension": "Base"
+        },
+        {
+            "id": 341,
+            "name": "El prepucio",
+            "color": "White",
+            "extension": "Base"
+        },
+        {
+            "id": 342,
+            "name": "Solos de saxo",
+            "color": "White",
+            "extension": "Base"
+        },
+        {
+            "id": 343,
+            "name": "Gallegos",
+            "color": "White",
+            "extension": "Base"
+        },
+        {
+            "id": 344,
+            "name": "Un feto",
+            "color": "White",
+            "extension": "Base"
+        },
+        {
+            "id": 345,
+            "name": "Disparar un rifle al aire mientras te cogés duro a un cerdo histérico",
+            "color": "White",
+            "extension": "Base"
+        },
+        {
+            "id": 346,
+            "name": "Francisco de Narváez",
+            "color": "White",
+            "extension": "Base"
+        },
+        {
+            "id": 347,
+            "name": "Amputados",
+            "color": "White",
+            "extension": "Base"
+        },
+        {
+            "id": 348,
+            "name": "Mejoramiento racial",
+            "color": "White",
+            "extension": "Base"
+        },
+        {
+            "id": 349,
+            "name": "Mi estado amoroso",
+            "color": "White",
+            "extension": "Base"
+        },
+        {
+            "id": 350,
+            "name": "Christopher Walken",
+            "color": "White",
+            "extension": "Base"
+        },
+        {
+            "id": 351,
+            "name": "¿Abejas?",
+            "color": "White",
+            "extension": "Base"
+        },
+        {
+            "id": 352,
+            "name": "Porno de Harry Potter",
+            "color": "White",
+            "extension": "Base"
+        },
+        {
+            "id": 353,
+            "name": "La universidad",
+            "color": "White",
+            "extension": "Base"
+        },
+        {
+            "id": 354,
+            "name": "Emborracharse con Lysterine",
+            "color": "White",
+            "extension": "Base"
+        },
+        {
+            "id": 355,
+            "name": "Nazis",
+            "color": "White",
+            "extension": "Base"
+        },
+        {
+            "id": 356,
+            "name": "200 gramos de delicioso paco",
+            "color": "White",
+            "extension": "Base"
+        },
+        {
+            "id": 357,
+            "name": "Stephen Hawking diciendo chanchadas",
+            "color": "White",
+            "extension": "Base"
+        },
+        {
+            "id": 358,
+            "name": "Padres muertos",
+            "color": "White",
+            "extension": "Base"
+        },
+        {
+            "id": 359,
+            "name": "Teoría de desarrollo cognitivo de Piaget",
+            "color": "White",
+            "extension": "Base"
+        },
+        {
+            "id": 360,
+            "name": "Pulgares oponibles",
+            "color": "White",
+            "extension": "Base"
+        },
+        {
+            "id": 361,
+            "name": "Preguntas de examen racistas",
+            "color": "White",
+            "extension": "Base"
+        },
+        {
+            "id": 362,
+            "name": "Paparruchadas",
+            "color": "White",
+            "extension": "Base"
+        },
+        {
+            "id": 363,
+            "name": "Motosierras en lugar de manos",
+            "color": "White",
+            "extension": "Base"
+        },
+        {
+            "id": 364,
+            "name": "Nicholas Cage",
+            "color": "White",
+            "extension": "Base"
+        },
+        {
+            "id": 365,
+            "name": "Concursos de belleza de niñas",
+            "color": "White",
+            "extension": "Base"
+        },
+        {
+            "id": 366,
+            "name": "Explosiones",
+            "color": "White",
+            "extension": "Base"
+        },
+        {
+            "id": 367,
+            "name": "Oler pegamento",
+            "color": "White",
+            "extension": "Base"
+        },
+        {
+            "id": 368,
+            "name": "Mariano Grondona siendo acosado por una bandada de buitres",
+            "color": "White",
+            "extension": "Base"
+        },
+        {
+            "id": 369,
+            "name": "Represión",
+            "color": "White",
+            "extension": "Base"
+        },
+        {
+            "id": 370,
+            "name": "Un pañuelo con cloroformo",
+            "color": "White",
+            "extension": "Base"
+        },
+        {
+            "id": 371,
+            "name": "Mi vagina",
+            "color": "White",
+            "extension": "Base"
+        },
+        {
+            "id": 372,
+            "name": "Pantalones de montar de cuero",
+            "color": "White",
+            "extension": "Base"
+        },
+        {
+            "id": 373,
+            "name": "Un asesinato terrible",
+            "color": "White",
+            "extension": "Base"
+        },
+        {
+            "id": 374,
+            "name": "Dar el 110%",
+            "color": "White",
+            "extension": "Base"
+        },
+        {
+            "id": 375,
+            "name": "Su alteza real, la reina Elizabeth II",
+            "color": "White",
+            "extension": "Base"
+        },
+        {
+            "id": 376,
+            "name": "Campaña del Desierto",
+            "color": "White",
+            "extension": "Base"
+        },
+        {
+            "id": 377,
+            "name": "Ser dejado de lado",
+            "color": "White",
+            "extension": "Base"
+        },
+        {
+            "id": 378,
+            "name": "Goblins",
+            "color": "White",
+            "extension": "Base"
+        },
+        {
+            "id": 379,
+            "name": "Esperanza",
+            "color": "White",
+            "extension": "Base"
+        },
+        {
+            "id": 380,
+            "name": "El Padre Mugica",
+            "color": "White",
+            "extension": "Base"
+        },
+        {
+            "id": 381,
+            "name": "Manicero",
+            "color": "White",
+            "extension": "Base"
+        },
+        {
+            "id": 382,
+            "name": "Mi alma",
+            "color": "White",
+            "extension": "Base"
+        },
+        {
+            "id": 383,
+            "name": "Loca linda",
+            "color": "White",
+            "extension": "Base"
+        },
+        {
+            "id": 384,
+            "name": "Vikingos",
+            "color": "White",
+            "extension": "Base"
+        },
+        {
+            "id": 385,
+            "name": "Gente que esta buena",
+            "color": "White",
+            "extension": "Base"
+        },
+        {
+            "id": 386,
+            "name": "Seducción",
+            "color": "White",
+            "extension": "Base"
+        },
+        {
+            "id": 387,
+            "name": "Un complejo de Edipo",
+            "color": "White",
+            "extension": "Base"
+        },
+        {
+            "id": 388,
+            "name": "Gansos",
+            "color": "White",
+            "extension": "Base"
+        },
+        {
+            "id": 389,
+            "name": "Calentamiento global",
+            "color": "White",
+            "extension": "Base"
+        },
+        {
+            "id": 390,
+            "name": "Musica New Age",
+            "color": "White",
+            "extension": "Base"
+        },
+        {
+            "id": 391,
+            "name": "Empanadas congeladas de Sibarita",
+            "color": "White",
+            "extension": "Base"
+        },
+        {
+            "id": 392,
+            "name": "Poner cara de puchero",
+            "color": "White",
+            "extension": "Base"
+        },
+        {
+            "id": 393,
+            "name": "Homicidio imprudente con vehículo a motor",
+            "color": "White",
+            "extension": "Base"
+        },
+        {
+            "id": 394,
+            "name": "Voto femenino",
+            "color": "White",
+            "extension": "Base"
+        },
+        {
+            "id": 395,
+            "name": "Un forro pinchado",
+            "color": "White",
+            "extension": "Base"
+        },
+        {
+            "id": 396,
+            "name": "Forum, la corte del pueblo",
+            "color": "White",
+            "extension": "Base"
+        },
+        {
+            "id": 397,
+            "name": "Chinos africanos",
+            "color": "White",
+            "extension": "Base"
+        },
+        {
+            "id": 398,
+            "name": "La masacre de Carmen de Patagones",
+            "color": "White",
+            "extension": "Base"
+        },
+        {
+            "id": 399,
+            "name": "Cristina Fernández de Kirchner",
+            "color": "White",
+            "extension": "Base"
+        },
+        {
+            "id": 400,
+            "name": "Asiáticos que no saben matemática",
+            "color": "White",
+            "extension": "Base"
+        },
+        {
+            "id": 401,
+            "name": "Ancianos japoneses",
+            "color": "White",
+            "extension": "Base"
+        },
+        {
+            "id": 402,
+            "name": "Intercambiar saludos de protocolo",
+            "color": "White",
+            "extension": "Base"
+        },
+        {
+            "id": 403,
+            "name": "Heteronormatividad",
+            "color": "White",
+            "extension": "Base"
+        },
+        {
+            "id": 404,
+            "name": "Partir el Mar Rojo",
+            "color": "White",
+            "extension": "Base"
+        },
+        {
+            "id": 405,
+            "name": "Arnold Schwarzenegger",
+            "color": "White",
+            "extension": "Base"
+        },
+        {
+            "id": 406,
+            "name": "Mamada en el auto",
+            "color": "White",
+            "extension": "Base"
+        },
+        {
+            "id": 407,
+            "name": "Abdominales como una plancha de ravioles",
+            "color": "White",
+            "extension": "Base"
+        },
+        {
+            "id": 408,
+            "name": "Pan dulce",
+            "color": "White",
+            "extension": "Base"
+        },
+        {
+            "id": 409,
+            "name": "Un león de zoológico triste",
+            "color": "White",
+            "extension": "Base"
+        },
+        {
+            "id": 410,
+            "name": "Una bolsa de habichuelas magicas",
+            "color": "White",
+            "extension": "Base"
+        },
+        {
+            "id": 411,
+            "name": "Malas elecciones de vida",
+            "color": "White",
+            "extension": "Base"
+        },
+        {
+            "id": 412,
+            "name": "Mi vida sexual",
+            "color": "White",
+            "extension": "Base"
+        },
+        {
+            "id": 413,
+            "name": "Auschwitz",
+            "color": "White",
+            "extension": "Base"
+        },
+        {
+            "id": 414,
+            "name": "Una tortuga mordiéndole la punta del pene",
+            "color": "White",
+            "extension": "Base"
+        },
+        {
+            "id": 415,
+            "name": "Una detonación termonuclear",
+            "color": "White",
+            "extension": "Base"
+        },
+        {
+            "id": 416,
+            "name": "El clítoris",
+            "color": "White",
+            "extension": "Base"
+        },
+        {
+            "id": 417,
+            "name": "El Big Bang",
+            "color": "White",
+            "extension": "Base"
+        },
+        {
+            "id": 418,
+            "name": "Minas terrestres",
+            "color": "White",
+            "extension": "Base"
+        },
+        {
+            "id": 419,
+            "name": "Amigos que se comen toda la picada",
+            "color": "White",
+            "extension": "Base"
+        },
+        {
+            "id": 420,
+            "name": "Cabras comiéndose latas",
+            "color": "White",
+            "extension": "Base"
+        },
+        {
+            "id": 421,
+            "name": "La danza del hada de Azúcar",
+            "color": "White",
+            "extension": "Base"
+        },
+        {
+            "id": 422,
+            "name": "Acabar dentro de una pileta llena de lágrimas de niños",
+            "color": "White",
+            "extension": "Base"
+        },
+        {
+            "id": 423,
+            "name": "Chupetín de carne",
+            "color": "White",
+            "extension": "Base"
+        },
+        {
+            "id": 424,
+            "name": "Tiempo para uno mismo",
+            "color": "White",
+            "extension": "Base"
+        },
+        {
+            "id": 425,
+            "name": "Chistes del Holocausto en el momento equivocado",
+            "color": "White",
+            "extension": "Base"
+        },
+        {
+            "id": 426,
+            "name": "La mar de problemas",
+            "color": "White",
+            "extension": "Base"
+        },
+        {
+            "id": 427,
+            "name": "Fantasías con bomberos",
+            "color": "White",
+            "extension": "Base"
+        },
+        {
+            "id": 428,
+            "name": "La voz de Morgan Freeman",
+            "color": "White",
+            "extension": "Base"
+        },
+        {
+            "id": 429,
+            "name": "Las mujeres de las publicidades de Activia",
+            "color": "White",
+            "extension": "Base"
+        },
+        {
+            "id": 430,
+            "name": "Crecimiento natural del pene",
+            "color": "White",
+            "extension": "Base"
+        },
+        {
+            "id": 431,
+            "name": "Ser mago, la puta madre",
+            "color": "White",
+            "extension": "Base"
+        },
+        {
+            "id": 432,
+            "name": "Piercings genitales",
+            "color": "White",
+            "extension": "Base"
+        },
+        {
+            "id": 433,
+            "name": "Travestis aceptables",
+            "color": "White",
+            "extension": "Base"
+        },
+        {
+            "id": 434,
+            "name": "Peleas de almohadas cachondas",
+            "color": "White",
+            "extension": "Base"
+        },
+        {
+            "id": 435,
+            "name": "Pelotas",
+            "color": "White",
+            "extension": "Base"
+        },
+        {
+            "id": 436,
+            "name": "La abuela",
+            "color": "White",
+            "extension": "Base"
+        },
+        {
+            "id": 437,
+            "name": "Fricción",
+            "color": "White",
+            "extension": "Base"
+        },
+        {
+            "id": 438,
+            "name": "Aguafiestas",
+            "color": "White",
+            "extension": "Base"
+        },
+        {
+            "id": 439,
+            "name": "Tirarte un pedo y hacerte el boludo",
+            "color": "White",
+            "extension": "Base"
+        },
+        {
+            "id": 440,
+            "name": "Tratar mal a los niños",
+            "color": "White",
+            "extension": "Base"
+        },
+        {
+            "id": 441,
+            "name": "Llenar la casa de trampas para cagar a los ladrones",
+            "color": "White",
+            "extension": "Base"
+        },
+        {
+            "id": 442,
+            "name": "Colchón de espuma con memoria de forma",
+            "color": "White",
+            "extension": "Base"
+        },
+        {
+            "id": 444,
+            "name": "Huracán Katrina",
+            "color": "White",
+            "extension": "Base"
+        },
+        {
+            "id": 445,
+            "name": "Los homosexuales",
+            "color": "White",
+            "extension": "Base"
+        },
+        {
+            "id": 446,
+            "name": "La imprudencia del hombre",
+            "color": "White",
+            "extension": "Base"
+        },
+        {
+            "id": 447,
+            "name": "Hombres",
+            "color": "White",
+            "extension": "Base"
+        },
+        {
+            "id": 448,
+            "name": "Los amish",
+            "color": "White",
+            "extension": "Base"
+        },
+        {
+            "id": 449,
+            "name": "Huevos de Pterodáctilo",
+            "color": "White",
+            "extension": "Base"
+        },
+        {
+            "id": 450,
+            "name": "Ejercicios para dinámica de grupos",
+            "color": "White",
+            "extension": "Base"
+        },
+        {
+            "id": 451,
+            "name": "Un tumor cerebral",
+            "color": "White",
+            "extension": "Base"
+        },
+        {
+            "id": 452,
+            "name": "Cards Against Humanity",
+            "color": "White",
+            "extension": "Base"
+        },
+        {
+            "id": 453,
+            "name": "El miedo mismo",
+            "color": "White",
+            "extension": "Base"
+        },
+        {
+            "id": 454,
+            "name": "Lady Gaga",
+            "color": "White",
+            "extension": "Base"
+        },
+        {
+            "id": 455,
+            "name": "El sodero",
+            "color": "White",
+            "extension": "Base"
+        },
+        {
+            "id": 456,
+            "name": "Boca sucia",
+            "color": "White",
+            "extension": "Base"
+        },
+        {
+            "id": 457,
+            "name": "¡ESSSTAAAAAAAAA!",
+            "color": "White",
+            "extension": "Base"
+        },
+        {
+            "id": 458,
+            "name": "Un golpe de Estado",
+            "color": "White",
+            "extension": "Politica"
+        },
+        {
+            "id": 459,
+            "name": "Las vacaciones de Macri",
+            "color": "White",
+            "extension": "Politica"
+        },
+        {
+            "id": 460,
+            "name": "Pindonga y Cuchuflito",
+            "color": "White",
+            "extension": "Politica"
+        },
+        {
+            "id": 461,
+            "name": "Desaparecer gente",
+            "color": "White",
+            "extension": "Politica"
+        },
+        {
+            "id": 462,
+            "name": "Un peroncho",
+            "color": "White",
+            "extension": "Politica"
+        },
+        {
+            "id": 463,
+            "name": "Juan Domingo Perón",
+            "color": "White",
+            "extension": "Politica"
+        },
+        {
+            "id": 464,
+            "name": "Enterrar bolsos en un convento",
+            "color": "White",
+            "extension": "Politica"
+        },
+        {
+            "id": 465,
+            "name": "La amistad entre la federal y la metropolitana",
+            "color": "White",
+            "extension": "Politica"
+        },
+        {
+            "id": 466,
+            "name": "Los planes trabajar",
+            "color": "White",
+            "extension": "Politica"
+        },
+        {
+            "id": 467,
+            "name": "Las remeras del Che",
+            "color": "White",
+            "extension": "Politica"
+        },
+        {
+            "id": 468,
+            "name": "Los gordos de la CGT",
+            "color": "White",
+            "extension": "Politica"
+        },
+        {
+            "id": 469,
+            "name": "La plata de los jubilados",
+            "color": "White",
+            "extension": "Politica"
+        },
+        {
+            "id": 470,
+            "name": "Maria Eugenia Vidal",
+            "color": "White",
+            "extension": "Politica"
+        },
+        {
+            "id": 471,
+            "name": "Un Falcon verde transformer",
+            "color": "White",
+            "extension": "Politica"
+        },
+        {
+            "id": 472,
+            "name": "La democracia venezolana",
+            "color": "White",
+            "extension": "Politica"
+        },
+        {
+            "id": 473,
+            "name": "Evita",
+            "color": "White",
+            "extension": "Politica"
+        },
+        {
+            "id": 474,
+            "name": "Carlos Saúl I",
+            "color": "White",
+            "extension": "Politica"
+        },
+        {
+            "id": 475,
+            "name": "Espiar a la población",
+            "color": "White",
+            "extension": "Politica"
+        },
+        {
+            "id": 476,
+            "name": "La hiperinflación",
+            "color": "White",
+            "extension": "Politica"
+        },
+        {
+            "id": 477,
+            "name": "Robar, robarse todo, absolutamente todo",
+            "color": "White",
+            "extension": "Politica"
+        },
+        {
+            "id": 478,
+            "name": "Los zurditos",
+            "color": "White",
+            "extension": "Politica"
+        },
+        {
+            "id": 479,
+            "name": "La macrisis",
+            "color": "White",
+            "extension": "Politica"
+        },
+        {
+            "id": 480,
+            "name": "La guerra civil del 2025",
+            "color": "White",
+            "extension": "Politica"
+        },
+        {
+            "id": 481,
+            "name": "Odiar la democracia",
+            "color": "White",
+            "extension": "Politica"
+        },
+        {
+            "id": 482,
+            "name": "Aumentar la edad de la jubilación",
+            "color": "White",
+            "extension": "Politica"
+        },
+        {
+            "id": 483,
+            "name": "Fiesta en el búnker de Macri",
+            "color": "White",
+            "extension": "Politica"
+        },
+        {
+            "id": 484,
+            "name": "Invadir las Malvinas",
+            "color": "White",
+            "extension": "Politica"
+        },
+        {
+            "id": 485,
+            "name": "Un excombatiente",
+            "color": "White",
+            "extension": "Politica"
+        },
+        {
+            "id": 486,
+            "name": "La corte suprema",
+            "color": "White",
+            "extension": "Politica"
+        },
+        {
+            "id": 487,
+            "name": "Ser comunista",
+            "color": "White",
+            "extension": "Politica"
+        },
+        {
+            "id": 488,
+            "name": "Venderse al mejor postor",
+            "color": "White",
+            "extension": "Politica"
+        },
+        {
+            "id": 489,
+            "name": "La clase media",
+            "color": "White",
+            "extension": "Politica"
+        },
+        {
+            "id": 490,
+            "name": "El dia después de las PASO",
+            "color": "White",
+            "extension": "Politica"
+        },
+        {
+            "id": 491,
+            "name": "CFK",
+            "color": "White",
+            "extension": "Politica"
+        },
+        {
+            "id": 492,
+            "name": "La educación pública",
+            "color": "White",
+            "extension": "Politica"
+        },
+        {
+            "id": 493,
+            "name": "Hebe",
+            "color": "White",
+            "extension": "Politica"
+        },
+        {
+            "id": 494,
+            "name": "La revolución de la alegría",
+            "color": "White",
+            "extension": "Politica"
+        },
+        {
+            "id": 495,
+            "name": "Pagar la deuda",
+            "color": "White",
+            "extension": "Politica"
+        },
+        {
+            "id": 496,
+            "name": "El FMI",
+            "color": "White",
+            "extension": "Politica"
+        },
+        {
+            "id": 497,
+            "name": "La anarquía",
+            "color": "White",
+            "extension": "Politica"
+        },
+        {
+            "id": 498,
+            "name": "La brutalidad policial",
+            "color": "White",
+            "extension": "2"
+        },
+        {
+            "id": 499,
+            "name": "La codicia",
+            "color": "White",
+            "extension": "2"
+        },
+        {
+            "id": 500,
+            "name": "La falta de imaginación",
+            "color": "White",
+            "extension": "2"
+        },
+        {
+            "id": 501,
+            "name": "Invadir Polonia",
+            "color": "White",
+            "extension": "2"
+        },
+        {
+            "id": 502,
+            "name": "El Diegote",
+            "color": "White",
+            "extension": "2"
+        },
+        {
+            "id": 503,
+            "name": "Roncar como un hijo de puta",
+            "color": "White",
+            "extension": "2"
+        },
+        {
+            "id": 504,
+            "name": "Pedirle la SUBE a un desconocido",
+            "color": "White",
+            "extension": "2"
+        },
+        {
+            "id": 505,
+            "name": "Bajonear bondiola a las 6 de la mañana",
+            "color": "White",
+            "extension": "2"
+        },
+        {
+            "id": 506,
+            "name": "Salir con alguien que estuvo preso",
+            "color": "White",
+            "extension": "2"
+        },
+        {
+            "id": 507,
+            "name": "Una montaña de merca",
+            "color": "White",
+            "extension": "2"
+        },
+        {
+            "id": 508,
+            "name": "Las cenizas del abuelo",
+            "color": "White",
+            "extension": "2"
+        },
+        {
+            "id": 509,
+            "name": "Un niño prodigio",
+            "color": "White",
+            "extension": "2"
+        },
+        {
+            "id": 510,
+            "name": "Una riñonera",
+            "color": "White",
+            "extension": "2"
+        },
+        {
+            "id": 511,
+            "name": "Un grupo de nudistas",
+            "color": "White",
+            "extension": "2"
+        },
+        {
+            "id": 512,
+            "name": "La friendzone",
+            "color": "White",
+            "extension": "2"
+        },
+        {
+            "id": 513,
+            "name": "El maltrato infantil",
+            "color": "White",
+            "extension": "2"
+        },
+        {
+            "id": 514,
+            "name": "Quejarse al pedo",
+            "color": "White",
+            "extension": "2"
+        },
+        {
+            "id": 515,
+            "name": "Un senegalés vendiendo cadenitas",
+            "color": "White",
+            "extension": "2"
+        },
+        {
+            "id": 516,
+            "name": "Un día a día de un oncólogo",
+            "color": "White",
+            "extension": "2"
+        },
+        {
+            "id": 517,
+            "name": "Un futuro donde Chile sea potencia nuclear",
+            "color": "White",
+            "extension": "2"
+        },
+        {
+            "id": 518,
+            "name": "Un enano llamado Marcelo",
+            "color": "White",
+            "extension": "2"
+        },
+        {
+            "id": 519,
+            "name": "El pizza con ananá",
+            "color": "White",
+            "extension": "2"
+        },
+        {
+            "id": 520,
+            "name": "Una aerolínea de Malasia",
+            "color": "White",
+            "extension": "2"
+        },
+        {
+            "id": 521,
+            "name": "Abandonar la escena del accidente",
+            "color": "White",
+            "extension": "2"
+        },
+        {
+            "id": 522,
+            "name": "Los empleados públicos",
+            "color": "White",
+            "extension": "2"
+        },
+        {
+            "id": 523,
+            "name": "Un gran danés",
+            "color": "White",
+            "extension": "2"
+        },
+        {
+            "id": 524,
+            "name": "El genocidio armenio",
+            "color": "White",
+            "extension": "2"
+        },
+        {
+            "id": 525,
+            "name": "Los pobres",
+            "color": "White",
+            "extension": "2"
+        },
+        {
+            "id": 526,
+            "name": "Pedirle un taxi",
+            "color": "White",
+            "extension": "2"
+        },
+        {
+            "id": 527,
+            "name": "El fuego a discreción",
+            "color": "White",
+            "extension": "2"
+        },
+        {
+            "id": 528,
+            "name": "Tener arena en los genitales",
+            "color": "White",
+            "extension": "2"
+        },
+        {
+            "id": 529,
+            "name": "Un telemarketer",
+            "color": "White",
+            "extension": "2"
+        },
+        {
+            "id": 530,
+            "name": "Una vasectomía",
+            "color": "White",
+            "extension": "2"
+        },
+        {
+            "id": 531,
+            "name": "Restos humanos",
+            "color": "White",
+            "extension": "2"
+        },
+        {
+            "id": 532,
+            "name": "Un somellier de dildos",
+            "color": "White",
+            "extension": "2"
+        },
+        {
+            "id": 533,
+            "name": "Moco, mucho moco",
+            "color": "White",
+            "extension": "2"
+        },
+        {
+            "id": 534,
+            "name": "Un apretón de manos huemdo",
+            "color": "White",
+            "extension": "2"
+        },
+        {
+            "id": 535,
+            "name": "Una fiesta fuera de control",
+            "color": "White",
+            "extension": "2"
+        },
+        {
+            "id": 536,
+            "name": "El sentimiento de culpa",
+            "color": "White",
+            "extension": "2"
+        },
+        {
+            "id": 537,
+            "name": "Subir la vara",
+            "color": "White",
+            "extension": "3"
+        },
+        {
+            "id": 538,
+            "name": "Un ataque de pánico",
+            "color": "White",
+            "extension": "3"
+        },
+        {
+            "id": 539,
+            "name": "El cuartito donde los asesinos seriales guardan las fotos de sus víctimas",
+            "color": "White",
+            "extension": "3"
+        },
+        {
+            "id": 540,
+            "name": "Un bombardeo con drones",
+            "color": "White",
+            "extension": "3"
+        },
+        {
+            "id": 541,
+            "name": "La violencia domestica",
+            "color": "White",
+            "extension": "3"
+        },
+        {
+            "id": 542,
+            "name": "Un coordinador de viaje de egresados",
+            "color": "White",
+            "extension": "3"
+        },
+        {
+            "id": 543,
+            "name": "El servicio secreto uruguayo",
+            "color": "White",
+            "extension": "3"
+        },
+        {
+            "id": 544,
+            "name": "Un nene llorando",
+            "color": "White",
+            "extension": "3"
+        },
+        {
+            "id": 545,
+            "name": "La dura y triste realidad",
+            "color": "White",
+            "extension": "3"
+        },
+        {
+            "id": 546,
+            "name": "Un juicio por alimentos",
+            "color": "White",
+            "extension": "3"
+        },
+        {
+            "id": 547,
+            "name": "El Espiritu Santo",
+            "color": "White",
+            "extension": "3"
+        },
+        {
+            "id": 548,
+            "name": "Dar un like sin querer",
+            "color": "White",
+            "extension": "3"
+        },
+        {
+            "id": 549,
+            "name": "Un velorio a cajón cerrado",
+            "color": "White",
+            "extension": "3"
+        },
+        {
+            "id": 550,
+            "name": "Circuncidarse de grande",
+            "color": "White",
+            "extension": "3"
+        },
+        {
+            "id": 551,
+            "name": "Un sordomudo",
+            "color": "White",
+            "extension": "3"
+        },
+        {
+            "id": 552,
+            "name": "Ser pecho frio",
+            "color": "White",
+            "extension": "3"
+        },
+        {
+            "id": 553,
+            "name": "Enterrar evidencias",
+            "color": "White",
+            "extension": "3"
+        },
+        {
+            "id": 554,
+            "name": "El zombie de Freddy Mercury",
+            "color": "White",
+            "extension": "3"
+        },
+        {
+            "id": 555,
+            "name": "Un cinturón de cuero",
+            "color": "White",
+            "extension": "3"
+        },
+        {
+            "id": 556,
+            "name": "La dentadura de la abuela",
+            "color": "White",
+            "extension": "3"
+        },
+        {
+            "id": 557,
+            "name": "Un puterío",
+            "color": "White",
+            "extension": "3"
+        },
+        {
+            "id": 558,
+            "name": "Vender poesía en el colectivo",
+            "color": "White",
+            "extension": "3"
+        },
+        {
+            "id": 559,
+            "name": "Sacarse el anillo de casamiento",
+            "color": "White",
+            "extension": "3"
+        },
+        {
+            "id": 560,
+            "name": "Media docena de huevos",
+            "color": "White",
+            "extension": "3"
+        },
+        {
+            "id": 561,
+            "name": "La comida para perros",
+            "color": "White",
+            "extension": "3"
+        },
+        {
+            "id": 562,
+            "name": "El olor a chivo",
+            "color": "White",
+            "extension": "3"
+        },
+        {
+            "id": 563,
+            "name": "El juguito que gotea de una bolsa de basura",
+            "color": "White",
+            "extension": "3"
+        },
+        {
+            "id": 564,
+            "name": "Una incubadora",
+            "color": "White",
+            "extension": "3"
+        },
+        {
+            "id": 565,
+            "name": "Un caso de gatillo fácil",
+            "color": "White",
+            "extension": "3"
+        },
+        {
+            "id": 566,
+            "name": "Los patovicas",
+            "color": "White",
+            "extension": "3"
+        },
+        {
+            "id": 567,
+            "name": "La capacidad de amar de un abogado",
+            "color": "White",
+            "extension": "3"
+        },
+        {
+            "id": 568,
+            "name": "Una oveja en baby doll",
+            "color": "White",
+            "extension": "3"
+        },
+        {
+            "id": 569,
+            "name": "El faso",
+            "color": "White",
+            "extension": "3"
+        },
+        {
+            "id": 570,
+            "name": "Despertar en el bondi cubierto de baba",
+            "color": "White",
+            "extension": "3"
+        },
+        {
+            "id": 571,
+            "name": "Despertar en el bondi cubierto de waska",
+            "color": "White",
+            "extension": "3"
+        },
+        {
+            "id": 572,
+            "name": "El celibato",
+            "color": "White",
+            "extension": "3"
+        },
+        {
+            "id": 573,
+            "name": "El gas pimienta",
+            "color": "White",
+            "extension": "3"
+        },
+        {
+            "id": 574,
+            "name": "Manosear el joystick",
+            "color": "White",
+            "extension": "3"
+        },
+        {
+            "id": 575,
+            "name": "La comunidad mapuche",
+            "color": "White",
+            "extension": "3"
+        },
+        {
+            "id": 576,
+            "name": "Los manteros",
+            "color": "White",
+            "extension": "3"
+        },
+        {
+            "id": 577,
+            "name": "Amigos con derechos",
+            "color": "White",
+            "extension": "3"
+        },
+        {
+            "id": 578,
+            "name": "Los de Jabad",
+            "color": "White",
+            "extension": "mia"
+        },
+        {
+            "id": 579,
+            "name": "La normativa de la Secretaria de Transporte ahora prohibe _____ en los aviones",
+            "color": "Black",
+            "extension": "Base",
+            "chances": 1
+        },
+        {
+            "id": 580,
+            "name": "Es una pena que hoy en dia los jovenes se estan metiendo con _____",
+            "color": "Black",
+            "extension": "Base",
+            "chances": 1
+        },
+        {
+            "id": 581,
+            "name": "En 1000 años, cuando el papel moneda sea una memoria distante, ____ va a ser nuestra moneda",
+            "color": "Black",
+            "extension": "Base",
+            "chances": 1
+        },
+        {
+            "id": 582,
+            "name": "La Asociacion de Futbol Argentino ha prohibido _____ por dar a los jugadores una ventaja injusta",
+            "color": "Black",
+            "extension": "Base",
+            "chances": 1
+        },
+        {
+            "id": 583,
+            "name": "¿Cual es el placer culposo de Batman?",
+            "color": "Black",
+            "extension": "Base",
+            "chances": 1
+        },
+        {
+            "id": 584,
+            "name": "Lo nuevo de JK Rowling: Harry Potter y la camara de _____",
+            "color": "Black",
+            "extension": "Base",
+            "chances": 1
+        },
+        {
+            "id": 585,
+            "name": "¿Que me traje de vuelta de Paraguay?",
+            "color": "Black",
+            "extension": "Base",
+            "chances": 1
+        },
+        {
+            "id": 586,
+            "name": "¿_____? Hay una app para eso",
+            "color": "Black",
+            "extension": "Base",
+            "chances": 1
+        },
+        {
+            "id": 587,
+            "name": "_____. A que no podes comer ni uno solo de esos.",
+            "color": "Black",
+            "extension": "Base",
+            "chances": 1
+        },
+        {
+            "id": 588,
+            "name": "¿Cual es mi sustituto para no usar drogas?",
+            "color": "Black",
+            "extension": "Base",
+            "chances": 1
+        },
+        {
+            "id": 589,
+            "name": "Cuando los EEUU y la URSS corrian la carrera espacial, el gobierno Argentino dedico millones de pesos a la investigacion de _____",
+            "color": "Black",
+            "extension": "Base",
+            "chances": 1
+        },
+        {
+            "id": 590,
+            "name": "En la nueva pelicula original de Disney Channel, Hannah Montana se enfrenta a _____ por primera vez",
+            "color": "Black",
+            "extension": "Base",
+            "chances": 1
+        },
+        {
+            "id": 591,
+            "name": "¿Cual es mi poder secreto?",
+            "color": "Black",
+            "extension": "Base",
+            "chances": 1
+        },
+        {
+            "id": 592,
+            "name": "¿Cual es la nueva dieta de moda?",
+            "color": "Black",
+            "extension": "Base",
+            "chances": 1
+        },
+        {
+            "id": 593,
+            "name": "¿Que comio Vin Diesel para la cena?",
+            "color": "Black",
+            "extension": "Base",
+            "chances": 1
+        },
+        {
+            "id": 594,
+            "name": "Cuando el Faraon se mantuvo en su postura, Moises llamo una Plaga de _____.",
+            "color": "Black",
+            "extension": "Base",
+            "chances": 1
+        },
+        {
+            "id": 595,
+            "name": "¿Que hago para mantener estable mi relacion amorosa?",
+            "color": "Black",
+            "extension": "Base",
+            "chances": 1
+        },
+        {
+            "id": 596,
+            "name": "¿Que es lo mas crujiente?",
+            "color": "Black",
+            "extension": "Base",
+            "chances": 1
+        },
+        {
+            "id": 597,
+            "name": "En la carcel de Devoto se dice que podes cambiar 200 cigarrillos por _____.",
+            "color": "Black",
+            "extension": "Base",
+            "chances": 1
+        },
+        {
+            "id": 598,
+            "name": "Despues del terremoto, Sean Penn llevo _____ a la gente de Haiti",
+            "color": "Black",
+            "extension": "Base",
+            "chances": 1
+        },
+        {
+            "id": 599,
+            "name": "Ahora, en vez de carbon, Papa Noel le da _____ a los chicos malos",
+            "color": "Black",
+            "extension": "Base",
+            "chances": 1
+        },
+        {
+            "id": 600,
+            "name": "La vida para los pueblos originarios cambio drasticamente cuando el hombre blanco les mostro _____",
+            "color": "Black",
+            "extension": "Base",
+            "chances": 1
+        },
+        {
+            "id": 601,
+            "name": "En sus momentos finales, Michael Jackson penso en _____",
+            "color": "Black",
+            "extension": "Base",
+            "chances": 1
+        },
+        {
+            "id": 602,
+            "name": "A la gente blanca le gusta _____",
+            "color": "Black",
+            "extension": "Base",
+            "chances": 1
+        },
+        {
+            "id": 603,
+            "name": "¿Por que me duele todo?",
+            "color": "Black",
+            "extension": "Base",
+            "chances": 1
+        },
+        {
+            "id": 604,
+            "name": "Una cena romantica a la luz de las velas estaria incompleta sin _____",
+            "color": "Black",
+            "extension": "Base",
+            "chances": 1
+        },
+        {
+            "id": 605,
+            "name": "¿Que llevaria en un viaje al pasado para convencer a la gente de que soy un poderoso hechicero?",
+            "color": "Black",
+            "extension": "Base",
+            "chances": 1
+        },
+        {
+            "id": 606,
+            "name": "La excursion del curso fue arruinada completamente por _____",
+            "color": "Black",
+            "extension": "Base",
+            "chances": 1
+        },
+        {
+            "id": 607,
+            "name": "¿Que es el mejor amigo de una chica?",
+            "color": "Black",
+            "extension": "Base",
+            "chances": 1
+        },
+        {
+            "id": 608,
+            "name": "Cuando sea Presidente de Argentina, voy a crear el Ministerio de _____",
+            "color": "Black",
+            "extension": "Base",
+            "chances": 1
+        },
+        {
+            "id": 609,
+            "name": "¿Que me estan escondiendo mis padres?",
+            "color": "Black",
+            "extension": "Base",
+            "chances": 1
+        },
+        {
+            "id": 610,
+            "name": "¿Que nunca falla para animar una fiesta?",
+            "color": "Black",
+            "extension": "Base",
+            "chances": 1
+        },
+        {
+            "id": 611,
+            "name": "¿Que mejora con la edad?",
+            "color": "Black",
+            "extension": "Base",
+            "chances": 1
+        },
+        {
+            "id": 612,
+            "name": "_________: Rico hasta la ultima gota",
+            "color": "Black",
+            "extension": "Base",
+            "chances": 1
+        },
+        {
+            "id": 613,
+            "name": "Tengo 99 problemas, pero _____ no es uno de ellos.",
+            "color": "Black",
+            "extension": "Base",
+            "chances": 1
+        },
+        {
+            "id": 614,
+            "name": "___________. It's a trap!",
+            "color": "Black",
+            "extension": "Base",
+            "chances": 1
+        },
+        {
+            "id": 615,
+            "name": "El nuevo Gran Hermano Famosos va a tener 8 famosos de segunda conviviendo con _____",
+            "color": "Black",
+            "extension": "Base",
+            "chances": 1
+        },
+        {
+            "id": 616,
+            "name": "¿Que encontraria la abuela perturbador, pero extrañamente encantador?",
+            "color": "Black",
+            "extension": "Base",
+            "chances": 1
+        },
+        {
+            "id": 617,
+            "name": "¿Que es lo mas emo?",
+            "color": "Black",
+            "extension": "Base",
+            "chances": 1
+        },
+        {
+            "id": 618,
+            "name": "Durante el sexo, me gusta pensar en _____.",
+            "color": "Black",
+            "extension": "Base",
+            "chances": 1
+        },
+        {
+            "id": 619,
+            "name": "¿Que termino con mi ultima relacion?",
+            "color": "Black",
+            "extension": "Base",
+            "chances": 1
+        },
+        {
+            "id": 620,
+            "name": "¿Que es ese ruido?",
+            "color": "Black",
+            "extension": "Base",
+            "chances": 1
+        },
+        {
+            "id": 621,
+            "name": "________. Asi me quiero morir",
+            "color": "Black",
+            "extension": "Base",
+            "chances": 1
+        },
+        {
+            "id": 622,
+            "name": "¿Por que estoy pegajoso?",
+            "color": "Black",
+            "extension": "Base",
+            "chances": 1
+        },
+        {
+            "id": 623,
+            "name": "¿Cual es el proximo juguete de la cajita feliz?",
+            "color": "Black",
+            "extension": "Base",
+            "chances": 1
+        },
+        {
+            "id": 624,
+            "name": "¿De que hay un monton en el cielo?",
+            "color": "Black",
+            "extension": "Base",
+            "chances": 1
+        },
+        {
+            "id": 625,
+            "name": "No se con que armas se luchara la Tercera Guerra Mundial, pero la cuarta se luchara con _____.",
+            "color": "Black",
+            "extension": "Base",
+            "chances": 1
+        },
+        {
+            "id": 626,
+            "name": "¿Que siempre lograra llevarte a la cama?",
+            "color": "Black",
+            "extension": "Base",
+            "chances": 1
+        },
+        {
+            "id": 627,
+            "name": "__________: Probado en niños, aprobado por madres.",
+            "color": "Black",
+            "extension": "Base",
+            "chances": 1
+        },
+        {
+            "id": 628,
+            "name": "¿Por que no me puedo dormir por las noches?",
+            "color": "Black",
+            "extension": "Base",
+            "chances": 1
+        },
+        {
+            "id": 629,
+            "name": "¿Que es ese olor?",
+            "color": "Black",
+            "extension": "Base",
+            "chances": 1
+        },
+        {
+            "id": 630,
+            "name": "¿Que ayuda a CFK a relajarse?",
+            "color": "Black",
+            "extension": "Base",
+            "chances": 1
+        },
+        {
+            "id": 631,
+            "name": "Asi termina el mundo, no con un bang, sino con _____.",
+            "color": "Black",
+            "extension": "Base",
+            "chances": 1
+        },
+        {
+            "id": 632,
+            "name": "Llega a la Calle Corrientes este verano, ______: El Musical.",
+            "color": "Black",
+            "extension": "Base",
+            "chances": 1
+        },
+        {
+            "id": 633,
+            "name": "Antropologos han descubierto recientemente a una tribu primitiva que adora _____",
+            "color": "Black",
+            "extension": "Base",
+            "chances": 1
+        },
+        {
+            "id": 634,
+            "name": "Pero antes de matarlo, Sr. Bond, debo mostrarle _____",
+            "color": "Black",
+            "extension": "Base",
+            "chances": 1
+        },
+        {
+            "id": 635,
+            "name": "Estudios muestran que las ratas de laboratorio recorren laberintos 50% mas rapido despues de ser expuestas a ______.",
+            "color": "Black",
+            "extension": "Base",
+            "chances": 1
+        },
+        {
+            "id": 636,
+            "name": "A continuacion en ESPN+: El torneo mundial de _____.",
+            "color": "Black",
+            "extension": "Base",
+            "chances": 1
+        },
+        {
+            "id": 637,
+            "name": "Cuando sea billonario, erigire una estatua de 15 metros de altura conmemorando ______.",
+            "color": "Black",
+            "extension": "Base",
+            "chances": 1
+        },
+        {
+            "id": 638,
+            "name": "Con la intencion de atraer mas publico, el Museo Nacional de Ciencias Naturales abrio una exhibicion interactiva de ______.",
+            "color": "Black",
+            "extension": "Base",
+            "chances": 1
+        },
+        {
+            "id": 639,
+            "name": "Yo me pregunto, ¿para que sirve la guerra?",
+            "color": "Black",
+            "extension": "Base",
+            "chances": 1
+        },
+        {
+            "id": 640,
+            "name": "¿Que me da gases incontrolables?",
+            "color": "Black",
+            "extension": "Base",
+            "chances": 1
+        },
+        {
+            "id": 641,
+            "name": "¿A que huele la gente mayor?",
+            "color": "Black",
+            "extension": "Base",
+            "chances": 1
+        },
+        {
+            "id": 642,
+            "name": "La medicina alternativa esta usando ahora las propiedades curativas de _____.",
+            "color": "Black",
+            "extension": "Base",
+            "chances": 1
+        },
+        {
+            "id": 643,
+            "name": "¿Que prefiere Francisco de Narvaez?",
+            "color": "Black",
+            "extension": "Base",
+            "chances": 1
+        },
+        {
+            "id": 644,
+            "name": "Durante el frecuentemente no tenido en cuenta Periodo Marron de Picasso, el produjo cientos de pinturas de _____.",
+            "color": "Black",
+            "extension": "Base",
+            "chances": 1
+        },
+        {
+            "id": 645,
+            "name": "¿Que no queres encontrar en tu comida China?",
+            "color": "Black",
+            "extension": "Base",
+            "chances": 1
+        },
+        {
+            "id": 646,
+            "name": "Tomo para olvidar _____.",
+            "color": "Black",
+            "extension": "Base",
+            "chances": 1
+        },
+        {
+            "id": 647,
+            "name": "_________. Choca los 5, papa.",
+            "color": "Black",
+            "extension": "Base",
+            "chances": 1
+        },
+        {
+            "id": 648,
+            "name": "Lo siento profesor, pero no pude completar mi tarea por _____.",
+            "color": "Black",
+            "extension": "Base",
+            "chances": 1
+        },
+        {
+            "id": 649,
+            "name": "¿Cual es el proximo duo de Superheroe/Ayudante? ",
+            "color": "Black",
+            "extension": "Base",
+            "chances": 1
+        },
+        {
+            "id": 650,
+            "name": "Si, yo mate a _____. ¿Como, preguntas? ______. ",
+            "color": "Black",
+            "extension": "Base",
+            "chances": 2
+        },
+        {
+            "id": 651,
+            "name": "Y el premio de la academia por ______ es para ________. ",
+            "color": "Black",
+            "extension": "Base",
+            "chances": 2
+        },
+        {
+            "id": 652,
+            "name": "Para mi proximo turno sacare ________ de ________. ",
+            "color": "Black",
+            "extension": "Base",
+            "chances": 2
+        },
+        {
+            "id": 653,
+            "name": "Paso 1: ____. Paso 2: _____. Paso 3: Ganancia. ",
+            "color": "Black",
+            "extension": "Base",
+            "chances": 2
+        },
+        {
+            "id": 654,
+            "name": "Cuando estaba volado con LSD, ____ se convirtio en _____. ",
+            "color": "Black",
+            "extension": "Base",
+            "chances": 2
+        },
+        {
+            "id": 655,
+            "name": "______ es un camino de ida a _____. ",
+            "color": "Black",
+            "extension": "Base",
+            "chances": 2
+        },
+        {
+            "id": 656,
+            "name": "En un mundo destrozado por _____, nuestro unico consuelo es ______. ",
+            "color": "Black",
+            "extension": "Base",
+            "chances": 2
+        },
+        {
+            "id": 657,
+            "name": "En la nueva pelicula de M. Night Shaymalan, Bruce Willis descubre que _____ era en realidad _____. ",
+            "color": "Black",
+            "extension": "Base",
+            "chances": 2
+        },
+        {
+            "id": 658,
+            "name": "Nunca entendi _____ hasta que me encontre con _____. ",
+            "color": "Black",
+            "extension": "Base",
+            "chances": 2
+        },
+        {
+            "id": 659,
+            "name": "El rumor dice que el plato preferido de Fernando De la Rua era ______ relleno de _____. ",
+            "color": "Black",
+            "extension": "Base",
+            "chances": 2
+        },
+        {
+            "id": 660,
+            "name": "E! True hollywood Story presenta ______: la historia de _____. ",
+            "color": "Black",
+            "extension": "Base",
+            "chances": 2
+        },
+        {
+            "id": 661,
+            "name": "______: hace que cada vez me cueste mas llegar a fin de mes.",
+            "color": "Black",
+            "extension": "Politica",
+            "chances": 1
+        },
+        {
+            "id": 662,
+            "name": "Hay un nuevo partido politico en Argentina: Juntos por ______.",
+            "color": "Black",
+            "extension": "Politica",
+            "chances": 1
+        },
+        {
+            "id": 663,
+            "name": "El Congreso lleva 10 dias seguidos debatiendo sobre ______.",
+            "color": "Black",
+            "extension": "Politica",
+            "chances": 1
+        },
+        {
+            "id": 664,
+            "name": "La izquierda tiene menos chances de ganar las elecciones que ______.",
+            "color": "Black",
+            "extension": "Politica",
+            "chances": 1
+        },
+        {
+            "id": 665,
+            "name": "Volvere y sere ______.",
+            "color": "Black",
+            "extension": "Politica",
+            "chances": 1
+        },
+        {
+            "id": 666,
+            "name": "En uno de los cuadernos de las coimas, habia un gasto de 500 lucas en ______.",
+            "color": "Black",
+            "extension": "Politica",
+            "chances": 1
+        },
+        {
+            "id": 667,
+            "name": "El proximo presidente va a ganar las elecciones con una campaña basada en ______.",
+            "color": "Black",
+            "extension": "Politica",
+            "chances": 1
+        },
+        {
+            "id": 668,
+            "name": "Soy incorruptible, excepto que me coimeen con ______.",
+            "color": "Black",
+            "extension": "Politica",
+            "chances": 1
+        },
+        {
+            "id": 669,
+            "name": "Reforma impositiva: polemica por el nuevo impuesto a ______.",
+            "color": "Black",
+            "extension": "Politica",
+            "chances": 1
+        },
+        {
+            "id": 670,
+            "name": "Estallo la revuelta social. La gente pide a gritos ______.",
+            "color": "Black",
+            "extension": "Politica",
+            "chances": 1
+        },
+        {
+            "id": 671,
+            "name": "Nunca me imagine que (nombra un jugador de la mesa) guardara ______ en la heladera.",
+            "color": "Black",
+            "extension": "2",
+            "chances": 1
+        },
+        {
+            "id": 672,
+            "name": "Pocos lo saben, pero cuando era joven al presidente lo arrestaron por ______.",
+            "color": "Black",
+            "extension": "2",
+            "chances": 1
+        },
+        {
+            "id": 673,
+            "name": "Este año en Gualeguaychu, gano una comparsa que eligio ______ como tema.",
+            "color": "Black",
+            "extension": "2",
+            "chances": 1
+        },
+        {
+            "id": 674,
+            "name": "URGENTE: ______ del presidente en la mira de la oposicion.",
+            "color": "Black",
+            "extension": "2",
+            "chances": 1
+        },
+        {
+            "id": 675,
+            "name": "Me hicieron el Test de Rorschach. Lo primero que vi fue ______.",
+            "color": "Black",
+            "extension": "2",
+            "chances": 1
+        },
+        {
+            "id": 676,
+            "name": "Y Dios dijo: \"Llenad la Tierra con ______ y sed felices\".",
+            "color": "Black",
+            "extension": "2",
+            "chances": 1
+        },
+        {
+            "id": 677,
+            "name": "En el primer guion de la pelicula Naufrago, en vez de una pelota Tom Hanks hablaba con ______.",
+            "color": "Black",
+            "extension": "2",
+            "chances": 1
+        },
+        {
+            "id": 678,
+            "name": "Cuando en una relacion aparece ______ siempre se complican las cosas.",
+            "color": "Black",
+            "extension": "2",
+            "chances": 1
+        },
+        {
+            "id": 679,
+            "name": "En mi galleta de la fortuna decia: \"Cuidado con ______\".",
+            "color": "Black",
+            "extension": "2",
+            "chances": 1
+        },
+        {
+            "id": 680,
+            "name": "El peor tema de conversacion para improvisar a alguien que te gusta es ______.",
+            "color": "Black",
+            "extension": "2",
+            "chances": 1
+        },
+        {
+            "id": 681,
+            "name": "Llega a la Argentina la teleonovela colombiana que esta batiendo todos los records: Pasion de ______.",
+            "color": "Black",
+            "extension": "3",
+            "chances": 1
+        },
+        {
+            "id": 682,
+            "name": "¿A que se parece (nombra a un jugador de la mesa)?",
+            "color": "Black",
+            "extension": "3",
+            "chances": 1
+        },
+        {
+            "id": 683,
+            "name": "¿Sabias que hoy es San ______?",
+            "color": "Black",
+            "extension": "3",
+            "chances": 1
+        },
+        {
+            "id": 684,
+            "name": "Entre los murales del Hospital de Niños, hay uno de ______.",
+            "color": "Black",
+            "extension": "3",
+            "chances": 1
+        },
+        {
+            "id": 685,
+            "name": "Tire de la cuerda de la muñeca y decia: \"Mi nombre es Poli y me gusta ______\".",
+            "color": "Black",
+            "extension": "3",
+            "chances": 1
+        },
+        {
+            "id": 686,
+            "name": "¿Cual es tu pecado, hijo mio?",
+            "color": "Black",
+            "extension": "3",
+            "chances": 1
+        },
+        {
+            "id": 687,
+            "name": "Me paro la policia y me pidio que abra el baul. Adentro encontraron restos de ______.",
+            "color": "Black",
+            "extension": "3",
+            "chances": 1
+        },
+        {
+            "id": 688,
+            "name": "Ya tiene media sancion el proyecto para cambiar el sol de la bandera argentina por ______.",
+            "color": "Black",
+            "extension": "3",
+            "chances": 1
+        },
+        {
+            "id": 689,
+            "name": "Inspirado en los tiempos que corren, la ONU presento su nuevo logo: ______.",
+            "color": "Black",
+            "extension": "3",
+            "chances": 1
+        },
+        {
+            "id": 690,
+            "name": "8 de cada 10 argentinos eligen ______.",
+            "color": "Black",
+            "extension": "3",
+            "chances": 1
+        }
+    ]
+}

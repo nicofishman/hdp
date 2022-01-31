@@ -1,14 +1,22 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './App';
+import AppProvider from './App';
 import reportWebVitals from './reportWebVitals';
+import { DndProvider } from 'react-dnd';
+import { MultiBackend } from 'react-dnd-multi-backend'
+import { HTML5toTouch } from 'rdndmb-html5-to-touch'
+import { GameProvider } from './Context/GameContext';
+import { DropProvider } from './Context/DropContext';
+import { DragProvider } from './Context/DragContext';
 
 ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-  document.getElementById('root')
+    <DndProvider backend={MultiBackend} options={HTML5toTouch}>
+        <GameProvider> <DropProvider> <DragProvider>
+            <AppProvider />
+        </DragProvider> </DropProvider> </GameProvider>
+    </DndProvider >,
+    document.getElementById('root')
 );
 
 // If you want to start measuring performance in your app, pass a function
