@@ -9,13 +9,19 @@ import { HTML5toTouch } from 'rdndmb-html5-to-touch'
 import { GameProvider } from './Context/GameContext';
 import { DropProvider } from './Context/DropContext';
 import { DragProvider } from './Context/DragContext';
+import { BrowserRouter } from 'react-router-dom';
+import { LanguageProvider } from 'Context/LanguageContext';
 
 ReactDOM.render(
-    <DndProvider backend={MultiBackend} options={HTML5toTouch}>
-        <GameProvider> <DropProvider> <DragProvider>
-            <AppProvider />
-        </DragProvider> </DropProvider> </GameProvider>
-    </DndProvider >,
+    <BrowserRouter>
+        <DndProvider backend={MultiBackend} options={HTML5toTouch}>
+            <GameProvider> <DropProvider> <DragProvider>
+                <LanguageProvider>
+                    <AppProvider />
+                </LanguageProvider>
+            </DragProvider> </DropProvider> </GameProvider>
+        </DndProvider >
+    </BrowserRouter>,
     document.getElementById('root')
 );
 

@@ -1,7 +1,7 @@
 import React from "react";
 import { Card } from "./Card";
-import { useGame } from "../Context/GameContext";
-import { useDragContext } from "../Context/DragContext";
+import { useGame } from "Context/GameContext";
+import { useDragContext } from "Context/DragContext";
 import Box from "@mui/material/Box";
 
 

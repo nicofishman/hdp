@@ -1,5 +1,5 @@
 import React from 'react';
-import logo from './Mono.png';
+import logo from 'Common/Mono.png';
 import { useDrag } from 'react-dnd';
 import { useEffect } from 'react';
 import { getEmptyImage } from 'react-dnd-html5-backend';
@@ -45,17 +45,39 @@ export const Card = (props) => {
                 transitionDuration: '0.5s',
                 userSelect: 'none',
                 display: isDragging ? 'none' : 'inline-block',
-                "&:hover": {
+                "&:hover": props.calledBy === 'Bottom' && {
                     transform: props.color === 'White' && 'translateY(-0.8em)',
                     cursor: props.color === 'White' && 'pointer'
                 },
             }}
             ref={drag}
         >
-            <Typography align={'left'} sx={{ p: 0.8, userSelect: 'none', fontWeight: 'bold', lineHeight: 1.2 }}>
+            <Typography
+                align={'left'}
+                sx={{
+                    p: 0.8,
+                    userSelect: 'none',
+                    fontFamily: '"Roboto","Helvetica","Arial",sans-serif;',
+                    fontWeight: 'bold',
+                    lineHeight: 1.2
+                }}
+            >
                 {props.name}
             </Typography>
-            <img src={logo} alt='logo' className='mono' />
+            <Box
+                component='img'
+                src={logo}
+                alt='Logo'
+                sx={{
+                    position: 'absolute',
+                    width: '4em',
+                    right: '0.4em',
+                    bottom: 0,
+                    userSelect: 'none'
+                }}
+            >
+
+            </Box>
         </Box>
     )
 }

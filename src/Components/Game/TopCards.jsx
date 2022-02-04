@@ -1,19 +1,39 @@
 import React from "react";
-import { Card } from "./Card"
-import '../App.css'
-import { useDropContext } from '../Context/DropContext';
-import { useGame } from "../Context/GameContext";
+import { Card } from "./Card";
+import { useDropContext } from 'Context/DropContext';
+import { useGame } from "Context/GameContext";
 import Grid from '@mui/material/Grid';
 import Divider from '@mui/material/Divider';
 import Box from "@mui/material/Box";
+import Badge from "@mui/material/Badge";
+import styled from '@mui/material/styles/styled';
 
 function TopCards(props) {
     const { drop } = useDropContext();
     const { blackCardTop, whiteTopCards } = useGame();
 
+    const StyledBadge = styled(Badge)(() => ({
+        '& .MuiBadge-badge': {
+            border: `2px solid white`,
+            padding: '0 4px',
+            minWidth: 30,
+            minHeight: 30,
+            fontSize: '1.1rem',
+            borderRadius: '50%',
+        },
+    }))
+
     return (
         <>
-            <Box className="top-cards" ref={drop}>
+            <Box
+                sx={{
+                    mt: 2,
+                    display: 'flex',
+                    flexDirection: 'row',
+                    justifyContent: 'center',
+                }}
+                ref={drop}
+            >
                 <Grid
                     container
                     columns={{ xs: 2, md: 6, lg: 12 }}
@@ -28,14 +48,16 @@ function TopCards(props) {
                         item
                         key={blackCardTop.id}
                     >
-                        <Card
-                            key={blackCardTop.id}
-                            color={blackCardTop.color}
-                            name={blackCardTop.name}
-                            extension={blackCardTop.extension}
-                            id={blackCardTop.id}
-                            draggable={false}
-                        />
+                        <StyledBadge badgeContent={blackCardTop.chances - whiteTopCards.length} color='primary'>
+                            <Card
+                                key={blackCardTop.id}
+                                color={blackCardTop.color}
+                                name={blackCardTop.name}
+                                extension={blackCardTop.extension}
+                                id={blackCardTop.id}
+                                draggable={false}
+                            />
+                        </StyledBadge>
                     </Grid>
                     {whiteTopCards.map((whiteCard) => {
                         return (
