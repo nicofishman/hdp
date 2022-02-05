@@ -2,8 +2,10 @@ import React from 'react';
 import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
 import { Text } from 'Languages/Text';
+import { useThemeContext } from 'Context/ThemeContext';
 
 function MenuButton({ text }) {
+    const { theme } = useThemeContext();
     return (
         <Box
             sx={{
@@ -20,7 +22,7 @@ function MenuButton({ text }) {
                 mb: 0.5,
                 textAlign: 'center',
                 whiteSpace: { lg: 'nowrap', xs: 'normal' },
-                bgcolor: "white",
+                bgcolor: theme.palette.background.default,
                 color: "black",
                 boxShadow: '0.2em 0.2em 0.5em #333',
                 userSelect: 'none',

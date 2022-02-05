@@ -1,15 +1,14 @@
 import React from "react";
 import { Route, Routes } from "react-router-dom";
-import { ThemeProvider } from "@mui/system";
-import { theme } from "Common/Theme";
 import Menu from "Components/Routes/Menu";
 import Game from "Components/Routes/Game";
+import { ThemeProvider } from 'Context/ThemeContext';
 //TODO: TERMINAR DE CORREGIR cartas.json. VOY POR EL ID 578
 //* VER USECONTEXT / REDUX
 
 export default function App() {
     return (
-        <ThemeProvider theme={theme}>
+        <ThemeProvider>
             <Routes>
                 <Route path='/' element={<Menu page="index" />} />
                 <Route path="/account" element={<Menu page="account" />} />

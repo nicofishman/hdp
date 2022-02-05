@@ -6,12 +6,13 @@ import MenuInput from 'Components/Menu/MenuInput';
 import MenuButtonIcon from 'Components/Menu/MenuButtonIcon';
 import SettingsIcon from '@mui/icons-material/Settings';
 import PersonIcon from '@mui/icons-material/Person';
-import { theme } from 'Common/Theme';
-import { uid } from 'react-uid';
+import { useThemeContext } from 'Context/ThemeContext';
+import Box from '@mui/material/Box';
 
 function MenuIndex() {
+    const { theme } = useThemeContext();
     return (
-        <>
+        <Box sx={{ bgcolor: theme.background }}>
             <Grid
                 container item
                 columnSpacing={{ xs: 1, md: 2, lg: 0 }}
@@ -71,7 +72,7 @@ function MenuIndex() {
                     </Link>
                 </Grid>
             </Grid>
-        </>
+        </Box>
     );
 }
 

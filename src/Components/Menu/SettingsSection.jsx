@@ -1,7 +1,9 @@
 import Box from '@mui/material/Box';
 import React from 'react';
+import { useThemeContext } from 'Context/ThemeContext';
 
 function SettingsSection({ children, sx = {} }) {
+    const { theme } = useThemeContext();
     return (
         <Box
             sx={{
@@ -18,8 +20,7 @@ function SettingsSection({ children, sx = {} }) {
                 mb: 0.5,
                 textAlign: 'center',
                 whiteSpace: { lg: 'nowrap', xs: 'normal' },
-                bgcolor: "white",
-                color: "black",
+                bgcolor: theme.palette.background.default,
                 boxShadow: '0.2em 0.2em 0.5em #333',
                 userSelect: 'none',
                 ...sx

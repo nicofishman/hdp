@@ -5,9 +5,11 @@ import { useNavigate } from 'react-router-dom';
 import SearchIcon from '@mui/icons-material/Search';
 import grey from '@mui/material/colors/grey';
 import { useLanguageContext } from 'Context/LanguageContext';
+import { useThemeContext } from 'Context/ThemeContext';
 
 function MenuInput({ text }) {
     const navigate = useNavigate();
+    const { theme } = useThemeContext();
 
     const languageContext = useLanguageContext();
     const placeholder = languageContext.dictionary[text] || text;
@@ -43,7 +45,7 @@ function MenuInput({ text }) {
                 mb: 0.5,
                 textAlign: 'center',
                 whiteSpace: { lg: 'nowrap', xs: 'normal' },
-                bgcolor: "white",
+                bgcolor: theme.palette.background.default,
                 color: "black",
                 boxShadow: '0.2em 0.2em 0.5em #333',
                 userSelect: 'none',

@@ -7,6 +7,7 @@ import Typography from '@mui/material/Typography';
 import Box from '@mui/material/Box';
 
 export const Card = (props) => {
+
     const [{ isDragging }, drag, dragPreview] = useDrag(() => ({
         type: props.color === 'White' ? 'white-card' : 'black-card',
         item: () => ({
@@ -59,7 +60,8 @@ export const Card = (props) => {
                     userSelect: 'none',
                     fontFamily: '"Roboto","Helvetica","Arial",sans-serif;',
                     fontWeight: 'bold',
-                    lineHeight: 1.2
+                    lineHeight: 1.2,
+                    color: props.color === 'White' ? "black" : "white",
                 }}
             >
                 {props.name}
