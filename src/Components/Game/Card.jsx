@@ -5,9 +5,10 @@ import { useEffect } from 'react';
 import { getEmptyImage } from 'react-dnd-html5-backend';
 import Typography from '@mui/material/Typography';
 import Box from '@mui/material/Box';
+import { useThemeContext } from 'Context/ThemeContext';
 
 export const Card = (props) => {
-
+    const { theme } = useThemeContext();
     const [{ isDragging }, drag, dragPreview] = useDrag(() => ({
         type: props.color === 'White' ? 'white-card' : 'black-card',
         item: () => ({
@@ -42,7 +43,7 @@ export const Card = (props) => {
                 overflowWrap: 'break-word',
                 bgcolor: props.color === 'White' ? "white" : "black",
                 color: props.color === 'White' ? "black" : "white",
-                boxShadow: '0.2em 0.2em 0.5em #333',
+                boxShadow: `0.2em 0.2em 0.5em ${theme.palette.mode === 'light' ? '#333' : '#666'}`,
                 transitionDuration: '0.5s',
                 userSelect: 'none',
                 display: isDragging ? 'none' : 'inline-block',

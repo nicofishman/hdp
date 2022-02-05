@@ -1,8 +1,11 @@
 import Grid from '@mui/material/Grid';
 import React from 'react';
-import { ReactComponent as Logo } from 'Common/Logo.svg';
+import { ReactComponent as LogoLight } from 'Common/LogoLight.svg';
+import { ReactComponent as LogoDark } from 'Common/LogoDark.svg';
+import { useThemeContext } from 'Context/ThemeContext';
 
 function MenuLogo() {
+    const { theme } = useThemeContext();
     return (
         <Grid
             container item
@@ -15,7 +18,7 @@ function MenuLogo() {
             flexDirection={'column'}
         >
             <Grid item sx={{ width: '100%', maxWidth: '35em', userSelect: 'none' }}>
-                <Logo />
+                {theme.palette.mode === 'light' ? <LogoLight /> : <LogoDark />}
             </Grid>
         </Grid >
     );

@@ -24,7 +24,7 @@ function MenuButton({ text }) {
                 whiteSpace: { lg: 'nowrap', xs: 'normal' },
                 bgcolor: theme.palette.background.default,
                 color: "black",
-                boxShadow: '0.2em 0.2em 0.5em #333',
+                boxShadow: `0.2em 0.2em 0.5em ${theme.palette.mode === 'light' ? '#333' : '#666'}`,
                 userSelect: 'none',
             }}>
             <Typography

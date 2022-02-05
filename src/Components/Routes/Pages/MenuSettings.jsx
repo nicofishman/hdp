@@ -25,6 +25,7 @@ function MenuSettings() {
     let toggleSwitch = !!JSON.parse(localStorage.getItem('colorMode'));
     console.log('switch', toggleSwitch)
     useEffect(() => {
+        // eslint-disable-next-line react-hooks/exhaustive-deps
         toggleSwitch = JSON.parse(localStorage.getItem('colorMode'));
         console.log(theme.palette.mode)
     }, []);
@@ -89,7 +90,7 @@ function MenuSettings() {
                                 textAlign: 'center',
                                 whiteSpace: { lg: 'nowrap', xs: 'normal' },
                                 bgcolor: theme.palette.background.default,
-                                boxShadow: '0.2em 0.2em 0.5em #333',
+                                boxShadow: `0.2em 0.2em 0.5em ${theme.palette.mode === 'light' ? '#333' : '#666'}`,
                                 userSelect: 'none',
                             }}
                         >

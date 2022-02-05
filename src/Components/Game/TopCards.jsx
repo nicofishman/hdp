@@ -20,6 +20,7 @@ function TopCards(props) {
             minHeight: 30,
             fontSize: '1.1rem',
             borderRadius: '50%',
+            color: 'white',
         },
     }))
 
@@ -48,7 +49,7 @@ function TopCards(props) {
                         item
                         key={blackCardTop.id}
                     >
-                        <StyledBadge badgeContent={blackCardTop.chances - whiteTopCards.length} color='primary'>
+                        <StyledBadge badgeContent={blackCardTop.chances - whiteTopCards.length} color='primary' >
                             <Card
                                 key={blackCardTop.id}
                                 color={blackCardTop.color}
