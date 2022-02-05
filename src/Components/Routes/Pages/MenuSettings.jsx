@@ -80,7 +80,7 @@ function MenuSettings() {
                                 justifyContent: 'center',
                                 alignItems: 'center',
                                 height: 90,
-                                width: 270,
+                                width: 250,
                                 maxWidth: '51vw',
                                 border: '1px solid #666',
                                 borderRadius: 3,
