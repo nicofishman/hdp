@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { useLanguageContext } from 'Context/LanguageContext';
 import Input from '@mui/material/Input';
 import SettingsSection from './SettingsSection';
