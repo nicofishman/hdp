@@ -20,6 +20,7 @@ function MenuButtonIcon({ children, sx = {} }) {
             "&:hover": {
                 cursor: 'pointer',
             },
+            ...sx
         }}>
             {children}
         </Box>

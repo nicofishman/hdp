@@ -1,31 +1,17 @@
 import React from 'react';
-import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
 import { Text } from 'Languages/Text';
-import { useThemeContext } from 'Context/ThemeContext';
+import SettingsSection from 'Components/Menu/SettingsSection';
 
-function MenuButton({ text }) {
-    const { theme } = useThemeContext();
+function MenuButton({ text, sx = {}, onClick = null }) {
     return (
-        <Box
+        <SettingsSection
+            onClick={onClick}
             sx={{
-                display: 'flex',
-                justifyContent: 'center',
-                alignItems: 'center',
-                height: 90,
-                width: 275,
-                minWidth: '51%',
-                border: '1px solid #666',
-                borderRadius: 3,
-                padding: 1,
-                mr: 0.5,
-                mb: 0.5,
-                textAlign: 'center',
-                whiteSpace: { lg: 'nowrap', xs: 'normal' },
-                bgcolor: theme.palette.background.default,
-                color: "black",
-                boxShadow: `0.2em 0.2em 0.5em ${theme.palette.mode === 'light' ? '#333' : '#666'}`,
-                userSelect: 'none',
+                "&:hover": {
+                    cursor: 'pointer',
+                },
+                ...sx
             }}>
             <Typography
                 align={'center'}
@@ -36,12 +22,15 @@ function MenuButton({ text }) {
                     lineHeight: 1.2,
                     textTransform: 'uppercase',
                     fontSize: 40,
+                    transition: 'letter-spacing 0.2s ease',
+                    "&:hover": {
+                        letterSpacing: '0.05em',
+                    }
                 }}
             >
                 <Text tid={text} />
             </Typography>
-
-        </Box >
+        </SettingsSection >
     )
 }
 

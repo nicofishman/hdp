@@ -2,16 +2,17 @@ import Box from '@mui/material/Box';
 import React from 'react';
 import { useThemeContext } from 'Context/ThemeContext';
 
-function SettingsSection({ children, sx = {} }) {
+function SettingsSection({ children, sx = {}, onClick = null }) {
     const { theme } = useThemeContext();
     return (
         <Box
+            onClick={onClick}
             sx={{
                 display: 'flex',
                 justifyContent: 'center',
                 alignItems: 'center',
                 height: 90,
-                width: 250,
+                width: 300,
                 maxWidth: '51vw',
                 border: '1px solid #666',
                 borderRadius: 3,

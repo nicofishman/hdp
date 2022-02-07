@@ -1,5 +1,9 @@
 {
     "crear": "Crear Juego",
     "buscar": "Buscar Juego",
-    "ajustes": "Ajustes"
+    "ajustes": "Ajustes",
+    "cuenta": "Cuenta",
+    "email": "Email",
+    "contrasena": "Contraseña",
+    "ingresar": "Ingresar"
 }

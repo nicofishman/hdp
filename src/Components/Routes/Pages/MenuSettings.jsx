@@ -30,7 +30,6 @@ function MenuSettings() {
         console.log(theme.palette.mode)
     }, []);
 
-
     return (
         <Box sx={{ bgColor: theme.palette.background.default }}>
             <Grid
@@ -45,14 +44,14 @@ function MenuSettings() {
                 direction={'column'}
             >
                 <Grid container item direction={'row'} justifyContent={'center'}>
-                    <Link to='/' style={{ justifyContent: 'center', textDecoration: 'none', }}>
+                    <Link to='/' style={{ justifyContent: 'center', textDecoration: 'none', alignItems: 'center' }}>
                         <SettingsSection sx={{
                             height: 40,
                             "&:hover .settings": {
                                 transform: 'translateX(-2px)',
                             }
                         }}>
-                            <Typography>
+                            <Typography sx={{ mt: 0.5 }}>
                                 <ArrowBackIcon className='settings' sx={{ mr: 'auto', ml: 2, transition: 'transform 0.2s ease' }} />
                             </Typography>
                             <Typography sx={{ justifyContent: 'center', flex: 1, fontSize: 25, mr: 4 }}><Text tid="ajustes" /></Typography>
@@ -80,7 +79,7 @@ function MenuSettings() {
                                 justifyContent: 'center',
                                 alignItems: 'center',
                                 height: 90,
-                                width: 250,
+                                width: 300,
                                 maxWidth: '51vw',
                                 border: '1px solid #666',
                                 borderRadius: 3,

@@ -4,6 +4,7 @@ import MenuLogo from 'Components/Menu/MenuLogo';
 import MenuIndex from 'Components/Routes/Pages/MenuIndex';
 import MenuSettings from 'Components/Routes/Pages/MenuSettings';
 import MenuAccount from './Pages/MenuAccount';
+import { AccountProvider } from 'Context/AccountContext';
 
 function Menu({ page }) {
     return (
@@ -17,7 +18,7 @@ function Menu({ page }) {
                 transform: { lg: 'translateX(50%)', xs: 'translateX(0)' },
             }}>
                 <MenuLogo />
-                {page === 'index' ? <MenuIndex /> : page === 'account' ? <MenuAccount /> : page === 'settings' ? <MenuSettings /> : null}
+                {page === 'index' ? <MenuIndex /> : page === 'account' ? <AccountProvider><MenuAccount /></AccountProvider> : page === 'settings' ? <MenuSettings /> : null}
             </Grid >
         </>
     );

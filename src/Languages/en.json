@@ -1,5 +1,9 @@
 {
     "crear": "Create Game",
     "buscar": "Search Game",
-    "ajustes": "Settings"
+    "ajustes": "Settings",
+    "cuenta": "Account",
+    "email": "Email",
+    "contrasena": "Password",
+    "ingresar": "Login"
 }

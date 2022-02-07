@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import MenuButton from 'Components/Menu/MenuButton';
 import Grid from '@mui/material/Grid';
-import MenuInput from 'Components/Menu/MenuInput';
+import SearchGame from 'Components/Menu/SearchGame';
 import MenuButtonIcon from 'Components/Menu/MenuButtonIcon';
 import SettingsIcon from '@mui/icons-material/Settings';
 import PersonIcon from '@mui/icons-material/Person';
@@ -25,11 +25,14 @@ function MenuIndex() {
             >
                 <Grid item>
                     <Link to="/game/hdp" style={{ textDecoration: 'none' }}>
-                        <MenuButton text='crear'></MenuButton>
+                        <MenuButton text='crear' sx={{
+                            width: 275,
+                            minWidth: '51%',
+                        }}></MenuButton>
                     </Link>
                 </Grid>
                 <Grid item>
-                    <MenuInput text='buscar'></MenuInput>
+                    <SearchGame text='buscar'></SearchGame>
                 </Grid>
             </Grid>
             <Grid
