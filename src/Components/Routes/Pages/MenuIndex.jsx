@@ -25,14 +25,14 @@ function MenuIndex() {
             >
                 <Grid item>
                     <Link to="/game/hdp" style={{ textDecoration: 'none' }}>
-                        <MenuButton text='crear' sx={{
+                        <MenuButton text='create' sx={{
                             width: 275,
                             maxWidth: null,
                         }}></MenuButton>
                     </Link>
                 </Grid>
                 <Grid item>
-                    <SearchGame text='buscar'></SearchGame>
+                    <SearchGame text='search'></SearchGame>
                 </Grid>
             </Grid>
             <Grid

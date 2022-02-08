@@ -11,6 +11,7 @@ const FirebaseContext = createContext(undefined);
 
 export function FirebaseProvider(props) {
     const { userLanguage } = useLanguageContext()
+    const [alertTrigger, setAlertTrigger] = useState(false);
 
     const firebaseApp = initializeApp({
         apiKey: process.env.REACT_APP_apiKey,
@@ -106,6 +107,13 @@ export function FirebaseProvider(props) {
         }).then(() => {
             setUser({ ...user, displayName: displayName });
         });
+        if (alertTrigger) { return }
+        else {
+            setAlertTrigger(true);
+            // setTimeout(() => { //Se borra la alerta después de 5 segundos
+            //     setAlertTrigger(false);
+            // }, 5000);
+        }
     }
 
     const value = useMemo(() => {
@@ -117,8 +125,10 @@ export function FirebaseProvider(props) {
             signInWithGoogle,
             signInWithTwitter,
             changeDisplayName,
+            alertTrigger,
+            setAlertTrigger
         });
-    }, [auth, logOut, user]);
+    }, [auth, logOut, user, alertTrigger]);
     return <FirebaseContext.Provider value={value} {...props} />
 }
 

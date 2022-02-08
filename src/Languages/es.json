@@ -1,11 +1,13 @@
 {
-    "crear": "Crear Juego",
-    "buscar": "Buscar Juego",
-    "ajustes": "Ajustes",
-    "cuenta": "Cuenta",
+    "create": "Crear Juego",
+    "search": "Buscar Juego",
+    "settings": "Ajustes",
+    "account": "Cuenta",
     "email": "Email",
-    "contrasena": "Contraseña",
-    "ingresar": "Ingresar",
-    "cambiarnombre": "Cambiar Nombre",
-    "salir": "Salir"
+    "password": "Contraseña",
+    "login": "Ingresar",
+    "changename": "Cambiar Nombre",
+    "logout": "Salir",
+    "updateusername": "Nombre de usuario actualizado.",
+    "numbercardserror": "Por favor poné todas las cartas habilitadas en la mesa"
 }

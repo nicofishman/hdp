@@ -8,26 +8,28 @@ import { useParams } from 'react-router-dom';
 
 function Game() {
     const { gameId } = useParams();
-    return <Box
-        sx={{
-            margin: "2% auto",
-        }}
-    >
-        <Top></Top>
+    return (
         <Box
             sx={{
-                display: "flex",
-                flexDirection: "column",
-                flexWrpa: "wrap",
-                justifyContent: "center",
-                textAlign: "center",
+                margin: "2% auto",
             }}
         >
-            <TopCards />
-            <BottomCards />
-            <CustomDragLayer />
+            <Top></Top>
+            <Box
+                sx={{
+                    display: "flex",
+                    flexDirection: "column",
+                    flexWrpa: "wrap",
+                    justifyContent: "center",
+                    textAlign: "center",
+                }}
+            >
+                <TopCards />
+                <BottomCards />
+                <CustomDragLayer />
+            </Box>
         </Box>
-    </Box>;
+    );
 }
 
 export default Game;

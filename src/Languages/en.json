@@ -1,11 +1,13 @@
 {
-    "crear": "Create Game",
-    "buscar": "Search Game",
-    "ajustes": "Settings",
-    "cuenta": "Account",
+    "create": "Create Game",
+    "search": "Search Game",
+    "settings": "Settings",
+    "account": "Account",
     "email": "Email",
-    "contrasena": "Password",
-    "ingresar": "Login",
-    "cambiarnombre": "Change Name",
-    "salir": "Log out"
+    "password": "Password",
+    "login": "Login",
+    "changename": "Change Name",
+    "logout": "Log out",
+    "updateusername": "Username updated successfully",
+    "numbercardserror": "Please drag all available cards to the game board"
 }

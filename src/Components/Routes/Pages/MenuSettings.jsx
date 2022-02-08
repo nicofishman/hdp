@@ -54,7 +54,7 @@ function MenuSettings() {
                             <Typography sx={{ mt: 0.5 }}>
                                 <ArrowBackIcon className='settings' sx={{ mr: 'auto', ml: 2, transition: 'transform 0.2s ease' }} />
                             </Typography>
-                            <Typography sx={{ justifyContent: 'center', flex: 1, fontSize: 25, mr: 4 }}><Text tid="ajustes" /></Typography>
+                            <Typography sx={{ justifyContent: 'center', flex: 1, fontSize: 25, mr: 4 }}><Text tid="settings" /></Typography>
                         </SettingsSection>
                     </Link>
                 </Grid>
