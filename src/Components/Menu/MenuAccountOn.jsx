@@ -1,16 +1,26 @@
+import React, { useEffect } from 'react';
 import { Grid } from '@mui/material';
 import Typography from '@mui/material/Typography';
 import { useFirebaseContext } from 'Context/FirebaseContext';
-import React from 'react';
 import { Link } from 'react-router-dom';
 import MenuButton from './MenuButton';
 import SettingsSection from './SettingsSection';
 import ArrowBackIcon from '@mui/icons-material/ArrowBackIos';
+import MenuButtonIcon from './MenuButtonIcon';
+import { useThemeContext } from 'Context/ThemeContext';
+import ChangeName from './ChangeName';
+import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
 import { Text } from 'Languages/Text';
-import PersonIcon from '@mui/icons-material/Person';
+import { useAccountContext } from 'Context/AccountContext';
 
 function MenuAccountOn() {
-    const { user, logOut } = useFirebaseContext();
+    const { user, logOut, changeDisplayName } = useFirebaseContext();
+    const { changeName } = useAccountContext();
+    const { theme } = useThemeContext()
+    const displayName = user.displayName;
+    useEffect(() => {
+        console.log('displ', user.displayName);
+    }, [user.displayName])
     return (
         <Grid
             container item
@@ -25,25 +35,43 @@ function MenuAccountOn() {
         >
             <Grid container item direction={'row'} justifyContent={'center'}>
                 <Link to='/' style={{ justifyContent: 'center', textDecoration: 'none', alignItems: 'center' }}>
-                    <SettingsSection sx={{
-                        height: 40,
-                        width: 300,
+                    <MenuButtonIcon sx={{
+                        color: theme.palette.mode === 'light' ? '#000' : '#fff',
+                        width: 60,
+                        height: 60,
+                        borderRadius: 3,
                         "&:hover .settings": {
                             transform: 'translateX(-2px)',
                         }
-                    }}>
-                        <Typography sx={{ mt: 0.5 }}>
-                            <ArrowBackIcon className='settings' sx={{ mr: 'auto', ml: 2, transition: 'transform 0.2s ease' }} />
-                        </Typography>
-                        <Typography sx={{ justifyContent: 'center', flex: 1, fontSize: 25, mr: 4 }}><Text tid="cuenta" /></Typography>
-                    </SettingsSection>
+                    }}
+                    >
+                        <ArrowBackIcon className='settings' sx={{ mr: 'auto', ml: 2.75, transition: 'transform 0.2s ease' }} />
+                    </MenuButtonIcon>
                 </Link>
+                <SettingsSection sx={{ height: 60, width: 220, ml: 2 }}>
+                    {/* <PersonIcon sx={{ fontSize: 55, minWidth: 40 }}></PersonIcon> */}
+                    <Typography sx={{ textOverflow: 'ellipsis' }}>{!(displayName) ? user.email.split('@')[0] : displayName}</Typography>
+                </SettingsSection>
+            </Grid>
+            <Grid container item direction={'row'} justifyContent={'center'} mr={25} mb={-3}>
+                <Typography><Text tid="cambiarnombre"></Text></Typography>
             </Grid>
             <Grid container item direction={'row'} justifyContent={'center'}>
-                <SettingsSection sx={{ height: 60 }}>
-                    <PersonIcon sx={{ fontSize: 60, ml: 1 }}></PersonIcon>
-                    <Typography sx={{ flex: 1, mr: 7, textOverflow: 'ellipsis' }}>{!(user.displayName) ? user.email.split('@')[0] : user.displayName}</Typography>
-                </SettingsSection>
+                <ChangeName placeholder={displayName} sx={{ height: 60, width: 220, mr: 2 }}></ChangeName>
+                <MenuButtonIcon
+                    onClick={() => { changeDisplayName(changeName) }}
+                    sx={{
+                        color: theme.palette.mode === 'light' ? '#000' : '#fff',
+                        width: 60,
+                        height: 60,
+                        borderRadius: 3,
+                        "&:hover .settings": {
+                            transform: 'translateX(2px)',
+                        }
+                    }}
+                >
+                    <ArrowForwardIosIcon className='settings' sx={{ mr: 'auto', ml: 2.75, transition: 'transform 0.2s ease' }} />
+                </MenuButtonIcon>
             </Grid>
             <Grid container item direction={'row'} justifyContent={'center'}>
                 <MenuButton text="salir" onClick={() => logOut()}></MenuButton>

@@ -69,7 +69,7 @@ function MenuSignUp() {
 
             >
                 <MenuButtonIcon sx={{ ml: 1, mr: 1, width: 70, height: 70, }} onClick={signInWithGoogle}><GoogleIcon sx={{ fontSize: 65 }} /></MenuButtonIcon>
-                <MenuButtonIcon sx={{ ml: 1, mr: 1, width: 70, height: 70, }}><TwitterIcon sx={{ fontSize: 65 }} /></MenuButtonIcon>
+                <MenuButtonIcon sx={{ ml: 1, mr: 1, width: 70, height: 70, }} onClick={signInWithTwitter}><TwitterIcon sx={{ fontSize: 65 }} /></MenuButtonIcon>
             </Grid>
             <Grid
                 container item
@@ -85,7 +85,7 @@ function MenuSignUp() {
             </Grid>
             <Grid container item justifyContent={'center'} mt={-2}>
                 <AccountInput name="password" text="contrasena" type={passwordShown ? 'text' : 'password'}
-                    endAronment={
+                    endAdornment={
                         passwordShown ?
                             <Visibility onClick={() => setPasswordShown(!passwordShown)} sx={{ "&:hover": { cursor: 'pointer' }, }} /> :
                             <VisibilityOff onClick={() => setPasswordShown(!passwordShown)} sx={{ "&:hover": { cursor: 'pointer' }, }} />

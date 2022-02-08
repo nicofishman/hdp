@@ -5,5 +5,7 @@
     "cuenta": "Cuenta",
     "email": "Email",
     "contrasena": "Contraseña",
-    "ingresar": "Ingresar"
+    "ingresar": "Ingresar",
+    "cambiarnombre": "Cambiar Nombre",
+    "salir": "Salir"
 }

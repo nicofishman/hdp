@@ -11,10 +11,14 @@ function MenuButton({ text, sx = {}, onClick = null }) {
                 "&:hover": {
                     cursor: 'pointer',
                 },
+                "&:hover .children": {
+                    letterSpacing: '0.05em',
+                },
                 ...sx
             }}>
             <Typography
                 align={'center'}
+                className='children'
                 sx={{
                     p: 0.8,
                     userSelect: 'none',
@@ -23,9 +27,6 @@ function MenuButton({ text, sx = {}, onClick = null }) {
                     textTransform: 'uppercase',
                     fontSize: 40,
                     transition: 'letter-spacing 0.2s ease',
-                    "&:hover": {
-                        letterSpacing: '0.05em',
-                    }
                 }}
             >
                 <Text tid={text} />

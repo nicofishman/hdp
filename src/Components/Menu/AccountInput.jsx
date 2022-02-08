@@ -4,7 +4,7 @@ import Input from '@mui/material/Input';
 import SettingsSection from './SettingsSection';
 import { useAccountContext } from 'Context/AccountContext';
 
-function AccountInput({ text, type = 'text', sx = {}, endAronment = null, name = "" }) {
+function AccountInput({ text, type = 'text', sx = {}, endAdornment = null, name = "" }) {
     const languageContext = useLanguageContext();
     const placeholder = languageContext.dictionary[text] || text;
 
@@ -29,7 +29,7 @@ function AccountInput({ text, type = 'text', sx = {}, endAronment = null, name =
                     width: 280,
                     fontSize: 40
                 }}
-                endAdornment={endAronment}
+                endAdornment={endAdornment}
             />
         </SettingsSection>
     );

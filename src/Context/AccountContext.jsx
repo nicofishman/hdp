@@ -1,12 +1,15 @@
 import React, { useContext, useMemo, useState } from "react";
+import { useFirebaseContext } from "./FirebaseContext";
 
 
 
 const AccountContext = React.createContext(undefined);
 
 export function AccountProvider(props) {
+    const { user } = useFirebaseContext();
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
+    const [changeName, setChangeName] = useState(user.displayName);
 
 
     const value = useMemo(() => {
@@ -15,8 +18,10 @@ export function AccountProvider(props) {
             password,
             setEmail,
             setPassword,
+            changeName,
+            setChangeName,
         })
-    }, [email, password]);
+    }, [email, password, changeName]);
     return <AccountContext.Provider value={value} {...props} />
 }
 

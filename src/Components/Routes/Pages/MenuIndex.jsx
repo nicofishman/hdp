@@ -27,7 +27,7 @@ function MenuIndex() {
                     <Link to="/game/hdp" style={{ textDecoration: 'none' }}>
                         <MenuButton text='crear' sx={{
                             width: 275,
-                            minWidth: '51%',
+                            maxWidth: null,
                         }}></MenuButton>
                     </Link>
                 </Grid>

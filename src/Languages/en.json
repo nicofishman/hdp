@@ -5,5 +5,7 @@
     "cuenta": "Account",
     "email": "Email",
     "contrasena": "Password",
-    "ingresar": "Login"
+    "ingresar": "Login",
+    "cambiarnombre": "Change Name",
+    "salir": "Log out"
 }

@@ -87,7 +87,6 @@ export function FirebaseProvider(props) {
             await updateProfile(auth.currentUser, {
                 displayName: email.split('@')[0]
             })
-            console.log(user);
         } catch (error) {
             if (error.code === FirebaseErrors.emailInUse) {
                 console.log('Email in use');
@@ -101,6 +100,14 @@ export function FirebaseProvider(props) {
         console.log('logged out');
     }
 
+    const changeDisplayName = async (displayName) => {
+        await updateProfile(auth.currentUser, {
+            displayName: displayName
+        }).then(() => {
+            setUser({ ...user, displayName: displayName });
+        });
+    }
+
     const value = useMemo(() => {
         return ({
             signInWithEmailAndPassword,
@@ -109,6 +116,7 @@ export function FirebaseProvider(props) {
             logOut,
             signInWithGoogle,
             signInWithTwitter,
+            changeDisplayName,
         });
     }, [auth, logOut, user]);
     return <FirebaseContext.Provider value={value} {...props} />
