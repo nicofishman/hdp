@@ -14,7 +14,7 @@ export const Card = (props) => {
         item: () => ({
             id: props.id,
             color: props.color,
-            name: props.name,
+            text: props.text,
             extension: props.extension
         }),
         collect: (monitor) => ({
@@ -65,7 +65,7 @@ export const Card = (props) => {
                     color: props.color === 'White' ? "black" : "white",
                 }}
             >
-                {props.name}
+                {props.text}
             </Typography>
             <Box
                 component='img'

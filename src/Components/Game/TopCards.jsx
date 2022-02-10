@@ -49,11 +49,11 @@ function TopCards(props) {
                         item
                         key={blackCardTop.id}
                     >
-                        <StyledBadge badgeContent={blackCardTop.chances - whiteTopCards.length} color='primary' >
+                        <StyledBadge badgeContent={blackCardTop.pick - whiteTopCards.length} color='primary' >
                             <Card
                                 key={blackCardTop.id}
                                 color={blackCardTop.color}
-                                name={blackCardTop.name}
+                                text={blackCardTop.text}
                                 extension={blackCardTop.extension}
                                 id={blackCardTop.id}
                                 draggable={false}
@@ -70,7 +70,7 @@ function TopCards(props) {
                                     calledBy={"Top"}
                                     key={whiteCard.id}
                                     color={whiteCard.color}
-                                    name={whiteCard.name}
+                                    text={whiteCard.text}
                                     extension={whiteCard.extension}
                                     id={whiteCard.id}
                                     draggable={false}

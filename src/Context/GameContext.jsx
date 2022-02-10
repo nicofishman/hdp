@@ -1,22 +1,26 @@
 import React, { useEffect, useState, useContext, useMemo, createContext } from 'react';
-import cartas from '../Cartas/cartas.json';
+import cartas_en from '../Cartas/cartas_en.json';
+import cartas_es from '../Cartas/cartas_es.json';
 import consts from '../utils/consts';
+import { useLanguageContext } from './LanguageContext';
 
 
 const GameContext = createContext(undefined);
 
 //Mezclar cartas
-function getCardsShuffled() {
-    return cartas.cartas.sort((a, b) => 0.5 - Math.random());
+function getCardsShuffled(array) {
+    return array.sort((a, b) => 0.5 - Math.random());
 }
 
 //Inicia el juego: genera los mazos negro y blanco
-function initializeGame() {
-    const whiteCards = [];
-    const blackCards = [];
-    getCardsShuffled().map(card => {
-        return card.color === 'White' ? whiteCards.push(card) : card.color === 'Black' ? blackCards.push(card) : null;
-    });
+function initializeGame(lang) {
+    console.log('lang', lang)
+    const cartas = lang === 'es' ? cartas_es : lang === 'en' ? cartas_en : undefined
+    const whiteCards = getCardsShuffled(cartas.whiteCards);
+    const blackCards = getCardsShuffled(cartas.blackCards);
+    // getCardsShuffled().map(card => {
+    //     return card.color === 'White' ? whiteCards.push(card) : card.color === 'Black' ? blackCards.push(card) : null;
+    // });
     // console.log(whiteCards);
     return [whiteCards, blackCards];
 }
@@ -27,7 +31,7 @@ export function GameProvider(props) {
 
     const submit = () => {
         //Si la cantidad de cartas no es la indicada, tira una alerta
-        if (whiteTopCards.length !== blackCardTop.chances) {
+        if (whiteTopCards.length !== blackCardTop.pick) {
             if (alertFade) {
                 return
             } else {
@@ -58,7 +62,8 @@ export function GameProvider(props) {
         setWhiteTopCards(whiteTopCards.slice(0, whiteTopCards.length - 1)); //Actualiza el estado de las cartas blancas de arriba
     }
 
-    const [whiteCardsInit, blackCardsInit] = initializeGame(); //Se inicializan las cartas
+    const { userLanguage } = useLanguageContext();
+    const [whiteCardsInit, blackCardsInit] = initializeGame(userLanguage); //Se inicializan las cartas
     const [whiteCards, setWhiteCards] = useState(whiteCardsInit);
     const [playerCards, setPlayerCards] = useState(() => { //Se inicializan las cartas del jugador
         const whiteCardsCopy = [...whiteCards];

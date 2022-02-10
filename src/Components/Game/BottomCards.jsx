@@ -29,10 +29,10 @@ export default function BottomCards(props) {
                                 calledBy={"Bottom"}
                                 key={card.id}
                                 color={card.color}
-                                name={card.name}
+                                text={card.text}
                                 extension={card.extension}
                                 id={card.id}
-                                draggable={blackCardTop.chances > whiteTopCards.length}
+                                draggable={blackCardTop.pick > whiteTopCards.length}
                             />
                         </Grid>
                     )

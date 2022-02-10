@@ -9,7 +9,7 @@ import Box from '@mui/material/Box'
 
 function Menu({ page }) {
     return (
-        <Box sx={{ height: '100vh', width: '100%' }}>
+        <Box mt={-3} sx={{ height: '100vh', width: '100%' }}>
             <Grid sx={{
                 display: 'flex',
                 flexDirection: 'column',

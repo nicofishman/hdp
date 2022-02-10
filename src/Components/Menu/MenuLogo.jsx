@@ -13,7 +13,7 @@ function MenuLogo() {
             rowSpacing={3}
             justifyContent={'center'}
             alignItems={'center'}
-            mt={{ lg: 10, md: 7, xs: 5 }}
+            mt={-10}
             display={'flex'}
             flexDirection={'column'}
         >

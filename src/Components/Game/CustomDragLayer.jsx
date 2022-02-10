@@ -40,11 +40,11 @@ export const CustomDragLayer = (props) => {
                 <Card
                     key={item.id}
                     color={item.color}
-                    name={item.name}
+                    text={item.text}
                     extension={item.extension}
                     id={item.id}
                     customLayer={true}
-                    draggable={blackCardTop.chances > whiteTopCards.length}
+                    draggable={blackCardTop.pick > whiteTopCards.length}
                 />
             </Box>
         </Box>

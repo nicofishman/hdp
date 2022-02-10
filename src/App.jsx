@@ -3,8 +3,6 @@ import { Route, Routes } from "react-router-dom";
 import Menu from "Components/Routes/Menu";
 import Game from "Components/Routes/Game";
 import { ThemeProvider } from 'Context/ThemeContext';
-//TODO: TERMINAR DE CORREGIR cartas.json. VOY POR EL ID 578
-//* VER USECONTEXT / REDUX
 
 export default function App() {
     return (
