@@ -5,6 +5,7 @@ import { getAuth, createUserWithEmailAndPassword, onAuthStateChanged, updateProf
 import FirebaseErrors from '../Firebase/FirebaseErrors';
 import { useLanguageContext } from './LanguageContext';
 
+// Update Username
 const FirebaseContext = createContext(undefined);
 
 export function FirebaseProvider(props) {
