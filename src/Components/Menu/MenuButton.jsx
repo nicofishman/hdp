@@ -8,10 +8,10 @@ function MenuButton({ text, sx = {}, onClick = null }) {
         <SettingsSection
             onClick={onClick}
             sx={{
-                "&:hover": {
+                '&:hover': {
                     cursor: 'pointer',
                 },
-                "&:hover .children": {
+                '&:hover .children': {
                     letterSpacing: '0.05em',
                 },
                 ...sx
@@ -32,7 +32,7 @@ function MenuButton({ text, sx = {}, onClick = null }) {
                 <Text tid={text} />
             </Typography>
         </SettingsSection >
-    )
+    );
 }
 
 export default MenuButton;

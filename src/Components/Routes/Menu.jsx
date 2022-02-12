@@ -5,7 +5,7 @@ import MenuIndex from 'Components/Routes/Pages/MenuIndex';
 import MenuSettings from 'Components/Routes/Pages/MenuSettings';
 import MenuAccount from './Pages/MenuAccount';
 import { AccountProvider } from 'Context/AccountContext';
-import Box from '@mui/material/Box'
+import Box from '@mui/material/Box';
 
 function Menu({ page }) {
     return (

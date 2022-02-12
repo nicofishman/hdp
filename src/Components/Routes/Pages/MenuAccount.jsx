@@ -10,8 +10,8 @@ function MenuAccount() {
         <Box
             sx={{
                 position: 'relative',
-                margin: "2% auto",
-                height: '100%',
+                margin: '2% auto',
+                // height: '100%',
                 width: '100%',
             }}
         >

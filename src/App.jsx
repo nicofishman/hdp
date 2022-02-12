@@ -1,7 +1,7 @@
-import React from "react";
-import { Route, Routes } from "react-router-dom";
-import Menu from "Components/Routes/Menu";
-import Game from "Components/Routes/Game";
+import React from 'react';
+import { Route, Routes } from 'react-router-dom';
+import Menu from 'Components/Routes/Menu';
+import Game from 'Components/Routes/Game';
 import { ThemeProvider } from 'Context/ThemeContext';
 
 export default function App() {

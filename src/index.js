@@ -4,8 +4,8 @@ import './index.css';
 import AppProvider from './App';
 import reportWebVitals from './reportWebVitals';
 import { DndProvider } from 'react-dnd';
-import { MultiBackend } from 'react-dnd-multi-backend'
-import { HTML5toTouch } from 'rdndmb-html5-to-touch'
+import { MultiBackend } from 'react-dnd-multi-backend';
+import { HTML5toTouch } from 'rdndmb-html5-to-touch';
 import { GameProvider } from './Context/GameContext';
 import { DropProvider } from './Context/DropContext';
 import { DragProvider } from './Context/DragContext';

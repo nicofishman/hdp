@@ -1,10 +1,10 @@
 import React from 'react';
 import Slide from '@mui/material/Slide';
 import Alert from '@mui/material/Alert';
-import IconButton from "@mui/material/IconButton";
+import IconButton from '@mui/material/IconButton';
 import CloseIcon from '@mui/icons-material/Close';
 import Typography from '@mui/material/Typography';
-import { Text } from "Languages/Text";
+import { Text } from 'Languages/Text';
 
 function MyAlert({ slideIn = null, setSlideIn = null, severity = null, text }) {
     return (

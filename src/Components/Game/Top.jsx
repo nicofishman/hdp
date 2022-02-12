@@ -1,11 +1,10 @@
-import React from 'react'
+import React from 'react';
 import Button from '@mui/material/Button';
 import ButtonGroup from '@mui/material/ButtonGroup';
-import { useGame } from 'Context/GameContext'
+import { useGame } from 'Context/GameContext';
 import Box from '@mui/material/Box';
 import UndoIcon from '@mui/icons-material/UndoRounded';
 import SendRoundedIcon from '@mui/icons-material/SendRounded';
-
 
 export default function Top() {
     const { submit, undo } = useGame();
@@ -21,5 +20,5 @@ export default function Top() {
                 <Button variant='contained' onClick={() => submit()}><SendRoundedIcon /></Button>
             </ButtonGroup>
         </Box>
-    )
+    );
 }

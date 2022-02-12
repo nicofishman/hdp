@@ -23,11 +23,10 @@ function MenuSettings() {
     const { dark, setDark, theme } = useThemeContext();
     const handleLanguageChange = e => userLanguageChange(e.target.value);
     let toggleSwitch = !!JSON.parse(localStorage.getItem('colorMode'));
-    console.log('switch', toggleSwitch)
+    console.log('switch', toggleSwitch);
     useEffect(() => {
-        // eslint-disable-next-line react-hooks/exhaustive-deps
         toggleSwitch = JSON.parse(localStorage.getItem('colorMode'));
-        console.log(theme.palette.mode)
+        console.log(theme.palette.mode);
     }, []);
 
     return (
@@ -47,7 +46,7 @@ function MenuSettings() {
                     <Link to='/' style={{ justifyContent: 'center', textDecoration: 'none', alignItems: 'center' }}>
                         <SettingsSection sx={{
                             height: 40,
-                            "&:hover .settings": {
+                            '&:hover .settings': {
                                 transform: 'translateX(-2px)',
                             }
                         }}>
@@ -68,9 +67,9 @@ function MenuSettings() {
                 <Grid container item justifyContent={'center'}>
                     <FormControl fullWidth sx={{ display: 'flex', flexDirection: 'row', justifyContent: 'center' }}>
                         <Select
-                            startAdornment={<LanguageIcon sx={{ color: theme.palette.mode === 'light' ? grey[800] : grey[200], }} />}
+                            startAdornment={<LanguageIcon sx={{ color: theme.palette.mode === 'light' ? grey[800] : grey[200] }} />}
                             placeholder='Idioma'
-                            defaultValue={""}
+                            defaultValue={''}
                             onChange={handleLanguageChange}
                             value={userLanguage}
                             color='primary'
@@ -94,7 +93,7 @@ function MenuSettings() {
                             }}
                         >
                             {Object.entries(LanguageOptions).map(([id, name]) => (
-                                <MenuItem key={id} value={id || ""}>{name}</MenuItem>
+                                <MenuItem key={id} value={id || ''}>{name}</MenuItem>
                             ))}
                         </Select>
                     </FormControl>
@@ -103,6 +102,5 @@ function MenuSettings() {
         </Box>
     );
 }
-
 
 export default MenuSettings;

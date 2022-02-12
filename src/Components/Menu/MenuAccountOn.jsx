@@ -17,12 +17,12 @@ import MyAlert from 'Components/Common/MyAlert';
 function MenuAccountOn() {
     const { user, logOut, changeDisplayName, alertTrigger, setAlertTrigger } = useFirebaseContext();
     const { changeName } = useAccountContext();
-    const { theme } = useThemeContext()
+    const { theme } = useThemeContext();
     const displayName = user.displayName;
 
     useEffect(() => {
         console.log('displ', user.displayName);
-    }, [user.displayName])
+    }, [user.displayName]);
     return (
         <>
             <Grid
@@ -43,7 +43,7 @@ function MenuAccountOn() {
                             width: 60,
                             height: 60,
                             borderRadius: 3,
-                            "&:hover .settings": {
+                            '&:hover .settings': {
                                 transform: 'translateX(-2px)',
                             }
                         }}
@@ -62,13 +62,13 @@ function MenuAccountOn() {
                 <Grid container item direction={'row'} justifyContent={'center'}>
                     <ChangeName placeholder={displayName} sx={{ height: 60, width: 220, mr: 2 }}></ChangeName>
                     <MenuButtonIcon
-                        onClick={() => { changeDisplayName(changeName) }}
+                        onClick={() => { changeDisplayName(changeName); }}
                         sx={{
                             color: theme.palette.mode === 'light' ? '#000' : '#fff',
                             width: 60,
                             height: 60,
                             borderRadius: 3,
-                            "&:hover .settings": {
+                            '&:hover .settings': {
                                 transform: 'translateX(2px)',
                             }
                         }}

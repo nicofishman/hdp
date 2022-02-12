@@ -7,10 +7,10 @@ function ChangeName({ placeholder = null, sx = {} }) {
     const { changeName, setChangeName } = useAccountContext();
     const handleInputChange = (e) => {
         if (e.target.value.length > 15) {
-            return
+            return;
         }
-        setChangeName(e.target.value)
-    }
+        setChangeName(e.target.value);
+    };
     return (
         <SettingsSection sx={{ height: 70, width: 300, ...sx }}>
             <Input

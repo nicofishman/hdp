@@ -1,7 +1,6 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import logo from 'Common/Mono.png';
 import { useDrag } from 'react-dnd';
-import { useEffect } from 'react';
 import { getEmptyImage } from 'react-dnd-html5-backend';
 import Typography from '@mui/material/Typography';
 import Box from '@mui/material/Box';
@@ -23,7 +22,6 @@ export const Card = (props) => {
         canDrag: props.draggable,
     }), [props.draggable]);
 
-
     useEffect(() => {
         dragPreview(getEmptyImage());
     });
@@ -41,13 +39,13 @@ export const Card = (props) => {
                 mb: 0.5,
                 textAlign: 'center',
                 overflowWrap: 'break-word',
-                bgcolor: props.color === 'White' ? "white" : "black",
-                color: props.color === 'White' ? "black" : "white",
+                bgcolor: props.color === 'White' ? 'white' : 'black',
+                color: props.color === 'White' ? 'black' : 'white',
                 boxShadow: `0.2em 0.2em 0.5em ${theme.palette.mode === 'light' ? '#333' : '#666'}`,
                 transitionDuration: '0.5s',
                 userSelect: 'none',
                 display: isDragging ? 'none' : 'inline-block',
-                "&:hover": props.calledBy === 'Bottom' && {
+                '&:hover': props.calledBy === 'Bottom' && {
                     transform: props.color === 'White' && 'translateY(-0.8em)',
                     cursor: props.color === 'White' && 'pointer'
                 },
@@ -62,7 +60,7 @@ export const Card = (props) => {
                     fontFamily: '"Roboto","Helvetica","Arial",sans-serif;',
                     fontWeight: 'bold',
                     lineHeight: 1.2,
-                    color: props.color === 'White' ? "black" : "white",
+                    color: props.color === 'White' ? 'black' : 'white',
                 }}
             >
                 {props.text}
@@ -82,5 +80,5 @@ export const Card = (props) => {
 
             </Box>
         </Box>
-    )
-}
+    );
+};

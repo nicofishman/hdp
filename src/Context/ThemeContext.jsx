@@ -1,11 +1,9 @@
 import React, { useContext, useEffect, useLayoutEffect, useMemo, useState } from 'react';
 import makeTheme from 'Common/Theme';
-import { ThemeProvider as MuiThemeContext } from "@mui/system";
-import CssBaseline from "@mui/material/CssBaseline";
-
+import { ThemeProvider as MuiThemeContext } from '@mui/system';
+import CssBaseline from '@mui/material/CssBaseline';
 
 const ThemeContext = React.createContext(undefined);
-
 
 export function ThemeProvider({ children }) {
     const [dark, setDark] = useState(false);
@@ -17,7 +15,7 @@ export function ThemeProvider({ children }) {
             const isDark = JSON.parse(colorMode);
             setDark(isDark);
         } catch (_) {
-            //no-oop
+            // no-oop
         }
     }, []);
 
@@ -34,13 +32,13 @@ export function ThemeProvider({ children }) {
             dark,
             setDark,
             theme,
-        })
+        });
     }, [dark, theme]);
 
     return (
         <ThemeContext.Provider value={value}>
             <MuiThemeContext theme={theme}><CssBaseline />{children}</MuiThemeContext>
-        </ThemeContext.Provider >)
+        </ThemeContext.Provider >);
 }
 
 export function useThemeContext() {

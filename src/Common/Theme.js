@@ -1,6 +1,5 @@
 import { createTheme } from '@mui/material/styles';
 
-
 export default function makeTheme(mode) {
     return (createTheme({
         palette: {
@@ -13,11 +12,11 @@ export default function makeTheme(mode) {
             }
         },
         typography: {
-            fontFamily: ["Oswald", 'sans-serif'].join(','),
+            fontFamily: ['Oswald', 'sans-serif'].join(','),
             body1: {
                 color: mode === 'light' ? '#000' : '#fff',
             }
         }
     })
-    )
+    );
 }

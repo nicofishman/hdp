@@ -11,17 +11,17 @@ function Game() {
     return (
         <Box
             sx={{
-                margin: "2% auto",
+                margin: '2% auto',
             }}
         >
             <Top></Top>
             <Box
                 sx={{
-                    display: "flex",
-                    flexDirection: "column",
-                    flexWrpa: "wrap",
-                    justifyContent: "center",
-                    textAlign: "center",
+                    display: 'flex',
+                    flexDirection: 'column',
+                    flexWrpa: 'wrap',
+                    justifyContent: 'center',
+                    textAlign: 'center',
                 }}
             >
                 <TopCards />

@@ -1,4 +1,4 @@
-import { useLanguageContext } from "Context/LanguageContext";
+import { useLanguageContext } from 'Context/LanguageContext';
 
 export function Text({ tid }) {
     const languageContext = useLanguageContext();

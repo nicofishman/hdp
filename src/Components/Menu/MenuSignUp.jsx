@@ -29,7 +29,7 @@ function MenuSignUp() {
             return;
         }
         signInWithEmailAndPassword(email, password);
-    }
+    };
 
     return (
         <Grid
@@ -48,7 +48,7 @@ function MenuSignUp() {
                     <SettingsSection sx={{
                         height: 40,
                         width: 300,
-                        "&:hover .settings": {
+                        '&:hover .settings': {
                             transform: 'translateX(-2px)',
                         }
                     }}>
@@ -68,8 +68,8 @@ function MenuSignUp() {
                 flexWrap={{ lg: 'nowrap', xs: 'wrap' }}
 
             >
-                <MenuButtonIcon sx={{ ml: 1, mr: 1, width: 70, height: 70, }} onClick={signInWithGoogle}><GoogleIcon sx={{ fontSize: 65 }} /></MenuButtonIcon>
-                <MenuButtonIcon sx={{ ml: 1, mr: 1, width: 70, height: 70, }} onClick={signInWithTwitter}><TwitterIcon sx={{ fontSize: 65 }} /></MenuButtonIcon>
+                <MenuButtonIcon sx={{ ml: 1, mr: 1, width: 70, height: 70 }} onClick={signInWithGoogle}><GoogleIcon sx={{ fontSize: 65 }} /></MenuButtonIcon>
+                <MenuButtonIcon sx={{ ml: 1, mr: 1, width: 70, height: 70 }} onClick={signInWithTwitter}><TwitterIcon sx={{ fontSize: 65 }} /></MenuButtonIcon>
             </Grid>
             <Grid
                 container item
@@ -87,12 +87,12 @@ function MenuSignUp() {
                 <AccountInput name="password" text="contrasena" type={passwordShown ? 'text' : 'password'}
                     endAdornment={
                         passwordShown ?
-                            <Visibility onClick={() => setPasswordShown(!passwordShown)} sx={{ "&:hover": { cursor: 'pointer' }, }} /> :
-                            <VisibilityOff onClick={() => setPasswordShown(!passwordShown)} sx={{ "&:hover": { cursor: 'pointer' }, }} />
+                            <Visibility onClick={() => setPasswordShown(!passwordShown)} sx={{ '&:hover': { cursor: 'pointer' } }} /> :
+                            <VisibilityOff onClick={() => setPasswordShown(!passwordShown)} sx={{ '&:hover': { cursor: 'pointer' } }} />
                     } />
             </Grid>
             <Grid container item justifyContent={'center'}>
-                <MenuButton text={"ingresar"} onClick={() => handleLogin()} sx={{ width: 300, height: 50, fontWeigth: 'light' }} />
+                <MenuButton text={'ingresar'} onClick={() => handleLogin()} sx={{ width: 300, height: 50, fontWeigth: 'light' }} />
             </Grid>
         </Grid >
     );

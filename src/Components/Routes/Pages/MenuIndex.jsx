@@ -21,6 +21,7 @@ function MenuIndex() {
                 justifyContent={'center'}
                 alignItems={'center'}
                 mt={3}
+                mb={3}
                 flexWrap={{ lg: 'nowrap', xs: 'wrap' }}
             >
                 <Grid item>
@@ -51,7 +52,7 @@ function MenuIndex() {
                                 color: theme.palette.primary.main,
                                 transitionProperty: 'all',
                                 transitionDuration: '0.7s',
-                                "&:hover": {
+                                '&:hover': {
                                     transform: 'rotate(90deg)',
                                     color: theme.palette.primary.dark,
                                 }
@@ -67,7 +68,7 @@ function MenuIndex() {
                                 color: theme.palette.primary.main,
                                 transitionProperty: 'all',
                                 transitionDuration: '0.7s',
-                                "&:hover": {
+                                '&:hover': {
                                     color: theme.palette.primary.dark,
                                 }
                             }}></PersonIcon>

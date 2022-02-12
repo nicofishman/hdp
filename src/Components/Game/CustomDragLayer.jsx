@@ -1,9 +1,8 @@
-import React from "react";
-import { Card } from "./Card";
-import { useGame } from "Context/GameContext";
-import { useDragContext } from "Context/DragContext";
-import Box from "@mui/material/Box";
-
+import React from 'react';
+import { Card } from './Card';
+import { useGame } from 'Context/GameContext';
+import { useDragContext } from 'Context/DragContext';
+import Box from '@mui/material/Box';
 
 function getItemStyles(initialOffset, currentOffset) {
     if (!initialOffset || !currentOffset) {
@@ -11,7 +10,7 @@ function getItemStyles(initialOffset, currentOffset) {
             display: 'none',
         };
     }
-    let { x, y } = currentOffset;
+    const { x, y } = currentOffset;
 
     const transform = `translate(${x}px, ${y}px)`;
     return {
@@ -22,7 +21,7 @@ function getItemStyles(initialOffset, currentOffset) {
 
 export const CustomDragLayer = (props) => {
     const { whiteTopCards, blackCardTop } = useGame();
-    const { isDragging, item, initialOffset, currentOffset } = useDragContext()
+    const { isDragging, item, initialOffset, currentOffset } = useDragContext();
     if (!isDragging) {
         return null;
     }
@@ -48,5 +47,5 @@ export const CustomDragLayer = (props) => {
                 />
             </Box>
         </Box>
-    )
-}
+    );
+};

@@ -5,4 +5,4 @@ export const dictionaryList = { es, en };
 export const LanguageOptions = {
     en: 'English',
     es: 'Español'
-}
+};

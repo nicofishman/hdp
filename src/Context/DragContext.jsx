@@ -1,10 +1,10 @@
-import React, { useMemo, useContext } from "react";
-import { useDragLayer } from "react-dnd";
+import React, { useMemo, useContext } from 'react';
+import { useDragLayer } from 'react-dnd';
 
 const DragContext = React.createContext(undefined);
 
 export function DragProvider(props) {
-    //Maneja todo el drag
+    // Maneja todo el drag
     const { isDragging, item, initialOffset, currentOffset } = useDragLayer((monitor) => ({
         item: monitor.getItem(),
         initialOffset: monitor.getInitialSourceClientOffset(),
@@ -12,14 +12,14 @@ export function DragProvider(props) {
         isDragging: monitor.isDragging()
     }));
 
-    //Devuelve los valores para que sean usados por otros componentes/contexts
+    // Devuelve los valores para que sean usados por otros componentes/contexts
     const value = useMemo(() => {
         return ({
             isDragging, item, initialOffset, currentOffset
-        })
+        });
     }, [isDragging, item, initialOffset, currentOffset]);
 
-    return <DragContext.Provider value={value} {...props} />
+    return <DragContext.Provider value={value} {...props} />;
 }
 
 export function useDragContext() {

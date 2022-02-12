@@ -19,16 +19,14 @@ function MenuInput({ text }) {
         if (!(e.target.value.length > 6)) {
             setInputSearch(e.target.value.toLowerCase());
         }
-        else {
-            return
-        }
-    }
+    };
 
     const handleInputSubmit = () => {
         if (inputSearch.length > 2) {
             navigate(`game/${inputSearch}`);
         }
-    }
+    };
+
     return (
         <Box
             sx={{
@@ -46,7 +44,7 @@ function MenuInput({ text }) {
                 textAlign: 'center',
                 whiteSpace: { lg: 'nowrap', xs: 'normal' },
                 bgcolor: theme.palette.background.default,
-                color: "black",
+                color: 'black',
                 boxShadow: `0.2em 0.2em 0.5em ${theme.palette.mode === 'light' ? '#333' : '#666'}`,
                 userSelect: 'none',
             }}>
@@ -77,7 +75,7 @@ function MenuInput({ text }) {
                 }}
             />
         </Box>
-    )
+    );
 }
 
 export default MenuInput;

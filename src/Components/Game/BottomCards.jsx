@@ -1,9 +1,8 @@
-import React from "react";
-import { useGame } from "Context/GameContext";
-import { Card } from "./Card";
-import Grid from "@mui/material/Grid";
-import MyAlert from "Components/Common/MyAlert";
-
+import React from 'react';
+import { useGame } from 'Context/GameContext';
+import { Card } from './Card';
+import Grid from '@mui/material/Grid';
+import MyAlert from 'Components/Common/MyAlert';
 
 export default function BottomCards(props) {
     const { playerCards, whiteTopCards, blackCardTop, alertFade, setAlertFade } = useGame();
@@ -26,7 +25,7 @@ export default function BottomCards(props) {
                             key={card.id}
                         >
                             <Card
-                                calledBy={"Bottom"}
+                                calledBy={'Bottom'}
                                 key={card.id}
                                 color={card.color}
                                 text={card.text}
@@ -35,10 +34,10 @@ export default function BottomCards(props) {
                                 draggable={blackCardTop.pick > whiteTopCards.length}
                             />
                         </Grid>
-                    )
+                    );
                 })}
             </Grid>
             <MyAlert text="numbercardserror" severity="error" slideIn={alertFade} setSlideIn={setAlertFade} />
         </>
-    )
+    );
 }

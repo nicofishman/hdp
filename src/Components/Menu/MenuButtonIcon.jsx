@@ -19,7 +19,7 @@ function MenuButtonIcon({ children, sx = {}, onClick = null }) {
                 boxShadow: `0.2em 0.2em 0.5em ${theme.palette.mode === 'light' ? '#333' : '#666'}`,
                 mr: 0.5,
                 border: '1px solid #666',
-                "&:hover": {
+                '&:hover': {
                     cursor: 'pointer',
                 },
                 ...sx

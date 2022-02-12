@@ -1,11 +1,11 @@
-import React from "react";
-import { Card } from "./Card";
+import React from 'react';
+import { Card } from './Card';
 import { useDropContext } from 'Context/DropContext';
-import { useGame } from "Context/GameContext";
+import { useGame } from 'Context/GameContext';
 import Grid from '@mui/material/Grid';
 import Divider from '@mui/material/Divider';
-import Box from "@mui/material/Box";
-import Badge from "@mui/material/Badge";
+import Box from '@mui/material/Box';
+import Badge from '@mui/material/Badge';
 import styled from '@mui/material/styles/styled';
 
 function TopCards(props) {
@@ -14,7 +14,7 @@ function TopCards(props) {
 
     const StyledBadge = styled(Badge)(() => ({
         '& .MuiBadge-badge': {
-            border: `2px solid white`,
+            border: '2px solid white',
             padding: '0 4px',
             minWidth: 30,
             minHeight: 30,
@@ -22,7 +22,7 @@ function TopCards(props) {
             borderRadius: '50%',
             color: 'white',
         },
-    }))
+    }));
 
     return (
         <>
@@ -67,7 +67,7 @@ function TopCards(props) {
                                 key={whiteCard.id}
                             >
                                 <Card
-                                    calledBy={"Top"}
+                                    calledBy={'Top'}
                                     key={whiteCard.id}
                                     color={whiteCard.color}
                                     text={whiteCard.text}
@@ -76,14 +76,13 @@ function TopCards(props) {
                                     draggable={false}
                                 />
                             </Grid>
-                        )
-                    }
-                    )}
+                        );
+                    })}
                 </Grid>
             </Box>
             <Divider variant='fullWidth' sx={{ mt: 2 }} flexItem={true} />
         </>
-    )
+    );
 }
 
-export default TopCards
+export default TopCards;
