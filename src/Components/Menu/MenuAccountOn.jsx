@@ -53,7 +53,7 @@ function MenuAccountOn() {
                     </Link>
                     <SettingsSection sx={{ height: 60, width: 220, ml: 2 }}>
                         {/* <PersonIcon sx={{ fontSize: 55, minWidth: 40 }}></PersonIcon> */}
-                        <Typography sx={{ textOverflow: 'ellipsis' }}>{!(displayName) ? user.email.split('@')[0] : displayName}</Typography>
+                        <Typography sx={{ textOverflow: 'ellipsis' }}>{displayName}</Typography>
                     </SettingsSection>
                 </Grid>
                 <Grid container item direction={'row'} justifyContent={'center'} mr={25} mb={-3}>

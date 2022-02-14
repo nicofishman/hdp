@@ -47,7 +47,7 @@ export const Card = (props) => {
                 display: isDragging ? 'none' : 'inline-block',
                 '&:hover': props.calledBy === 'Bottom' && {
                     transform: props.color === 'White' && 'translateY(-0.8em)',
-                    cursor: props.color === 'White' && 'pointer'
+                    cursor: props.color === 'White' && 'drag'
                 },
             }}
             ref={drag}

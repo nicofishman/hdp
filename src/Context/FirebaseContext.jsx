@@ -97,6 +97,7 @@ export function FirebaseProvider(props) {
 
     const value = useMemo(() => {
         return ({
+            firebaseApp,
             signInWithEmailAndPassword,
             auth,
             user,

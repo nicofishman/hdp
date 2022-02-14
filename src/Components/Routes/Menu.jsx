@@ -6,8 +6,10 @@ import MenuSettings from 'Components/Routes/Pages/MenuSettings';
 import MenuAccount from './Pages/MenuAccount';
 import { AccountProvider } from 'Context/AccountContext';
 import Box from '@mui/material/Box';
+import Game from 'Backend/Game';
 
 function Menu({ page }) {
+    Game();
     return (
         <Box mt={-3} sx={{ height: '100vh', width: '100%' }}>
             <Grid sx={{

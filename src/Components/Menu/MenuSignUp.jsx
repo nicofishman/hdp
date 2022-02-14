@@ -55,7 +55,7 @@ function MenuSignUp() {
                         <Typography sx={{ mt: 0.5 }}>
                             <ArrowBackIcon className='settings' sx={{ mr: 'auto', ml: 2, transition: 'transform 0.2s ease' }} />
                         </Typography>
-                        <Typography sx={{ justifyContent: 'center', flex: 1, fontSize: 25, mr: 4 }}><Text tid="cuenta" /></Typography>
+                        <Typography sx={{ justifyContent: 'center', flex: 1, fontSize: 25, mr: 4 }}><Text tid="account" /></Typography>
                     </SettingsSection>
                 </Link>
             </Grid>
@@ -84,7 +84,7 @@ function MenuSignUp() {
                 <AccountInput name="email" text="email" type="email" />
             </Grid>
             <Grid container item justifyContent={'center'} mt={-2}>
-                <AccountInput name="password" text="contrasena" type={passwordShown ? 'text' : 'password'}
+                <AccountInput name="password" text="password" type={passwordShown ? 'text' : 'password'}
                     endAdornment={
                         passwordShown ?
                             <Visibility onClick={() => setPasswordShown(!passwordShown)} sx={{ '&:hover': { cursor: 'pointer' } }} /> :
