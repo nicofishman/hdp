@@ -16,7 +16,7 @@ import MenuButton from 'Components/Menu/MenuButton';
 import { useAccountContext } from 'Context/AccountContext';
 
 function MenuSignUp() {
-    const { signInWithEmailAndPassword, signInWithGoogle, signInWithTwitter } = useFirebaseContext();
+    const { mySignInWithEmailAndPassword, signInWithGoogle, signInWithTwitter } = useFirebaseContext();
     const [passwordShown, setPasswordShown] = React.useState(false);
     // const isLoggedIn = userId !== null;
 
@@ -28,7 +28,7 @@ function MenuSignUp() {
             alert(`Invalid email or password ${email} ${password}`);
             return;
         }
-        signInWithEmailAndPassword(email, password);
+        mySignInWithEmailAndPassword(email, password);
     };
 
     return (
@@ -87,8 +87,8 @@ function MenuSignUp() {
                 <AccountInput name="password" text="password" type={passwordShown ? 'text' : 'password'}
                     endAdornment={
                         passwordShown ?
-                            <Visibility onClick={() => setPasswordShown(!passwordShown)} sx={{ '&:hover': { cursor: 'pointer' } }} /> :
-                            <VisibilityOff onClick={() => setPasswordShown(!passwordShown)} sx={{ '&:hover': { cursor: 'pointer' } }} />
+                            <Visibility onClick={() => setPasswordShown(!passwordShown)} sx={{ ml: 1, '&:hover': { cursor: 'pointer' } }} /> :
+                            <VisibilityOff onClick={() => setPasswordShown(!passwordShown)} sx={{ ml: 1, '&:hover': { cursor: 'pointer' } }} />
                     } />
             </Grid>
             <Grid container item justifyContent={'center'}>

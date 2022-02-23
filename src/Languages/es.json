@@ -9,5 +9,6 @@
     "changename": "Cambiar Nombre",
     "logout": "Salir",
     "updateusername": "Nombre de usuario actualizado.",
-    "numbercardserror": "Por favor poné todas las cartas habilitadas en la mesa"
+    "numbercardserror": "Por favor poné todas las cartas habilitadas en la mesa",
+    "wrongpassword": "Contraseña incorrecta"
 }

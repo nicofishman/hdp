@@ -9,5 +9,6 @@
     "changename": "Change Name",
     "logout": "Log out",
     "updateusername": "Username updated successfully",
-    "numbercardserror": "Please drag all available cards to the game board"
+    "numbercardserror": "Please drag all available cards to the game board",
+    "wrongpassword": "Wrong password"
 }

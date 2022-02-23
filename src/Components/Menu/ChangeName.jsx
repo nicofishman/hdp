@@ -5,6 +5,7 @@ import SettingsSection from './SettingsSection';
 
 function ChangeName({ placeholder = null, sx = {} }) {
     const { changeName, setChangeName } = useAccountContext();
+    // setChangeName(placeholder);
     const handleInputChange = (e) => {
         if (e.target.value.length > 15) {
             return;

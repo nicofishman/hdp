@@ -12,7 +12,7 @@ function MenuButton({ text, sx = {}, onClick = null }) {
                     cursor: 'pointer',
                 },
                 '&:hover .children': {
-                    letterSpacing: '0.05em',
+                    letterSpacing: '0.025em',
                 },
                 ...sx
             }}>

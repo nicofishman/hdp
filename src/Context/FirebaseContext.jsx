@@ -1,7 +1,7 @@
 import React, { createContext, useState, useContext, useMemo } from 'react';
 import { initializeApp } from 'firebase/app';
 // import { getFirestore } from 'firebase/firestore';
-import { getAuth, createUserWithEmailAndPassword, onAuthStateChanged, updateProfile, GoogleAuthProvider, signInWithPopup, TwitterAuthProvider } from 'firebase/auth';
+import { getAuth, createUserWithEmailAndPassword, onAuthStateChanged, updateProfile, GoogleAuthProvider, signInWithPopup, TwitterAuthProvider, signInWithEmailAndPassword } from 'firebase/auth';
 import FirebaseErrors from '../Firebase/FirebaseErrors';
 import { useLanguageContext } from './LanguageContext';
 
@@ -9,7 +9,9 @@ const FirebaseContext = createContext(undefined);
 
 export function FirebaseProvider(props) {
     const { userLanguage } = useLanguageContext();
-    const [alertTrigger, setAlertTrigger] = useState(false);
+    const [changeUsernameAlert, setchangeUsernameAlert] = useState(false);
+    const [wrongPasswordAlert, setWrongPasswordAlert] = useState(false);
+    const [loading, setLoading] = useState(false);
 
     const firebaseApp = initializeApp({
         apiKey: process.env.REACT_APP_apiKey,
@@ -62,15 +64,34 @@ export function FirebaseProvider(props) {
             });
     };
 
-    const signInWithEmailAndPassword = async (email, password) => {
+    const mySignInWithEmailAndPassword = async (email, password) => {
         try {
-            await createUserWithEmailAndPassword(auth, email, password);
-            await updateProfile(auth.currentUser, {
-                displayName: email.split('@')[0]
-            });
+            setLoading(true);
+            await createUserWithEmailAndPassword(auth, email, password)
+                .then(
+                    async () => {
+                        updateProfile(auth.currentUser, {
+                            displayName: email.split('@')[0]
+                        })
+                            .then(() => {
+                                setLoading(false);
+                            });
+                    });
         } catch (error) {
             if (error.code === FirebaseErrors.emailInUse) {
-                console.log('Email in use');
+                try {
+                    await signInWithEmailAndPassword(auth, email, password);
+                } catch (error) {
+                    console.log(error);
+                    if (error.code === FirebaseErrors.wrongPassword) {
+                        setWrongPasswordAlert(true);
+                        setTimeout(() => { // Se borra la alerta después de 5 segundos
+                            setWrongPasswordAlert(false);
+                        }, 5000);
+                    }
+                }
+            } else {
+                console.log(error);
             }
         }
     };
@@ -87,10 +108,10 @@ export function FirebaseProvider(props) {
         }).then(() => {
             setUser({ ...user, displayName: displayName });
         });
-        if (!alertTrigger) {
-            setAlertTrigger(true);
+        if (!changeUsernameAlert) {
+            setchangeUsernameAlert(true);
             setTimeout(() => { // Se borra la alerta después de 5 segundos
-                setAlertTrigger(false);
+                setchangeUsernameAlert(false);
             }, 5000);
         }
     };
@@ -98,17 +119,20 @@ export function FirebaseProvider(props) {
     const value = useMemo(() => {
         return ({
             firebaseApp,
-            signInWithEmailAndPassword,
+            mySignInWithEmailAndPassword,
             auth,
             user,
             logOut,
             signInWithGoogle,
             signInWithTwitter,
             changeDisplayName,
-            alertTrigger,
-            setAlertTrigger
+            changeUsernameAlert,
+            setchangeUsernameAlert,
+            wrongPasswordAlert,
+            setWrongPasswordAlert,
+            loading
         });
-    }, [auth, logOut, user, alertTrigger]);
+    }, [auth, logOut, user, changeUsernameAlert, wrongPasswordAlert, loading]);
     return <FirebaseContext.Provider value={value} {...props} />;
 }
 
