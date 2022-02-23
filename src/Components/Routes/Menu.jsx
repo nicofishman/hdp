@@ -6,13 +6,11 @@ import MenuSettings from 'Components/Routes/Pages/MenuSettings';
 import MenuAccount from './Pages/MenuAccount';
 import { AccountProvider } from 'Context/AccountContext';
 import Box from '@mui/material/Box';
-import Game from 'Backend/Game';
 import MyAlert from 'Components/Common/MyAlert';
-import { useFirebaseContext } from 'Context/FirebaseContext';
+import { useFirebaseAuthContext } from 'Context/Firebase.authContext';
 
 function Menu({ page }) {
-    const { changeUsernameAlert, setChangeUsernameAlert, wrongPasswordAlert, setWrongPasswordAlert } = useFirebaseContext();
-    Game();
+    const { changeUsernameAlert, setChangeUsernameAlert, wrongPasswordAlert, setWrongPasswordAlert } = useFirebaseAuthContext();
     return (
         <Box mt={-3} sx={{ height: '100vh', width: '100%' }}>
             <Grid sx={{

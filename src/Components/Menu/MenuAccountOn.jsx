@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 import Grid from '@mui/material/Grid';
 import Typography from '@mui/material/Typography';
 import Box from '@mui/material/Box';
-import { useFirebaseContext } from 'Context/FirebaseContext';
+import { useFirebaseAuthContext } from 'Context/Firebase.authContext';
 import { Link } from 'react-router-dom';
 import MenuButton from './MenuButton';
 import SettingsSection from './SettingsSection';
@@ -16,14 +16,14 @@ import { useAccountContext } from 'Context/AccountContext';
 import CircularProgress from '@mui/material/CircularProgress';
 
 function MenuAccountOn() {
-    const { user, logOut, changeDisplayName, loading } = useFirebaseContext();
+    const { auth, logOut, changeDisplayName, loading } = useFirebaseAuthContext();
     const { changeName } = useAccountContext();
     const { theme } = useThemeContext();
-    const displayName = user.displayName;
+    const displayName = auth.currentUser.displayName;
 
     useEffect(() => {
-        console.log('displ', user.displayName);
-    }, [user.displayName]);
+        console.log('displ', auth.currentUser.displayName);
+    }, [auth.currentUser.displayName]);
 
     return (
         <>

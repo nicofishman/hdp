@@ -91,7 +91,8 @@ export function GameProvider(props) {
             undo,
             submit,
             alertFade,
-            setAlertFade
+            setAlertFade,
+            initializeGame
         });
     }, [whiteTopCards, blackCardTop, playerCards, alertFade]);
 

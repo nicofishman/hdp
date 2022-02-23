@@ -5,9 +5,11 @@ import Top from 'Components/Game/Top';
 import TopCards from 'Components/Game/TopCards';
 import React from 'react';
 import { useParams } from 'react-router-dom';
+import { GameService } from 'Backend/GameService';
 
 function Game() {
     const { gameId } = useParams();
+    GameService(gameId);
     return (
         <Box
             sx={{

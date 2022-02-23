@@ -11,7 +11,9 @@ export default function App() {
                 <Route path='/' element={<Menu page="index" />} />
                 <Route path="/account" element={<Menu page="account" />} />
                 <Route path="/settings" element={<Menu page="settings" />} />
-                <Route path='/game/:gameId' element={<Game />} />
+                <Route path='/game/:gameId' element={
+                    <Game />
+                } />
                 <Route path='*' element={<h1>NOT FOUND</h1>} />
             </Routes>
         </ThemeProvider>

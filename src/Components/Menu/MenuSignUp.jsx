@@ -5,7 +5,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import ArrowBackIcon from '@mui/icons-material/ArrowBackIos';
 import { Text } from 'Languages/Text';
-import { useFirebaseContext } from 'Context/FirebaseContext';
+import { useFirebaseAuthContext } from 'Context/Firebase.authContext';
 import MenuButtonIcon from 'Components/Menu/MenuButtonIcon';
 import GoogleIcon from '@mui/icons-material/Google';
 import TwitterIcon from '@mui/icons-material/Twitter';
@@ -16,7 +16,7 @@ import MenuButton from 'Components/Menu/MenuButton';
 import { useAccountContext } from 'Context/AccountContext';
 
 function MenuSignUp() {
-    const { mySignInWithEmailAndPassword, signInWithGoogle, signInWithTwitter } = useFirebaseContext();
+    const { mySignInWithEmailAndPassword, signInWithGoogle, signInWithTwitter } = useFirebaseAuthContext();
     const [passwordShown, setPasswordShown] = React.useState(false);
     // const isLoggedIn = userId !== null;
 

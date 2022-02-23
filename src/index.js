@@ -11,18 +11,23 @@ import { DropProvider } from './Context/DropContext';
 import { DragProvider } from './Context/DragContext';
 import { BrowserRouter } from 'react-router-dom';
 import { LanguageProvider } from 'Context/LanguageContext';
-import { FirebaseProvider } from 'Context/FirebaseContext';
+import { FirebaseAuthProvider } from 'Context/Firebase.authContext';
+import { FirebaseDatabaseProvider } from 'Context/Firebase.databaseContext';
 
 ReactDOM.render(
     <BrowserRouter>
         <LanguageProvider>
-            <FirebaseProvider>
-                <DndProvider backend={MultiBackend} options={HTML5toTouch}>
-                    <GameProvider> <DropProvider> <DragProvider>
-                        <AppProvider />
-                    </DragProvider> </DropProvider> </GameProvider>
-                </DndProvider >
-            </FirebaseProvider>
+            <GameProvider>
+                <FirebaseDatabaseProvider>
+                    <FirebaseAuthProvider>
+                        <DndProvider backend={MultiBackend} options={HTML5toTouch}>
+                            <DropProvider> <DragProvider>
+                                <AppProvider />
+                            </DragProvider> </DropProvider>
+                        </DndProvider >
+                    </FirebaseAuthProvider>
+                </FirebaseDatabaseProvider>
+            </GameProvider>
         </LanguageProvider>
     </BrowserRouter>,
     document.getElementById('root')

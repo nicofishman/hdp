@@ -8,8 +8,12 @@ import SettingsIcon from '@mui/icons-material/Settings';
 import PersonIcon from '@mui/icons-material/Person';
 import { useThemeContext } from 'Context/ThemeContext';
 import Box from '@mui/material/Box';
+import { useFirebaseDatabaseContext } from 'Context/Firebase.databaseContext';
+import { useFirebaseAuthContext } from 'Context/Firebase.authContext';
 
 function MenuIndex() {
+    const { auth } = useFirebaseAuthContext();
+    const { createGame } = useFirebaseDatabaseContext();
     const { theme } = useThemeContext();
     return (
         <Box sx={{ bgcolor: theme.background }}>
@@ -25,12 +29,17 @@ function MenuIndex() {
                 flexWrap={{ lg: 'nowrap', xs: 'wrap' }}
             >
                 <Grid item>
-                    <Link to="/game/hdp" style={{ textDecoration: 'none' }}>
-                        <MenuButton text='create' sx={{
+                    <MenuButton
+                        text='create'
+                        sx={{
                             width: 275,
                             maxWidth: null,
-                        }}></MenuButton>
-                    </Link>
+                            '&:hover': {
+                                cursor: 'pointer',
+                            }
+                        }}
+                        onClick={() => createGame(auth.currentUser)}
+                    ></MenuButton>
                 </Grid>
                 <Grid item>
                     <SearchGame text='search'></SearchGame>

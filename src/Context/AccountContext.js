@@ -1,10 +1,10 @@
 import React, { useContext, useMemo, useState } from 'react';
-import { useFirebaseContext } from './FirebaseContext';
+import { useFirebaseAuthContext } from './Firebase.authContext';
 
 const AccountContext = React.createContext(undefined);
 
 export function AccountProvider(props) {
-    const { user } = useFirebaseContext();
+    const { user } = useFirebaseAuthContext();
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const [changeName, setChangeName] = useState(user.displayName);

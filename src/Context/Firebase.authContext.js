@@ -1,28 +1,22 @@
 import React, { createContext, useState, useContext, useMemo } from 'react';
-import { initializeApp } from 'firebase/app';
 // import { getFirestore } from 'firebase/firestore';
 import { getAuth, createUserWithEmailAndPassword, onAuthStateChanged, updateProfile, GoogleAuthProvider, signInWithPopup, TwitterAuthProvider, signInWithEmailAndPassword } from 'firebase/auth';
 import FirebaseErrors from '../Firebase/FirebaseErrors';
 import { useLanguageContext } from './LanguageContext';
+import { FirebaseApp } from '../Firebase/FirebaseApp';
+import { useFirebaseDatabaseContext } from './Firebase.databaseContext';
 
-const FirebaseContext = createContext(undefined);
+const FirebaseAuthContext = createContext(undefined);
 
-export function FirebaseProvider(props) {
+export function FirebaseAuthProvider(props) {
     const { userLanguage } = useLanguageContext();
     const [changeUsernameAlert, setchangeUsernameAlert] = useState(false);
     const [wrongPasswordAlert, setWrongPasswordAlert] = useState(false);
     const [loading, setLoading] = useState(false);
 
-    const firebaseApp = initializeApp({
-        apiKey: process.env.REACT_APP_apiKey,
-        authDomain: process.env.REACT_APP_authDomain,
-        projectId: process.env.REACT_APP_projectId,
-        storageBucket: process.env.REACT_APP_storageBucket,
-        messagingSenderId: process.env.REACT_APP_messagingSenderId,
-        appId: process.env.REACT_APP_appId,
-        measurementId: process.env.REACT_APP_measurementId
-    });
-    // const db = getFirestore();
+    const firebaseApp = FirebaseApp;
+    const { setUserDB } = useFirebaseDatabaseContext();
+
     const auth = getAuth(firebaseApp);
     const googleProvider = new GoogleAuthProvider();
     const twitterProvider = new TwitterAuthProvider();
@@ -72,6 +66,8 @@ export function FirebaseProvider(props) {
                     async () => {
                         updateProfile(auth.currentUser, {
                             displayName: email.split('@')[0]
+                        }).then(() => {
+                            setUserDB(auth.currentUser);
                         })
                             .then(() => {
                                 setLoading(false);
@@ -107,6 +103,8 @@ export function FirebaseProvider(props) {
             displayName: displayName
         }).then(() => {
             setUser({ ...user, displayName: displayName });
+        }).then(() => {
+            setUserDB(auth.currentUser);
         });
         if (!changeUsernameAlert) {
             setchangeUsernameAlert(true);
@@ -133,13 +131,13 @@ export function FirebaseProvider(props) {
             loading
         });
     }, [auth, logOut, user, changeUsernameAlert, wrongPasswordAlert, loading]);
-    return <FirebaseContext.Provider value={value} {...props} />;
+    return <FirebaseAuthContext.Provider value={value} {...props} />;
 }
 
-export function useFirebaseContext() {
-    const context = useContext(FirebaseContext);
+export function useFirebaseAuthContext() {
+    const context = useContext(FirebaseAuthContext);
     if (!context) {
-        throw new Error('useFirebaseContext must be used within a FirebaseProvider');
+        throw new Error('useFirebaseAuthContext must be used within a FirebaseAuthProvider');
     }
     return context;
 }

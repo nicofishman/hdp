@@ -44,6 +44,9 @@ export const CustomDragLayer = (props) => {
                     id={item.id}
                     customLayer={true}
                     draggable={blackCardTop.pick > whiteTopCards.length}
+                    sx={{
+                        '&:hover': { cursor: 'grabbing' }
+                    }}
                 />
             </Box>
         </Box>
