@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Card } from './Card';
 import { useDropContext } from 'Context/DropContext';
 import { useGame } from 'Context/GameContext';
@@ -8,9 +8,12 @@ import Box from '@mui/material/Box';
 import Badge from '@mui/material/Badge';
 import styled from '@mui/material/styles/styled';
 
-function TopCards(props) {
+function TopCards({ blackCardTopFire }) {
     const { drop } = useDropContext();
-    const { blackCardTop, whiteTopCards } = useGame();
+    const { whiteTopCards, blackCardTop, setBlackCardTop } = useGame();
+    useEffect(() => {
+        setBlackCardTop(blackCardTopFire);
+    }, []);
 
     const StyledBadge = styled(Badge)(() => ({
         '& .MuiBadge-badge': {

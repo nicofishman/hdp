@@ -86,8 +86,11 @@ export function GameProvider(props) {
         return ({
             updateWhiteTopCards,
             whiteTopCards,
+            setWhiteTopCards,
             blackCardTop,
+            setBlackCardTop,
             playerCards,
+            setPlayerCards,
             undo,
             submit,
             alertFade,

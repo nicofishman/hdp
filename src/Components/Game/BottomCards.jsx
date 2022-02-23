@@ -1,11 +1,15 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { useGame } from 'Context/GameContext';
 import { Card } from './Card';
 import Grid from '@mui/material/Grid';
 import MyAlert from 'Components/Common/MyAlert';
 
-export default function BottomCards(props) {
-    const { playerCards, whiteTopCards, blackCardTop, alertFade, setAlertFade } = useGame();
+export default function BottomCards({ playerCardsFire, blackCardTopFire }) {
+    const { whiteTopCards, setPlayerCards, playerCards, blackCardTop, setBlackCardTop, alertFade, setAlertFade } = useGame();
+    useEffect(() => {
+        setPlayerCards(playerCardsFire);
+        setBlackCardTop(blackCardTopFire);
+    }, [playerCardsFire, blackCardTopFire]);
     return (
         <>
             <Grid
