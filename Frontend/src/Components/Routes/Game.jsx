@@ -8,12 +8,15 @@ import { useParams } from 'react-router-dom';
 import { useFirebaseDatabaseContext } from 'Context/Firebase.databaseContext';
 import { useFirebaseAuthContext } from 'Context/Firebase.authContext';
 import CircularProgress from '@mui/material/CircularProgress';
+import MyAlert from 'Components/Common/MyAlert';
 
 function Game() {
     const { gameId } = useParams();
     const { getGameById } = useFirebaseDatabaseContext();
-    const { auth } = useFirebaseAuthContext();
+
     const [loading, setLoading] = useState(true);
+    const [gameNotFound, setGameNotFound] = useState(false);
+    const { auth } = useFirebaseAuthContext();
 
     const [blackCardTop, setBlackCardTop] = useState({});
     const [playerCards, setPlayerCards] = useState([]);
@@ -23,6 +26,11 @@ function Game() {
         getGameById(gameId)
             .then(g => {
                 console.log('G', g);
+                if (!g) {
+                    setGameNotFound(true);
+                    setLoading(false);
+                    return;
+                }
                 console.log('playerId', auth.currentUser.uid);
                 setBlackCardTop(g.currentBlackCard);
                 const player = g.players.filter(p => p.id === auth.currentUser.uid);
@@ -33,34 +41,37 @@ function Game() {
 
     return (
         <>
-            {!loading ?
-                <Box
-                    sx={{
-                        margin: '2% auto',
-                    }}
-                >
-                    <Top></Top>
+            {!gameNotFound ?
+                (!loading ?
                     <Box
                         sx={{
-                            display: 'flex',
-                            flexDirection: 'column',
-                            flexWrpa: 'wrap',
-                            justifyContent: 'center',
-                            textAlign: 'center',
+                            margin: '2% auto',
                         }}
                     >
-                        <TopCards blackCardTopFire={blackCardTop} />
-                        <BottomCards playerCardsFire={playerCards} blackCardTopFire={blackCardTop} />
-                        <CustomDragLayer />
+                        <Top></Top>
+                        <Box
+                            sx={{
+                                display: 'flex',
+                                flexDirection: 'column',
+                                flexWrpa: 'wrap',
+                                justifyContent: 'center',
+                                textAlign: 'center',
+                            }}
+                        >
+                            <TopCards blackCardTopFire={blackCardTop} />
+                            <BottomCards playerCardsFire={playerCards} blackCardTopFire={blackCardTop} />
+                            <CustomDragLayer />
+                        </Box>
+                    </Box> :
+                    <Box sx={{
+                        display: 'flex',
+                        justifyContent: 'center',
+                        alignItems: 'center',
+                    }}>
+                        <CircularProgress color='primary' />
                     </Box>
-                </Box> :
-                <Box sx={{
-                    display: 'flex',
-                    justifyContent: 'center',
-                    alignItems: 'center',
-                }}>
-                    <CircularProgress color='primary' />
-                </Box>
+                ) :
+                <MyAlert severity='error' text='gamenotfound' />
             }
         </>
     );

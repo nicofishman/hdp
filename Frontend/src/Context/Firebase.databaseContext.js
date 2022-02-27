@@ -1,6 +1,6 @@
 import React, { createContext, useContext, useMemo } from 'react';
 import { FirebaseApp } from '../Firebase/FirebaseApp';
-import { getFirestore, doc, getDoc, setDoc, addDoc, collection } from 'firebase/firestore';
+import { getFirestore, doc, getDoc, setDoc, collection } from 'firebase/firestore';
 import { useNavigate } from 'react-router-dom';
 import { useGame } from './GameContext';
 import consts from '../utils/consts';
@@ -26,9 +26,10 @@ export function FirebaseDatabaseProvider({ children }) {
                 isHdp: false,
                 cards: playerCards
             }],
-            whiteCards: whiteCards,
-            blackCards: blackCards,
-            currentHdp: 0,
+            // whiteCards: whiteCards,
+            // blackCards: blackCards,
+            cardsUsed: [currentBlackCard.id, ...playerCards.map(card => card.id)],
+            currentRound: 1, // Para poner el currentHDP se hace //? players[currentRound % players.length].isHdp = true
             currentBlackCard: currentBlackCard,
             lang
         };
@@ -46,7 +47,7 @@ export function FirebaseDatabaseProvider({ children }) {
     };
 
     const getUserById = async (userId) => {
-
+        console.log('NOT IMPLEMENTED YET');
     };
 
     const setUser = async (user) => {

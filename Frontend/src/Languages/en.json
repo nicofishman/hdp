@@ -10,5 +10,6 @@
     "logout": "Log out",
     "updateusername": "Username updated successfully",
     "numbercardserror": "Please drag all available cards to the game board",
-    "wrongpassword": "Wrong password"
+    "wrongpassword": "Wrong password",
+    "gamenotfound": "Game not found"
 }
