@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import Grid from '@mui/material/Grid';
 import MenuLogo from 'Components/Menu/MenuLogo';
 import MenuIndex from 'Components/Routes/Pages/MenuIndex';
@@ -8,9 +8,16 @@ import { AccountProvider } from 'Context/AccountContext';
 import Box from '@mui/material/Box';
 import MyAlert from 'Components/Common/MyAlert';
 import { useFirebaseAuthContext } from 'Context/Firebase.authContext';
+import { useGame } from 'Context/GameContext';
 
 function Menu({ page }) {
     const { changeUsernameAlert, setChangeUsernameAlert, wrongPasswordAlert, setWrongPasswordAlert } = useFirebaseAuthContext();
+    const { gameNotFoundAlert, setGameNotFoundAlert } = useGame();
+
+    useEffect(() => {
+        console.log('game alert changed', gameNotFoundAlert);
+    }, [gameNotFoundAlert]);
+
     return (
         <Box mt={-3} sx={{ height: '100vh', width: '100%' }}>
             <Grid sx={{
@@ -28,6 +35,7 @@ function Menu({ page }) {
             </Grid >
             <MyAlert text="updateusername" slideIn={changeUsernameAlert} setSlideIn={setChangeUsernameAlert} severity="success" />
             <MyAlert text="wrongpassword" slideIn={wrongPasswordAlert} setSlideIn={setWrongPasswordAlert} severity="error" />
+            <MyAlert text="gamenotfound" slideIn={gameNotFoundAlert} setSlideIn={setGameNotFoundAlert} severity="error" />
         </Box>
     );
 }

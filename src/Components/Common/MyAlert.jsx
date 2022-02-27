@@ -14,7 +14,7 @@ function MyAlert({ slideIn = null, setSlideIn = null, severity = null, text }) {
                 severity={severity}
                 sx={{ mb: 2, position: 'absolute', bottom: 0, left: 10 }}
             >
-                <Typography sx={{ fontWeight: 'light' }} >
+                <Typography sx={{ fontWeight: 'light', transform: 'translateY(-2px)', color: 'white' }} >
                     <Text tid={text} />
                 </Typography>
             </Alert> :

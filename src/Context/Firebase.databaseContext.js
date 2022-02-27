@@ -1,9 +1,10 @@
 import React, { createContext, useContext, useMemo } from 'react';
 import { FirebaseApp } from '../Firebase/FirebaseApp';
-import { getFirestore, doc, getDoc, setDoc, collection } from 'firebase/firestore';
+import { getFirestore, doc, getDoc, setDoc, collection, where, query, getDocs } from 'firebase/firestore';
 import { useNavigate } from 'react-router-dom';
 import { useGame } from './GameContext';
 import consts from '../utils/consts';
+import { generateShortCode } from 'utils/lobby.utils';
 
 const FirebaseDatabaseContext = createContext(undefined);
 
@@ -12,14 +13,20 @@ export function FirebaseDatabaseProvider({ children }) {
     const { initializeGame } = useGame();
     const firebaseApp = FirebaseApp;
     const db = getFirestore(firebaseApp);
+    const gamesRef = collection(db, 'Games');
 
     const createGame = async (currentUser) => {
-        const newGameRef = doc(collection(db, 'Games'));
+        const newGameRef = doc(gamesRef);
         const lang = window.localStorage.getItem('rcml-lang');
         let [whiteCards, blackCards] = initializeGame(lang);
         const playerCards = whiteCards.slice(0, consts.maxPlayerCards);
         whiteCards = whiteCards.slice(consts.maxPlayerCards);
         const currentBlackCard = blackCards.pop();
+        let shortCode = generateShortCode();
+        const shortCodeList = await getShortCodes().then((shortCodes) => { console.log(shortCodes); return shortCodes; });
+        while (shortCodeList.includes(shortCode)) {
+            shortCode = generateShortCode();
+        }
         const newGameData = {
             players: [{
                 id: currentUser.uid,
@@ -31,7 +38,8 @@ export function FirebaseDatabaseProvider({ children }) {
             cardsUsed: [currentBlackCard.id, ...playerCards.map(card => card.id)],
             currentRound: 1, // Para poner el currentHDP se hace //? players[currentRound % players.length].isHdp = true
             currentBlackCard: currentBlackCard,
-            lang
+            lang,
+            shortCode: shortCode
         };
         await setDoc(newGameRef, newGameData)
             .then(() => {
@@ -50,6 +58,27 @@ export function FirebaseDatabaseProvider({ children }) {
         console.log('NOT IMPLEMENTED YET');
     };
 
+    const getShortCodes = async () => {
+        const gamesSnap = await getDocs(gamesRef);
+        const shortCodesList = gamesSnap.docs.map(game => game.data().shortCode);
+        return shortCodesList;
+    };
+
+    const getGameByShortCode = async (shortCode) => {
+        console.log(shortCode.toUpperCase());
+        const docs = [];
+        const q = query(gamesRef, where('shortCode', '==', shortCode.toUpperCase()));
+        const querySnapshot = await getDocs(q);
+        console.log('query ejecutada', querySnapshot);
+        querySnapshot.forEach((doc) => {
+            docs.push(doc);
+        });
+        if (docs.length === 0) {
+            return null;
+        }
+        return docs[0].id;
+    };
+
     const setUser = async (user) => {
         console.log('dbdbdbdbdbdbbd', user.uid);
         await setDoc(doc(db, `Users/${user.uid}`), { username: user.displayName });
@@ -59,7 +88,8 @@ export function FirebaseDatabaseProvider({ children }) {
         return ({
             getGameById,
             setUserDB: setUser,
-            createGame
+            createGame,
+            getGameByShortCode
         });
     }, []);
     return <FirebaseDatabaseContext.Provider value={value}>{children}</FirebaseDatabaseContext.Provider>;

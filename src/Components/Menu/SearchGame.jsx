@@ -6,25 +6,41 @@ import SearchIcon from '@mui/icons-material/Search';
 import grey from '@mui/material/colors/grey';
 import { useLanguageContext } from 'Context/LanguageContext';
 import { useThemeContext } from 'Context/ThemeContext';
+import { useFirebaseDatabaseContext } from 'Context/Firebase.databaseContext';
+import { useGame } from 'Context/GameContext';
 
 function MenuInput({ text }) {
     const navigate = useNavigate();
     const { theme } = useThemeContext();
+    const { getGameByShortCode } = useFirebaseDatabaseContext();
+    const { gameNotFoundAlert, setGameNotFoundAlert } = useGame();
 
     const languageContext = useLanguageContext();
     const placeholder = languageContext.dictionary[text] || text;
 
     const [inputSearch, setInputSearch] = useState('');
+
     const handleInputChange = (/** @type {React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>} */ e) => {
-        if (!(e.target.value.length > 6)) {
+        if (!(e.target.value.length >= 8)) {
             setInputSearch(e.target.value.toLowerCase());
         }
     };
 
     const handleInputSubmit = () => {
-        if (inputSearch.length > 2) {
-            navigate(`game/${inputSearch}`);
-        }
+        getGameByShortCode(inputSearch)
+            .then(game => {
+                if (game) {
+                    console.log('found game', game);
+                    navigate(`/game/${game}`);
+                } else {
+                    if (!gameNotFoundAlert) {
+                        setGameNotFoundAlert(true);
+                        setTimeout(() => {
+                            setGameNotFoundAlert(false);
+                        }, 5000);
+                    }
+                }
+            });
     };
 
     return (
