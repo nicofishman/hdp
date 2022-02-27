@@ -1,5 +1,3 @@
-# Add unique id to each entry of a json file
-
 import json
 from pprint import pprint as print 
 

@@ -1,7 +1,7 @@
-import React, { useMemo, useContext } from 'react';
+import React, { useMemo, useContext, createContext } from 'react';
 import { useDragLayer } from 'react-dnd';
 
-const DragContext = React.createContext(undefined);
+const DragContext = createContext(undefined);
 
 export function DragProvider(props) {
     // Maneja todo el drag

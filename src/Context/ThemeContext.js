@@ -1,9 +1,9 @@
-import React, { useContext, useEffect, useLayoutEffect, useMemo, useState } from 'react';
+import React, { useContext, useEffect, useLayoutEffect, useMemo, useState, createContext } from 'react';
 import makeTheme from 'Common/Theme';
 import { ThemeProvider as MuiThemeContext } from '@mui/system';
 import CssBaseline from '@mui/material/CssBaseline';
 
-const ThemeContext = React.createContext(undefined);
+const ThemeContext = createContext(undefined);
 
 export function ThemeProvider({ children }) {
     const [dark, setDark] = useState(false);

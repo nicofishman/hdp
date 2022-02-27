@@ -1,8 +1,8 @@
-import React, { useContext, useMemo } from 'react';
+import React, { useContext, useMemo, createContext } from 'react';
 import { useDrop } from 'react-dnd';
 import { useGame } from './GameContext';
 
-const DropContext = React.createContext(undefined);
+const DropContext = createContext(undefined);
 
 export function DropProvider(props) {
     // Maneja todo el drop

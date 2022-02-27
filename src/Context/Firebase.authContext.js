@@ -99,11 +99,11 @@ export function FirebaseAuthProvider(props) {
     };
 
     const changeDisplayName = async (displayName) => {
+        console.log(auth.currentUser.uid);
         await updateProfile(auth.currentUser, {
             displayName: displayName
         }).then(() => {
             setUser({ ...user, displayName: displayName });
-        }).then(() => {
             setUserDB(auth.currentUser);
         });
         if (!changeUsernameAlert) {

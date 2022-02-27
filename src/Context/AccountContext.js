@@ -1,7 +1,7 @@
-import React, { useContext, useMemo, useState } from 'react';
+import React, { useContext, useMemo, useState, createContext } from 'react';
 import { useFirebaseAuthContext } from './Firebase.authContext';
 
-const AccountContext = React.createContext(undefined);
+const AccountContext = createContext(undefined);
 
 export function AccountProvider(props) {
     const { user } = useFirebaseAuthContext();

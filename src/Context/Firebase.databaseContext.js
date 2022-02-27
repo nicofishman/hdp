@@ -40,7 +40,7 @@ export function FirebaseDatabaseProvider({ children }) {
     };
 
     const getGameById = async (gameId) => {
-        const gamesRef = doc(db, 'Games', gameId);
+        const gamesRef = doc(db, `Games/${gameId}`);
         const gameSnap = await getDoc(gamesRef);
         return gameSnap.data();
     };
@@ -50,7 +50,8 @@ export function FirebaseDatabaseProvider({ children }) {
     };
 
     const setUser = async (user) => {
-        setDoc(doc(db, 'Users'), user.uid, { username: user.displayName });
+        console.log('dbdbdbdbdbdbbd', user.uid);
+        await setDoc(doc(db, `Users/${user.uid}`), { username: user.displayName });
     };
 
     const value = useMemo(() => {

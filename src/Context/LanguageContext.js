@@ -1,7 +1,7 @@
-import React, { useContext, useMemo, useState } from 'react';
+import React, { useContext, useMemo, useState, createContext } from 'react';
 import { dictionaryList } from 'Languages/Languages';
 
-const LanguageContext = React.createContext(undefined);
+const LanguageContext = createContext(undefined);
 
 export function LanguageProvider(props) {
     const defaultLanguage = window.localStorage.getItem('rcml-lang');

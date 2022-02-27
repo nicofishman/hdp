@@ -1,7 +1,7 @@
+import React, { useState } from 'react';
 import Grid from '@mui/material/Grid';
 import Typography from '@mui/material/Typography';
 import SettingsSection from 'Components/Menu/SettingsSection';
-import React from 'react';
 import { Link } from 'react-router-dom';
 import ArrowBackIcon from '@mui/icons-material/ArrowBackIos';
 import { Text } from 'Languages/Text';
@@ -17,7 +17,7 @@ import { useAccountContext } from 'Context/AccountContext';
 
 function MenuSignUp() {
     const { mySignInWithEmailAndPassword, signInWithGoogle, signInWithTwitter } = useFirebaseAuthContext();
-    const [passwordShown, setPasswordShown] = React.useState(false);
+    const [passwordShown, setPasswordShown] = useState(false);
     // const isLoggedIn = userId !== null;
 
     const { email, password } = useAccountContext();
