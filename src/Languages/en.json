@@ -11,5 +11,6 @@
     "updateusername": "Username updated successfully",
     "numbercardserror": "Please drag all available cards to the game board",
     "wrongpassword": "Wrong password",
-    "gamenotfound": "Game not found"
+    "gamenotfound": "Game not found",
+    "playernotingame": "You are not in the game"
 }

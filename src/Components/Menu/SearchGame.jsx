@@ -8,11 +8,13 @@ import { useLanguageContext } from 'Context/LanguageContext';
 import { useThemeContext } from 'Context/ThemeContext';
 import { useFirebaseDatabaseContext } from 'Context/Firebase.databaseContext';
 import { useGame } from 'Context/GameContext';
+import { useFirebaseAuthContext } from 'Context/Firebase.authContext';
 
 function MenuInput({ text }) {
     const navigate = useNavigate();
     const { theme } = useThemeContext();
-    const { getGameByShortCode } = useFirebaseDatabaseContext();
+    const { getGameByShortCode, addPlayerToGame, getGameById } = useFirebaseDatabaseContext();
+    const { auth } = useFirebaseAuthContext();
     const { gameNotFoundAlert, setGameNotFoundAlert } = useGame();
 
     const languageContext = useLanguageContext();
@@ -28,10 +30,20 @@ function MenuInput({ text }) {
 
     const handleInputSubmit = () => {
         getGameByShortCode(inputSearch)
-            .then(game => {
-                if (game) {
-                    console.log('found game', game);
-                    navigate(`/game/${game}`);
+            .then(gameId => {
+                if (gameId) {
+                    console.log('found game', gameId);
+                    getGameById(gameId).then(g => {
+                        const usersId = g.players.map(p => p.id);
+                        if (usersId.includes(auth.currentUser.uid)) {
+                            console.log('already in game');
+                            navigate(`/lobby/${gameId}`);
+                        } else {
+                            addPlayerToGame(gameId, auth.currentUser, g).then(() => {
+                                navigate(`/lobby/${gameId}`);
+                            });
+                        }
+                    });
                 } else {
                     if (!gameNotFoundAlert) {
                         setGameNotFoundAlert(true);

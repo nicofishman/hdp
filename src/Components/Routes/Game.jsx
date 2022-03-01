@@ -7,8 +7,8 @@ import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import { useFirebaseDatabaseContext } from 'Context/Firebase.databaseContext';
 import { useFirebaseAuthContext } from 'Context/Firebase.authContext';
-import CircularProgress from '@mui/material/CircularProgress';
 import MyAlert from 'Components/Common/MyAlert';
+import SpinningWheel from 'Components/Common/SpinningWheel';
 
 function Game() {
     const { gameId } = useParams();
@@ -73,13 +73,7 @@ function Game() {
                             <CustomDragLayer />
                         </Box>
                     </Box> :
-                    <Box sx={{
-                        display: 'flex',
-                        justifyContent: 'center',
-                        alignItems: 'center',
-                    }}>
-                        <CircularProgress color='primary' />
-                    </Box>
+                    <SpinningWheel />
                 ) :
                 <MyAlert severity='error' text='gamenotfound' />
             }

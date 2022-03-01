@@ -13,7 +13,7 @@ export default function App() {
                 <Route path="/account" element={<Menu page="account" />} />
                 <Route path="/settings" element={<Menu page="settings" />} />
                 <Route path='/game/:gameId' element={<Game />} />
-                <Route path='/loby/:gameId' element={<Lobby />} />
+                <Route path='/lobby/:gameId' element={<Lobby />} />
                 <Route path='*' element={<h1>NOT FOUND</h1>} />
             </Routes>
         </ThemeProvider>

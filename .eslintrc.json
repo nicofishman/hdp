@@ -16,7 +16,7 @@
 	"ignorePatterns": ["**/build/static/js/*.js"],
 	"rules": {
 		"auto-import/auto-import": [
-			2,
+			1,
 			{
 				"rootPath": "./src"
 			}
