@@ -1,6 +1,6 @@
 import React, { createContext, useContext, useMemo } from 'react';
 import { FirebaseApp } from '../Firebase/FirebaseApp';
-import { getFirestore, doc, getDoc, setDoc, collection, where, query, getDocs } from 'firebase/firestore';
+import { getFirestore, doc, getDoc, setDoc, collection, where, query, getDocs, updateDoc, arrayUnion } from 'firebase/firestore';
 import { useNavigate } from 'react-router-dom';
 import { useGame } from './GameContext';
 import consts from '../utils/consts';
@@ -31,13 +31,17 @@ export function FirebaseDatabaseProvider({ children }) {
             players: [{
                 id: currentUser.uid,
                 isHdp: false,
-                cards: playerCards
+                cards: playerCards,
+                points: 0,
             }],
             // whiteCards: whiteCards,
             // blackCards: blackCards,
             cardsUsed: [currentBlackCard.id, ...playerCards.map(card => card.id)],
             currentRound: 1, // Para poner el currentHDP se hace //? players[currentRound % players.length].isHdp = true
             currentBlackCard: currentBlackCard,
+            owner: currentUser.uid,
+            isStarted: false,
+            sentCards: [],
             lang,
             shortCode: shortCode
         };
@@ -46,6 +50,20 @@ export function FirebaseDatabaseProvider({ children }) {
                 console.log('GAME CREATED', newGameRef.id);
                 navigate(`game/${newGameRef.id}`);
             });
+    };
+
+    const addPlayerToGame = async (gameId, currentUser, g) => {
+        const gameRef = doc(gamesRef, gameId);
+        const [whiteCards, _] = initializeGame(g.lang);
+        const playerCards = newPlayerCards(whiteCards, g.cardsUsed);
+        await updateDoc(gameRef, {
+            players: arrayUnion({
+                id: currentUser.uid,
+                isHdp: false,
+                cards: playerCards,
+                points: 0,
+            })
+        });
     };
 
     const getGameById = async (gameId) => {
@@ -79,6 +97,17 @@ export function FirebaseDatabaseProvider({ children }) {
         return docs[0].id;
     };
 
+    const newPlayerCards = (whiteCards, cardsUsed) => {
+        const newCards = [];
+        while (newCards.length < consts.maxPlayerCards && whiteCards.length > 0) {
+            const candidateCard = whiteCards.pop();
+            if (!cardsUsed.includes(candidateCard.id)) {
+                newCards.push(candidateCard);
+            }
+        }
+        return newCards;
+    };
+
     const setUser = async (user) => {
         console.log('dbdbdbdbdbdbbd', user.uid);
         await setDoc(doc(db, `Users/${user.uid}`), { username: user.displayName });
@@ -89,7 +118,8 @@ export function FirebaseDatabaseProvider({ children }) {
             getGameById,
             setUserDB: setUser,
             createGame,
-            getGameByShortCode
+            getGameByShortCode,
+            addPlayerToGame
         });
     }, []);
     return <FirebaseDatabaseContext.Provider value={value}>{children}</FirebaseDatabaseContext.Provider>;

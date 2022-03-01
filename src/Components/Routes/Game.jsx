@@ -12,7 +12,7 @@ import MyAlert from 'Components/Common/MyAlert';
 
 function Game() {
     const { gameId } = useParams();
-    const { getGameById } = useFirebaseDatabaseContext();
+    const { getGameById, addPlayerToGame } = useFirebaseDatabaseContext();
 
     const [loading, setLoading] = useState(true);
     const [gameNotFound, setGameNotFound] = useState(false);
@@ -31,11 +31,21 @@ function Game() {
                     setLoading(false);
                     return;
                 }
-                console.log('playerId', auth.currentUser.uid);
-                setBlackCardTop(g.currentBlackCard);
-                const player = g.players.filter(p => p.id === auth.currentUser.uid);
-                setPlayerCards(player[0].cards);
-                setLoading(false);
+                const playersInGame = g.players.map(p => p.id);
+                if (!playersInGame.includes(auth.currentUser.uid)) {
+                    addPlayerToGame(gameId, auth.currentUser, g).then(() => {
+                        setBlackCardTop(g.currentBlackCard);
+                        const player = g.players.filter(p => p.id === auth.currentUser.uid);
+                        setPlayerCards(player[0].cards);
+                        setLoading(false);
+                    });
+                } else {
+                    console.log('playerId', auth.currentUser.uid);
+                    setBlackCardTop(g.currentBlackCard);
+                    const player = g.players.filter(p => p.id === auth.currentUser.uid);
+                    setPlayerCards(player[0].cards);
+                    setLoading(false);
+                }
             });
     }, []);
 

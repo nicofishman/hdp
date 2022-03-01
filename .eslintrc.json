@@ -12,9 +12,15 @@
 		"ecmaVersion": "latest",
 		"sourceType": "module"
 	},
-	"plugins": ["react"],
+	"plugins": ["react", "auto-import"],
 	"ignorePatterns": ["**/build/static/js/*.js"],
 	"rules": {
+		"auto-import/auto-import": [
+			2,
+			{
+				"rootPath": "./src"
+			}
+		],
 		"indent": ["error", 4],
 		"space-before-function-paren": [
 			"error",
