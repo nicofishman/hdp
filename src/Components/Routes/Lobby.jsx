@@ -13,6 +13,7 @@ import { useThemeContext } from 'Context/ThemeContext';
 import Divider from '@mui/material/Divider';
 import CloseIcon from '@mui/icons-material/Close';
 import MyAlert from 'Components/Common/MyAlert';
+import momorisa from 'Common/momorisa.gif';
 
 function Lobby() {
     const { getGameById, removePlayer, db } = useFirebaseDatabaseContext();
@@ -28,6 +29,7 @@ function Lobby() {
 
     useEffect(() => {
         console.log('currentUser', currentUser);
+        if (!auth.currentUser) return;
         const unsub = onSnapshot(doc(db, `Games/${gameId}`), (snapshot) => {
             setGame(snapshot.data());
             const playersIdArray = snapshot.data().players.map(p => p.id);
@@ -121,7 +123,17 @@ function Lobby() {
                         </Box>
                     ) :
                     <SpinningWheel /> :
-                <MyAlert text='playernotingame' severity='error' />
+                <>
+                    <Box sx={{
+                        display: 'flex',
+                        alignItems: 'center',
+                        justifyContent: 'center',
+                        height: '100vh',
+                    }}>
+                        <img src={momorisa} style={{ width: '60em' }} />
+                    </Box>
+                    <MyAlert text='playerbanned' severity='error' />
+                </>
             }
         </>
     );

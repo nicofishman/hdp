@@ -12,5 +12,6 @@
     "numbercardserror": "Por favor poné todas las cartas habilitadas en la mesa",
     "wrongpassword": "Contraseña incorrecta",
     "gamenotfound": "Juego no encontrado",
+    "playerbanned": "TE FUISTE BANEADO",
     "playernotingame": "No estás en el juego"
 }
