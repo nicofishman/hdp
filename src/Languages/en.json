@@ -13,5 +13,7 @@
     "wrongpassword": "Wrong password",
     "gamenotfound": "Game not found",
     "playerbanned": "YOU ARE BANNED",
-    "playernotingame": "You are not in the game"
+    "playernotingame": "You are not in the game",
+    "code": "Code",
+    "startgame": "Start Game"
 }

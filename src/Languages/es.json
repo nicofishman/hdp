@@ -13,5 +13,7 @@
     "wrongpassword": "Contraseña incorrecta",
     "gamenotfound": "Juego no encontrado",
     "playerbanned": "TE FUISTE BANEADO",
-    "playernotingame": "No estás en el juego"
+    "playernotingame": "No estás en el juego",
+    "code": "Código",
+    "startgame": "Iniciar Juego"
 }

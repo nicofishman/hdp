@@ -12,7 +12,7 @@ import { useGame } from 'Context/GameContext';
 
 function Menu({ page }) {
     const { changeUsernameAlert, setChangeUsernameAlert, wrongPasswordAlert, setWrongPasswordAlert } = useFirebaseAuthContext();
-    const { gameNotFoundAlert, setGameNotFoundAlert } = useGame();
+    const { gameNotFoundAlert, setGameNotFoundAlert, gameIsStartedAlert, setGameIsStartedAlert } = useGame();
 
     useEffect(() => {
         console.log('game alert changed', gameNotFoundAlert);
@@ -36,6 +36,7 @@ function Menu({ page }) {
             <MyAlert text="updateusername" slideIn={changeUsernameAlert} setSlideIn={setChangeUsernameAlert} severity="success" />
             <MyAlert text="wrongpassword" slideIn={wrongPasswordAlert} setSlideIn={setWrongPasswordAlert} severity="error" />
             <MyAlert text="gamenotfound" slideIn={gameNotFoundAlert} setSlideIn={setGameNotFoundAlert} severity="error" />
+            <MyAlert text="gamestarted" slideIn={gameIsStartedAlert} setSlideIn={setGameIsStartedAlert} severity="error" />
         </Box>
     );
 }

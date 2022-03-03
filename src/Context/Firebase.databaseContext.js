@@ -47,6 +47,8 @@ export function FirebaseDatabaseProvider({ children }) {
 
     const addPlayerToGame = async (gameId, currentUser, g) => {
         const gameRef = doc(gamesRef, gameId);
+        const gameData = await getDoc(gameRef)
+            .then((game) => { return game.data(); });
         await updateDoc(gameRef, {
             players: arrayUnion({
                 id: currentUser.uid,
@@ -58,8 +60,42 @@ export function FirebaseDatabaseProvider({ children }) {
     };
 
     const startGame = async (gameId) => {
+        console.log('starting game', gameId);
+        const gameRef = doc(gamesRef, gameId);
+        const gameData = await getDoc(gameRef)
+            .then((game) => { return game.data(); });
+
+        const newPlayers = [];
+        const players = gameData.players;
+        const cardsUsed = [];
+        const [whiteCards, blackCards] = initializeGame(gameData.lang);
+
         // Agregarle las cartas a cada jugador
+        players.forEach((player) => {
+            const playerCards = newPlayerCards(whiteCards, cardsUsed);
+            newPlayers.push({
+                ...player,
+                cards: playerCards,
+            });
+            cardsUsed.push(...(playerCards.map((card) => card.id)));
+        });
+
         // Agregar currentBlackCard y cardsUsed
+        const currentBlackCard = blackCards[0];
+        cardsUsed.push(currentBlackCard.id);
+
+        const gameStarted = true;
+        await updateDoc(gameRef, {
+            currentRound: 1,
+            players: newPlayers,
+            currentBlackCard,
+            lang: gameData.lang,
+            isStarted: gameStarted,
+            owner: gameData.owner,
+            sentCards: [],
+            usedCards: cardsUsed,
+            shortCode: gameData.shortCode
+        });
     };
 
     const getGameById = async (gameId) => {
@@ -128,6 +164,7 @@ export function FirebaseDatabaseProvider({ children }) {
             getUserById,
             db,
             removePlayer,
+            startGame,
         });
     }, [db]);
     return <FirebaseDatabaseContext.Provider value={value}>{children}</FirebaseDatabaseContext.Provider>;
