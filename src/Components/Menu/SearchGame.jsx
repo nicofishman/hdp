@@ -15,7 +15,7 @@ function MenuInput({ text }) {
     const { theme } = useThemeContext();
     const { getGameByShortCode, addPlayerToGame, getGameById } = useFirebaseDatabaseContext();
     const { auth, userAuth } = useFirebaseAuthContext();
-    const { setNotLoggedInAlert, notLoggedInAlert, gameNotFoundAlert, setGameNotFoundAlert } = useAlertsContext();
+    const { setNotLoggedInAlert, notLoggedInAlert, gameNotFoundAlert, setGameNotFoundAlert, setGameIsStartedAlert } = useAlertsContext();
 
     const languageContext = useLanguageContext();
     const placeholder = languageContext.dictionary[text] || text;
@@ -41,6 +41,13 @@ function MenuInput({ text }) {
                     if (gameId) {
                         console.log('found game', gameId);
                         getGameById(gameId).then(g => {
+                            if (g.isStarted) {
+                                setGameIsStartedAlert(true);
+                                setTimeout(() => {
+                                    setGameIsStartedAlert(false);
+                                }, 5000);
+                                return;
+                            }
                             const usersId = g.players.map(p => p.id);
                             if (usersId.includes(auth.currentUser.uid)) {
                                 console.log('already in game');

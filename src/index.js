@@ -19,17 +19,17 @@ ReactDOM.render(
     <BrowserRouter>
         <AlertsProvider>
             <LanguageProvider>
-                <GameProvider>
-                    <FirebaseDatabaseProvider>
-                        <FirebaseAuthProvider>
+                <FirebaseDatabaseProvider>
+                    <FirebaseAuthProvider>
+                        <GameProvider>
                             <DndProvider backend={MultiBackend} options={HTML5toTouch}>
                                 <DropProvider> <DragProvider>
                                     <AppProvider />
                                 </DragProvider> </DropProvider>
                             </DndProvider >
-                        </FirebaseAuthProvider>
-                    </FirebaseDatabaseProvider>
-                </GameProvider>
+                        </GameProvider>
+                    </FirebaseAuthProvider>
+                </FirebaseDatabaseProvider>
             </LanguageProvider>
         </AlertsProvider>
     </BrowserRouter>,

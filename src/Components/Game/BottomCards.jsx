@@ -5,7 +5,7 @@ import Grid from '@mui/material/Grid';
 import MyAlert from 'Components/Common/MyAlert';
 
 export default function BottomCards({ playerCardsFire, blackCardTopFire }) {
-    const { whiteTopCards, setPlayerCards, playerCards, blackCardTop, setBlackCardTop, alertFade, setAlertFade } = useGame();
+    const { whiteTopCards, setPlayerCards, playerCards, blackCardTop, setBlackCardTop, wrongAmoutCards, setWrongAmoutCards } = useGame();
     useEffect(() => {
         setPlayerCards(playerCardsFire);
         setBlackCardTop(blackCardTopFire);
@@ -41,7 +41,7 @@ export default function BottomCards({ playerCardsFire, blackCardTopFire }) {
                     );
                 })}
             </Grid>
-            <MyAlert text="numbercardserror" severity="error" slideIn={alertFade} setSlideIn={setAlertFade} />
+            <MyAlert text="numbercardserror" severity="error" slideIn={wrongAmoutCards} setSlideIn={setWrongAmoutCards} />
         </>
     );
 }

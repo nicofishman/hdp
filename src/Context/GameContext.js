@@ -1,51 +1,51 @@
 import React, { useEffect, useState, useContext, useMemo, createContext } from 'react';
-import cartasEn from '../Cartas/cartas_en.json';
-import cartasEs from '../Cartas/cartas_es.json';
 import consts from '../utils/consts';
 import { useLanguageContext } from './LanguageContext';
+import { useFirebaseDatabaseContext } from 'Context/Firebase.databaseContext';
+import { initializeGame } from 'utils/initalizeGame';
 
 const GameContext = createContext(undefined);
 
 //  Mezclar cartas
-function getCardsShuffled(array) {
-    return array.sort((a, b) => 0.5 - Math.random());
-}
-
-//  Inicia el juego: genera los mazos negro y blanco
-function initializeGame(lang) {
-    console.log('lang', lang);
-    const cartas = lang === 'es' ? cartasEs : lang === 'en' ? cartasEn : undefined;
-    const whiteCards = getCardsShuffled(cartas.whiteCards);
-    const blackCards = getCardsShuffled(cartas.blackCards);
-    return [whiteCards, blackCards];
-}
 
 export function GameProvider(props) {
     // Estado de la alerta por no poner todas las cartas
-    const [alertFade, setAlertFade] = useState(false);
+    const [wrongAmoutCards, setWrongAmoutCards] = useState(false);
+    const { submitCards } = useFirebaseDatabaseContext();
 
-    const submit = () => {
+    const submit = (currentUser, gameId) => {
         // Si la cantidad de cartas no es la indicada, tira una alerta
         if (whiteTopCards.length !== blackCardTop.pick) {
-            if (alertFade) {
+            if (wrongAmoutCards) {
                 return;
             } else {
-                setAlertFade(true);
+                setWrongAmoutCards(true);
                 setTimeout(() => { //  Se borra la alerta después de 5 segundos
-                    setAlertFade(false);
+                    setWrongAmoutCards(false);
                 }, 5000);
             }
             return;
         }
-        // Si el jugador tiene 3 cartas o menos abajo, se le rellenan con las cartas del mazo
+        submitCards(gameId, currentUser, whiteTopCards);
+
+        /*
+        * NUEVA RONDA
+        ? Si el jugador tiene 3 cartas o menos abajo, se le rellenan con las cartas del mazo
         if (playerCards.length <= 3) {
-            const newPlayerCards = [...playerCards, ...whiteCards.slice(0, consts.maxPlayerCards - playerCards.length)]; //  Genera el nuevo array de cartas
-            setWhiteCards(whiteCards.slice(consts.maxPlayerCards)); // Se quita las cartas del mazo
-            setPlayerCards(newPlayerCards); // Se actualiza el estado de las cartas del jugador
+            ? Genera el nuevo array de cartas
+            const newPlayerCards = [...playerCards, ...whiteCards.slice(0, consts.maxPlayerCards - playerCards.length)];
+            ? Se quita las cartas del mazo
+            setWhiteCards(whiteCards.slice(consts.maxPlayerCards));
+            ? Se actualiza el estado de las cartas del jugador
+            setPlayerCards(newPlayerCards);
         }
-        setBlackCards(blackCards.slice(1)); // Se actualiza el mazo negro dejando afuera la carta que fue usada
-        setBlackCardTop(blackCards[1]); // Se pone una carta negra nueva
-        setWhiteTopCards([]); // Se borran las cartas blancas de arriba
+        ? Se actualiza el mazo negro dejando afuera la carta que fue usada
+        setBlackCards(blackCards.slice(1));
+        ? Se pone una carta negra nueva
+        setBlackCardTop(blackCards[1]);
+        ? Se borran las cartas blancas de arriba
+        setWhiteTopCards([]);
+        */
     };
 
     const undo = () => {
@@ -93,11 +93,10 @@ export function GameProvider(props) {
             setPlayerCards,
             undo,
             submit,
-            alertFade,
-            setAlertFade,
-            initializeGame,
+            wrongAmoutCards,
+            setWrongAmoutCards,
         });
-    }, [whiteTopCards, blackCardTop, playerCards, alertFade]);
+    }, [whiteTopCards, blackCardTop, playerCards, wrongAmoutCards]);
 
     return <GameContext.Provider value={value} {...props} />;
 }

@@ -16,5 +16,7 @@
     "playernotingame": "No estás en el juego",
     "code": "Código",
     "startgame": "Iniciar Juego",
-    "notloggedin": "Por favor ingresa a tu cuenta"
+    "notloggedin": "Por favor ingresa a tu cuenta",
+    "gamestarted": "El juego ya comenzó",
+    "waitingforcards": "Esperando a que los jugadores envíen sus cartas"
 }

@@ -2,16 +2,14 @@ import React, { createContext, useContext, useMemo } from 'react';
 import { FirebaseApp } from '../Firebase/FirebaseApp';
 import { getFirestore, doc, getDoc, setDoc, collection, where, query, getDocs, updateDoc, arrayUnion, arrayRemove } from 'firebase/firestore';
 import { useNavigate } from 'react-router-dom';
-import { useGame } from './GameContext';
 import consts from '../utils/consts';
 import { generateShortCode } from 'utils/lobby.utils';
 import { useAlertsContext } from 'Context/AlertsContext';
-
+import { initializeGame } from 'utils/initalizeGame';
 const FirebaseDatabaseContext = createContext(undefined);
 
 export function FirebaseDatabaseProvider({ children }) {
     const navigate = useNavigate();
-    const { initializeGame } = useGame();
     const { setNotLoggedInAlert } = useAlertsContext();
 
     const firebaseApp = FirebaseApp;
@@ -38,7 +36,7 @@ export function FirebaseDatabaseProvider({ children }) {
             players: [{
                 id: currentUser.uid,
                 displayName: currentUser.displayName,
-                isHdp: false,
+                isHdp: true,
                 points: 0,
             }],
             currentRound: 1, // Para poner el currentHDP se hace //? players[currentRound % players.length].isHdp = true
@@ -57,8 +55,6 @@ export function FirebaseDatabaseProvider({ children }) {
 
     const addPlayerToGame = async (gameId, currentUser, g) => {
         const gameRef = doc(gamesRef, gameId);
-        const gameData = await getDoc(gameRef)
-            .then((game) => { return game.data(); });
         await updateDoc(gameRef, {
             players: arrayUnion({
                 id: currentUser.uid,
@@ -67,6 +63,30 @@ export function FirebaseDatabaseProvider({ children }) {
                 points: 0,
             })
         });
+    };
+
+    const submitCards = async (gameId, currentUser, cards) => {
+        const gameRef = doc(gamesRef, gameId);
+        let myPlayer;
+        let myPlayerNewCards;
+        const cardsId = cards.map((card) => card.id);
+        await getDoc(gameRef)
+            .then(async (g) => {
+                const game = g.data();
+                myPlayer = game.players.find((player) => player.id === currentUser.uid);
+                myPlayerNewCards = myPlayer.cards.filter((card) => !cardsId.includes(card.id));
+                console.log('myPlayerNewCards', myPlayerNewCards);
+                await updateDoc(gameRef, {
+                    sentCards: arrayUnion({ cards: cards, user: currentUser.uid }),
+                    players: arrayRemove(myPlayer)
+                })
+                    .then(async () => {
+                        myPlayer.cards = myPlayerNewCards;
+                        await updateDoc(gameRef, {
+                            players: arrayUnion(myPlayer)
+                        });
+                    });
+            });
     };
 
     const startGame = async (gameId) => {
@@ -175,6 +195,7 @@ export function FirebaseDatabaseProvider({ children }) {
             db,
             removePlayer,
             startGame,
+            submitCards,
         });
     }, [db]);
     return <FirebaseDatabaseContext.Provider value={value}>{children}</FirebaseDatabaseContext.Provider>;

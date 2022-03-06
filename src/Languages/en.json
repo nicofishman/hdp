@@ -16,5 +16,7 @@
     "playernotingame": "You are not in the game",
     "code": "Code",
     "startgame": "Start Game",
-    "notloggedin": "Log in to perform this action"
+    "notloggedin": "Log in to perform this action",
+    "gamestarted": "The game has started",
+    "waitingforcards": "Waiting for players to send their cards"
 }

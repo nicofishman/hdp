@@ -1,4 +1,3 @@
-import React from 'react';
 import { useFirebaseDatabaseContext } from 'Context/Firebase.databaseContext';
 
 export const GameService = async (id) => {

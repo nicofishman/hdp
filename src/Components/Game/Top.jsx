@@ -6,7 +6,7 @@ import Box from '@mui/material/Box';
 import UndoIcon from '@mui/icons-material/UndoRounded';
 import SendRoundedIcon from '@mui/icons-material/SendRounded';
 
-export default function Top() {
+export default function Top({ gameId, currentUser, setHasSubmitted }) {
     const { submit, undo } = useGame();
     return (
         <Box sx={{
@@ -17,7 +17,7 @@ export default function Top() {
         }}>
             <ButtonGroup variant='contained'>
                 <Button variant='contained' onClick={() => undo()}><UndoIcon /></Button>
-                <Button variant='contained' onClick={() => submit()}><SendRoundedIcon /></Button>
+                <Button variant='contained' onClick={() => submit(currentUser, gameId, setHasSubmitted)}><SendRoundedIcon /></Button>
             </ButtonGroup>
         </Box>
     );

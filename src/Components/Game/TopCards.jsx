@@ -8,7 +8,7 @@ import Box from '@mui/material/Box';
 import Badge from '@mui/material/Badge';
 import styled from '@mui/material/styles/styled';
 
-function TopCards({ blackCardTopFire }) {
+function TopCards({ blackCardTopFire, isHdp = false }) {
     const { drop } = useDropContext();
     const { whiteTopCards, blackCardTop, setBlackCardTop } = useGame();
     useEffect(() => {
@@ -52,7 +52,17 @@ function TopCards({ blackCardTopFire }) {
                         item
                         key={blackCardTop.id}
                     >
-                        <StyledBadge badgeContent={blackCardTop.pick - whiteTopCards.length} color='primary' >
+                        {!isHdp ?
+                            <StyledBadge badgeContent={blackCardTop.pick - whiteTopCards.length} color='primary' >
+                                <Card
+                                    key={blackCardTop.id}
+                                    color={blackCardTop.color}
+                                    text={blackCardTop.text}
+                                    extension={blackCardTop.extension}
+                                    id={blackCardTop.id}
+                                    draggable={false}
+                                />
+                            </StyledBadge> :
                             <Card
                                 key={blackCardTop.id}
                                 color={blackCardTop.color}
@@ -61,7 +71,7 @@ function TopCards({ blackCardTopFire }) {
                                 id={blackCardTop.id}
                                 draggable={false}
                             />
-                        </StyledBadge>
+                        }
                     </Grid>
                     {whiteTopCards.map((whiteCard) => {
                         return (
