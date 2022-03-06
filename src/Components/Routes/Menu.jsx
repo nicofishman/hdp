@@ -7,12 +7,10 @@ import MenuAccount from './Pages/MenuAccount';
 import { AccountProvider } from 'Context/AccountContext';
 import Box from '@mui/material/Box';
 import MyAlert from 'Components/Common/MyAlert';
-import { useFirebaseAuthContext } from 'Context/Firebase.authContext';
-import { useGame } from 'Context/GameContext';
+import { useAlertsContext } from 'Context/AlertsContext';
 
 function Menu({ page }) {
-    const { changeUsernameAlert, setChangeUsernameAlert, wrongPasswordAlert, setWrongPasswordAlert } = useFirebaseAuthContext();
-    const { gameNotFoundAlert, setGameNotFoundAlert, gameIsStartedAlert, setGameIsStartedAlert } = useGame();
+    const { changeUsernameAlert, setChangeUsernameAlert, wrongPasswordAlert, setWrongPasswordAlert, notLoggedInAlert, setNotLoggedInAlert, gameNotFoundAlert, setGameNotFoundAlert, gameIsStartedAlert, setGameIsStartedAlert } = useAlertsContext();
 
     useEffect(() => {
         console.log('game alert changed', gameNotFoundAlert);
@@ -33,10 +31,11 @@ function Menu({ page }) {
                 <MenuLogo />
                 {page === 'index' ? <MenuIndex /> : page === 'account' ? <AccountProvider><MenuAccount /></AccountProvider> : page === 'settings' ? <MenuSettings /> : null}
             </Grid >
-            <MyAlert text="updateusername" slideIn={changeUsernameAlert} setSlideIn={setChangeUsernameAlert} severity="success" />
-            <MyAlert text="wrongpassword" slideIn={wrongPasswordAlert} setSlideIn={setWrongPasswordAlert} severity="error" />
-            <MyAlert text="gamenotfound" slideIn={gameNotFoundAlert} setSlideIn={setGameNotFoundAlert} severity="error" />
-            <MyAlert text="gamestarted" slideIn={gameIsStartedAlert} setSlideIn={setGameIsStartedAlert} severity="error" />
+            <MyAlert text='updateusername' slideIn={changeUsernameAlert} setSlideIn={setChangeUsernameAlert} severity='success' />
+            <MyAlert text='wrongpassword' slideIn={wrongPasswordAlert} setSlideIn={setWrongPasswordAlert} severity='error' />
+            <MyAlert text='gamenotfound' slideIn={gameNotFoundAlert} setSlideIn={setGameNotFoundAlert} severity='error' />
+            <MyAlert text='gamestarted' slideIn={gameIsStartedAlert} setSlideIn={setGameIsStartedAlert} severity='error' />
+            <MyAlert text='notloggedin' slideIn={notLoggedInAlert} setSlideIn={setNotLoggedInAlert} severity='warning' />
         </Box>
     );
 }

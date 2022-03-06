@@ -13,22 +13,25 @@ import { BrowserRouter } from 'react-router-dom';
 import { LanguageProvider } from 'Context/LanguageContext';
 import { FirebaseAuthProvider } from 'Context/Firebase.authContext';
 import { FirebaseDatabaseProvider } from 'Context/Firebase.databaseContext';
+import { AlertsProvider } from './Context/AlertsContext';
 
 ReactDOM.render(
     <BrowserRouter>
-        <LanguageProvider>
-            <GameProvider>
-                <FirebaseDatabaseProvider>
-                    <FirebaseAuthProvider>
-                        <DndProvider backend={MultiBackend} options={HTML5toTouch}>
-                            <DropProvider> <DragProvider>
-                                <AppProvider />
-                            </DragProvider> </DropProvider>
-                        </DndProvider >
-                    </FirebaseAuthProvider>
-                </FirebaseDatabaseProvider>
-            </GameProvider>
-        </LanguageProvider>
+        <AlertsProvider>
+            <LanguageProvider>
+                <GameProvider>
+                    <FirebaseDatabaseProvider>
+                        <FirebaseAuthProvider>
+                            <DndProvider backend={MultiBackend} options={HTML5toTouch}>
+                                <DropProvider> <DragProvider>
+                                    <AppProvider />
+                                </DragProvider> </DropProvider>
+                            </DndProvider >
+                        </FirebaseAuthProvider>
+                    </FirebaseDatabaseProvider>
+                </GameProvider>
+            </LanguageProvider>
+        </AlertsProvider>
     </BrowserRouter>,
     document.getElementById('root')
 );

@@ -5,18 +5,28 @@ import { useNavigate } from 'react-router-dom';
 import { useGame } from './GameContext';
 import consts from '../utils/consts';
 import { generateShortCode } from 'utils/lobby.utils';
+import { useAlertsContext } from 'Context/AlertsContext';
 
 const FirebaseDatabaseContext = createContext(undefined);
 
 export function FirebaseDatabaseProvider({ children }) {
     const navigate = useNavigate();
     const { initializeGame } = useGame();
+    const { setNotLoggedInAlert } = useAlertsContext();
+
     const firebaseApp = FirebaseApp;
     const db = getFirestore(firebaseApp);
     const gamesRef = collection(db, 'Games');
     const usersRef = collection(db, 'Users');
 
     const createGame = async (currentUser) => {
+        if (!currentUser) {
+            setNotLoggedInAlert(true);
+            setTimeout(() => {
+                setNotLoggedInAlert(false);
+            }, 5000);
+            return;
+        }
         const newGameRef = doc(gamesRef);
         const lang = window.localStorage.getItem('rcml-lang');
         let shortCode = generateShortCode();

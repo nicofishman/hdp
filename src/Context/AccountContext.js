@@ -4,10 +4,10 @@ import { useFirebaseAuthContext } from './Firebase.authContext';
 const AccountContext = createContext(undefined);
 
 export function AccountProvider(props) {
-    const { user } = useFirebaseAuthContext();
+    const { userAuth } = useFirebaseAuthContext();
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
-    const [changeName, setChangeName] = useState(user.displayName);
+    const [changeName, setChangeName] = useState(userAuth.displayName);
 
     const value = useMemo(() => {
         return ({

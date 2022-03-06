@@ -1,10 +1,10 @@
 import React from 'react';
 import Input from '@mui/material/Input';
-import { useAccountContext } from 'Context/AccountContext';
+import { useAlertsContext } from 'Context/AlertsContext';
 import SettingsSection from './SettingsSection';
 
 function ChangeName({ placeholder = null, sx = {} }) {
-    const { changeName, setChangeName } = useAccountContext();
+    const { changeName, setChangeName } = useAlertsContext();
     // setChangeName(placeholder);
     const handleInputChange = (e) => {
         if (e.target.value.length > 15) {

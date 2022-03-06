@@ -15,5 +15,6 @@
     "playerbanned": "YOU ARE BANNED",
     "playernotingame": "You are not in the game",
     "code": "Code",
-    "startgame": "Start Game"
+    "startgame": "Start Game",
+    "notloggedin": "Log in to perform this action"
 }

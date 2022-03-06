@@ -23,8 +23,6 @@ function initializeGame(lang) {
 export function GameProvider(props) {
     // Estado de la alerta por no poner todas las cartas
     const [alertFade, setAlertFade] = useState(false);
-    const [gameNotFoundAlert, setGameNotFoundAlert] = useState(false);
-    const [gameIsStartedAlert, setGameIsStartedAlert] = useState(false);
 
     const submit = () => {
         // Si la cantidad de cartas no es la indicada, tira una alerta
@@ -98,12 +96,8 @@ export function GameProvider(props) {
             alertFade,
             setAlertFade,
             initializeGame,
-            gameNotFoundAlert,
-            setGameNotFoundAlert,
-            gameIsStartedAlert,
-            setGameIsStartedAlert,
         });
-    }, [whiteTopCards, blackCardTop, playerCards, alertFade, gameNotFoundAlert]);
+    }, [whiteTopCards, blackCardTop, playerCards, alertFade]);
 
     return <GameContext.Provider value={value} {...props} />;
 }

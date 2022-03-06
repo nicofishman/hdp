@@ -5,17 +5,17 @@ import FirebaseErrors from '../Firebase/FirebaseErrors';
 import { useLanguageContext } from './LanguageContext';
 import { FirebaseApp } from '../Firebase/FirebaseApp';
 import { useFirebaseDatabaseContext } from './Firebase.databaseContext';
+import { useAlertsContext } from './AlertsContext';
 
 const FirebaseAuthContext = createContext(undefined);
 
 export function FirebaseAuthProvider(props) {
     const { userLanguage } = useLanguageContext();
-    const [changeUsernameAlert, setchangeUsernameAlert] = useState(false);
-    const [wrongPasswordAlert, setWrongPasswordAlert] = useState(false);
     const [loading, setLoading] = useState(false);
 
     const firebaseApp = FirebaseApp;
     const { setUserDB } = useFirebaseDatabaseContext();
+    const { setWrongPasswordAlert, changeUsernameAlert, setchangeUsernameAlert } = useAlertsContext();
 
     const auth = getAuth(firebaseApp);
     const googleProvider = new GoogleAuthProvider();
@@ -119,18 +119,14 @@ export function FirebaseAuthProvider(props) {
             firebaseApp,
             mySignInWithEmailAndPassword,
             auth,
-            user,
+            userAuth: user,
             logOut,
             signInWithGoogle,
             signInWithTwitter,
             changeDisplayName,
-            changeUsernameAlert,
-            setchangeUsernameAlert,
-            wrongPasswordAlert,
-            setWrongPasswordAlert,
-            loading
+            loading,
         });
-    }, [auth, logOut, user, changeUsernameAlert, wrongPasswordAlert, loading]);
+    }, [auth, logOut, user, loading]);
     return <FirebaseAuthContext.Provider value={value} {...props} />;
 }
 

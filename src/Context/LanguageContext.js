@@ -25,7 +25,7 @@ export function LanguageProvider(props) {
 export function useLanguageContext() {
     const context = useContext(LanguageContext);
     if (!context) {
-        throw new Error('useDropContext must be used within a DropProvider');
+        throw new Error('useLanguageContext must be used within a LanguageProvider');
     }
     return context;
 }

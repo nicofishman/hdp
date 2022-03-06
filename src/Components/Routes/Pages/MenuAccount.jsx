@@ -5,7 +5,7 @@ import MenuAccountOn from 'Components/Menu/MenuAccountOn';
 import Box from '@mui/material/Box';
 
 function MenuAccount() {
-    const { user } = useFirebaseAuthContext();
+    const { userAuth } = useFirebaseAuthContext();
     return (
         <Box
             sx={{
@@ -15,7 +15,7 @@ function MenuAccount() {
                 width: '100%',
             }}
         >
-            {!(user.uid) ? <MenuSignUp /> : <MenuAccountOn />}
+            {!(userAuth.uid) ? <MenuSignUp /> : <MenuAccountOn />}
         </Box>
     );
 }
