@@ -18,5 +18,7 @@
     "startgame": "Iniciar Juego",
     "notloggedin": "Por favor ingresa a tu cuenta",
     "gamestarted": "El juego ya comenzó",
-    "waitingforcards": "Esperando a que los jugadores envíen sus cartas"
+    "waitingforcards": "Esperando a que los jugadores envíen sus cartas",
+    "waitingforhdp": "Esperando a que el hdp elija el ganador",
+    "codecopied": "Código copiado al portapapeles"
 }

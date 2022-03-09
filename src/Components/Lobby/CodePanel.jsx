@@ -1,14 +1,29 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Box from '@mui/material/Box';
 import { useThemeContext } from 'Context/ThemeContext';
 import Typography from '@mui/material/Typography';
 import Visibility from '@mui/icons-material/Visibility';
 import VisibilityOff from '@mui/icons-material/VisibilityOff';
 import { Text } from 'Languages/Text';
+import ContentCopyIcon from '@mui/icons-material/ContentCopy';
+import Tooltip from '@mui/material/Tooltip';
+import { useLanguageContext } from 'Context/LanguageContext';
 
 function CodePanel({ code, showCode, setShowCode }) {
     const { theme } = useThemeContext();
-    console.log('code', code.length);
+    const [openTooltip, setOpenTooltip] = useState(false);
+    const languageContext = useLanguageContext();
+    const tooltipText = languageContext.dictionary.codecopied || 'Code copied';
+
+    const copy = () => {
+        navigator.clipboard.writeText(code);
+        console.log('Copied to clipboard');
+        setOpenTooltip(true);
+        setTimeout(() => {
+            setOpenTooltip(false);
+        }, 1500);
+    };
+
     return (
         <Box
             sx={{
@@ -37,10 +52,26 @@ function CodePanel({ code, showCode, setShowCode }) {
                     <>
                         <Typography sx={{ fontSize: 20 }}>{'●'.repeat(code.length)}</Typography>
                         <Visibility onClick={() => setShowCode(!showCode)} sx={{ ml: 1, mt: 0.7, '&:hover': { cursor: 'pointer' } }} />
+                        <Tooltip
+                            PopperProps={{
+                                disablePortal: true,
+                            }}
+                            onOpen={() => setOpenTooltip(true)}
+                            onClose={() => setOpenTooltip(false)}
+                            open={openTooltip}
+                            disableHoverListener
+                            title={tooltipText}
+                            sx={{
+                                fontWeight: 'light',
+                            }}
+                        >
+                            <ContentCopyIcon onClick={() => copy()} sx={{ ml: 1, mt: 0.5, '&:hover': { cursor: 'pointer' } }} />
+                        </Tooltip>
                     </> :
                     <>
                         <Typography sx={{ fontSize: 24 }}>{code}</Typography>
                         <VisibilityOff onClick={() => setShowCode(!showCode)} sx={{ ml: 1, mt: 0.9, '&:hover': { cursor: 'pointer' } }} />
+                        <ContentCopyIcon onClick={() => copy()} sx={{ ml: 1, mt: 0.9, '&:hover': { cursor: 'pointer' } }} />
                     </>
                 }
             </Box>

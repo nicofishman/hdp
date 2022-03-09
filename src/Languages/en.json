@@ -18,5 +18,7 @@
     "startgame": "Start Game",
     "notloggedin": "Log in to perform this action",
     "gamestarted": "The game has started",
-    "waitingforcards": "Waiting for players to send their cards"
+    "waitingforcards": "Waiting for players to send their cards",
+    "waitingforhdp": "Waiting for the hdp to choose the winner",
+    "codecopied": "Code copied to clipboard"
 }
