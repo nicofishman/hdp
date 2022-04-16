@@ -24,7 +24,6 @@ function Lobby() {
     const currentUser = auth.currentUser;
 
     useEffect(() => {
-
         if (!auth.currentUser) return;
         onSnapshot(doc(db, `Games/${gameId}`), (snapshot) => {
             setGame(snapshot.data());
