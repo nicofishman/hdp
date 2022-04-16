@@ -33,7 +33,7 @@ function BottomSentCards({ cards }) {
                                 return (
                                     <Card
                                         calledBy={'BottomSent'}
-                                        key={cardItem.user}
+                                        key={card.id}
                                         color={card.color}
                                         text={card.text}
                                         extension={card.extension}

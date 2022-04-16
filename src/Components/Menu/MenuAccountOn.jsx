@@ -22,7 +22,7 @@ function MenuAccountOn() {
     const displayName = auth.currentUser.displayName;
 
     useEffect(() => {
-        console.log('displ', auth.currentUser.displayName);
+
     }, [auth.currentUser.displayName]);
 
     return (

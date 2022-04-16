@@ -17,7 +17,7 @@ function CodePanel({ code, showCode, setShowCode }) {
 
     const copy = () => {
         navigator.clipboard.writeText(code);
-        console.log('Copied to clipboard');
+
         setOpenTooltip(true);
         setTimeout(() => {
             setOpenTooltip(false);

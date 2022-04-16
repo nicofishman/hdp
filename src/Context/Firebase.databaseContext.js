@@ -195,7 +195,7 @@ export function FirebaseDatabaseProvider({ children }) {
             db,
             removePlayer,
             startGame,
-            submitCards,
+            submitCards
         });
     }, [db]);
     return <FirebaseDatabaseContext.Provider value={value}>{children}</FirebaseDatabaseContext.Provider>;

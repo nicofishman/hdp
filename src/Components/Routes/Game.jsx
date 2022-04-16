@@ -12,117 +12,138 @@ import SpinningWheel from 'Components/Common/SpinningWheel';
 import { Text } from 'Languages/Text';
 import Typography from '@mui/material/Typography';
 import { onSnapshot, doc } from 'firebase/firestore';
+import BottomSentCards from 'Components/Game/BottomSentCards';
+import { useGame } from 'Context/GameContext';
 
 function Game() {
     const { gameId } = useParams();
-    const { getGameById, addPlayerToGame, db } = useFirebaseDatabaseContext();
+    const { db } = useFirebaseDatabaseContext();
+    const { currentGame, setCurrentGame, bottomSentCards, setBottomSentCards } = useGame();
 
     const [loading, setLoading] = useState(true);
     const [hasSubmitted, setHasSubmitted] = useState(false);
     const [gameNotFound, setGameNotFound] = useState(false);
     const [currentPlayer, setCurrentPlayer] = useState({});
+    const [playerNotInGame, setPlayerNotInGame] = useState(false);
     const { auth } = useFirebaseAuthContext();
 
     const [blackCardTop, setBlackCardTop] = useState({});
-    const [game, setGame] = useState({});
     const [playerCards, setPlayerCards] = useState([]);
 
     useEffect(() => {
-        console.log('USEEEEE');
-        getGameById(gameId)
-            .then(g => {
-                if (!g) {
-                    setGameNotFound(true);
-                    setLoading(false);
-                    return;
-                }
-                setGame(g);
-                const sentCardsId = g.sentCards.map(c => c.user);
-                setHasSubmitted(sentCardsId.includes(auth.currentUser.uid));
-                const playersId = g.players.map(p => p.id);
-                if (!playersId.includes(auth.currentUser.uid)) {
-                    addPlayerToGame(gameId, auth.currentUser, g).then(() => {
-                        setBlackCardTop(g.currentBlackCard);
-                        const player = g.players.filter(p => p.id === auth.currentUser.uid)[0];
-                        setCurrentPlayer(player);
-                        setLoading(false);
-                    });
-                } else {
-                    setBlackCardTop(g.currentBlackCard);
-                    const player = g.players.filter(p => p.id === auth.currentUser.uid)[0];
-                    setCurrentPlayer(player);
-                    setPlayerCards(player.cards);
-                    setLoading(false);
-                }
-            });
+        console.log('bottom', bottomSentCards);
+    }, [bottomSentCards]);
+
+    useEffect(() => {
+        setLoading(true);
         onSnapshot(doc(db, `Games/${gameId}`), (snapshot) => {
             setLoading(true);
             const g = snapshot.data();
-            setGame(g);
+            setCurrentGame(g);
             const sentCardsId = g.sentCards.map(c => c.user);
             setHasSubmitted(sentCardsId.includes(auth.currentUser.uid));
             setLoading(false);
         });
     }, []);
 
-    console.log('hasSubmitted', hasSubmitted);
-    console.log('id', auth.currentUser.uid, game.sentCards);
+    useEffect(() => {
+        setLoading(true);
+        if (!currentGame) {
+            if (loading) return;
+
+            setGameNotFound(true);
+            setLoading(false);
+            return;
+        }
+        const playersId = currentGame.players.map(p => p.id);
+        if (!playersId.includes(auth.currentUser.uid)) {
+            setPlayerNotInGame(true);
+            return;
+        }
+        const sentCardsId = currentGame.sentCards.map(c => c.user);
+        setHasSubmitted(sentCardsId.includes(auth.currentUser.uid));
+        setBlackCardTop(currentGame.currentBlackCard);
+        const player = currentGame.players.filter(p => p.id === auth.currentUser.uid)[0];
+        setCurrentPlayer(player);
+        setPlayerCards(player.cards);
+        setBottomSentCards(currentGame.sentCards);
+        setLoading(false);
+    }, [currentGame]);
+
     return (
         <>
             {!gameNotFound ?
-                (!loading ?
-                    !(currentPlayer.isHdp) ?
-                        <Box
-                            sx={{
-                                margin: '2% auto',
-                            }}
-                        >
-                            <Top currentUser={auth.currentUser} gameId={gameId}></Top>
+                !playerNotInGame ?
+                    (!loading ?
+                        (!(currentPlayer.isHdp) ?
                             <Box
                                 sx={{
-                                    display: 'flex',
-                                    flexDirection: 'column',
-                                    flexWrpa: 'wrap',
-                                    justifyContent: 'center',
-                                    textAlign: 'center',
+                                    margin: '2% auto',
                                 }}
                             >
-                                <TopCards blackCardTopFire={blackCardTop} />
+                                <Top currentUser={auth.currentUser} gameId={gameId}></Top>
+                                <Box
+                                    sx={{
+                                        display: 'flex',
+                                        flexDirection: 'column',
+                                        flexWrpa: 'wrap',
+                                        justifyContent: 'center',
+                                        textAlign: 'center',
+                                    }}
+                                >
+                                    <TopCards blackCardTopFire={blackCardTop} />
 
-                                {!hasSubmitted ?
-                                    <>
-                                        <BottomCards playerCardsFire={playerCards} blackCardTopFire={blackCardTop} />
-                                        <CustomDragLayer />
-                                    </> :
-                                    <Typography>SUBMITTED</Typography>
-                                }
-                            </Box>
-                        </Box> :
-                        <Box
-                            sx={{
-                                margin: '2% auto',
-                            }}
-                        >
+                                    {!hasSubmitted ?
+                                        <>
+                                            <BottomCards playerCardsFire={playerCards} blackCardTopFire={blackCardTop} />
+                                            <CustomDragLayer />
+                                        </> :
+                                        currentGame.sentCards.length !== currentGame.players.length - 1 ?
+                                            <>
+                                                <Typography sx={{ mt: 3 }}>
+                                                    <Text tid='waitingforcards' />
+                                                    {`: ${currentGame.sentCards.length} / ${currentGame.players.length - 1}`}
+                                                </Typography>
+                                            </> :
+                                            <Typography sx={{ mt: 3 }}>
+                                                <Text tid='waitingforhdp' />
+                                            </Typography>
+                                    }
+                                </Box>
+                            </Box> :
                             <Box
                                 sx={{
-                                    display: 'flex',
-                                    flexDirection: 'column',
-                                    flexWrpa: 'wrap',
-                                    justifyContent: 'center',
-                                    textAlign: 'center',
+                                    margin: '2% auto',
                                 }}
                             >
-                                <TopCards blackCardTopFire={blackCardTop} isHdp={true} />
-                                <Box sx={{ mt: 3 }}>
-                                    <Typography>
-                                        <Text tid='waitingforcards' />
-                                        {`: ${game.sentCards.length} / ${game.players.length - 1}`}
-                                    </Typography>
+                                <Box
+                                    sx={{
+                                        display: 'flex',
+                                        flexDirection: 'column',
+                                        flexWrpa: 'wrap',
+                                        justifyContent: 'center',
+                                        textAlign: 'center',
+                                    }}
+                                >
+                                    <TopCards blackCardTopFire={blackCardTop} isHdp={true} />
+                                    {currentGame.sentCards.length !== currentGame.players.length - 1 ?
+                                        <Box sx={{ mt: 3 }}>
+                                            <Typography>
+                                                <Text tid='waitingforcards' />
+                                                {`: ${currentGame.sentCards.length} / ${currentGame.players.length - 1}`}
+                                            </Typography>
+                                        </Box> :
+                                        <>
+                                            <BottomSentCards cards={bottomSentCards.length > 0 ? bottomSentCards : null} />
+                                            <CustomDragLayer />
+                                        </>
+                                    }
                                 </Box>
                             </Box>
-                        </Box> :
-                    <SpinningWheel />
-                ) :
+                        ) :
+                        <SpinningWheel />
+                    ) :
+                    <MyAlert severity='error' text='playernotingame' /> :
                 <MyAlert severity='error' text='gamenotfound' />
             }
         </>

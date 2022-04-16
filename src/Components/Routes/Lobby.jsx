@@ -12,7 +12,7 @@ import CodePanel from 'Components/Lobby/CodePanel';
 import StartButton from 'Components/Lobby/StartButton';
 
 function Lobby() {
-    const { getGameById, db } = useFirebaseDatabaseContext();
+    const { db } = useFirebaseDatabaseContext();
     const navigate = useNavigate();
     const { auth } = useFirebaseAuthContext();
     const { gameId } = useParams();
@@ -24,9 +24,9 @@ function Lobby() {
     const currentUser = auth.currentUser;
 
     useEffect(() => {
-        console.log('currentUser', currentUser);
+
         if (!auth.currentUser) return;
-        const unsub = onSnapshot(doc(db, `Games/${gameId}`), (snapshot) => {
+        onSnapshot(doc(db, `Games/${gameId}`), (snapshot) => {
             setGame(snapshot.data());
             const playersIdArray = snapshot.data().players.map(p => p.id);
             if (!playersIdArray.includes(currentUser.uid)) {
@@ -36,14 +36,6 @@ function Lobby() {
                 if (snapshot.data().isStarted) {
                     navigate(`/game/${gameId}`);
                 }
-            }
-        });
-
-        getGameById(gameId).then((g) => {
-            setGame(g);
-            const playersIdArray = g.players.map(p => p.id);
-            if (!playersIdArray.includes(currentUser.uid)) {
-                setPlayerNotInGame(true);
             }
             setLoading(false);
         });

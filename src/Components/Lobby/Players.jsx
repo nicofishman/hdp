@@ -11,7 +11,7 @@ import { useFirebaseDatabaseContext } from 'Context/Firebase.databaseContext';
 function Players({ sx, children, game, gameId, currentUser }) {
     const { theme } = useThemeContext();
     const { removePlayer } = useFirebaseDatabaseContext();
-    console.log('game.id', gameId);
+
     return (
         <Box
             sx={{

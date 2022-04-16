@@ -23,9 +23,11 @@ ReactDOM.render(
                     <FirebaseAuthProvider>
                         <GameProvider>
                             <DndProvider backend={MultiBackend} options={HTML5toTouch}>
-                                <DropProvider> <DragProvider>
-                                    <AppProvider />
-                                </DragProvider> </DropProvider>
+                                <DropProvider>
+                                    <DragProvider>
+                                        <AppProvider />
+                                    </DragProvider>
+                                </DropProvider>
                             </DndProvider >
                         </GameProvider>
                     </FirebaseAuthProvider>
@@ -37,6 +39,6 @@ ReactDOM.render(
 );
 
 // If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
+// to log results (for example: reportWebVitals(
 // or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
 reportWebVitals();

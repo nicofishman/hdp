@@ -7,7 +7,6 @@ function getCardsShuffled(array) {
 
 //  Inicia el juego: genera los mazos negro y blanco
 export function initializeGame(lang) {
-    console.log('lang', lang);
     const cartas = lang === 'es' ? cartasEs : lang === 'en' ? cartasEn : undefined;
     const whiteCards = getCardsShuffled(cartas.whiteCards);
     const blackCards = getCardsShuffled(cartas.blackCards);

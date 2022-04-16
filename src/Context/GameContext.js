@@ -1,4 +1,4 @@
-import React, { useEffect, useState, useContext, useMemo, createContext } from 'react';
+import React, { useEffect, useState, useContext, createContext, useCallback, useMemo } from 'react';
 import consts from '../utils/consts';
 import { useLanguageContext } from './LanguageContext';
 import { useFirebaseDatabaseContext } from 'Context/Firebase.databaseContext';
@@ -12,6 +12,31 @@ export function GameProvider(props) {
     // Estado de la alerta por no poner todas las cartas
     const [wrongAmoutCards, setWrongAmoutCards] = useState(false);
     const { submitCards } = useFirebaseDatabaseContext();
+    const [currentGame, setCurrentGame] = useState(undefined);
+
+    const { userLanguage } = useLanguageContext();
+    const [whiteCardsInit, blackCardsInit] = initializeGame(userLanguage); // Se inicializan las cartas
+    const [whiteCards, setWhiteCards] = useState(whiteCardsInit);
+    const [playerCards, setPlayerCards] = useState(() => { // Se inicializan las cartas del jugador
+        const whiteCardsCopy = [...whiteCards];
+        setWhiteCards(whiteCardsCopy.slice(consts.maxPlayerCards));
+        return whiteCards.slice(0, consts.maxPlayerCards);
+    });
+    const [blackCards, setBlackCards] = useState(blackCardsInit);
+    const [blackCardTop, setBlackCardTop] = useState(() => { // Se inicializa la carta negra
+        const blackCardsCopy = [...blackCards];
+        setBlackCards(blackCardsCopy.slice(1));
+        return blackCards[0];
+    });
+    const [whiteTopCards, setWhiteTopCards] = useState([]); // Se inicializan las cartas blancas de arriba
+    const [bottomSentCards, setBottomSentCards] = useState([]);
+
+    const updateWhiteTopCards = useCallback((item) => { // Funcion para agregarle una carta blanca a las cartas de arriba
+        const topWhiteCards = playerCards.filter(card => card.id === item.id);
+        const chosenCard = item;
+        const newTopCards = currentGame.sentCards.length > 0 ? [chosenCard] : [...whiteTopCards, ...topWhiteCards];
+        setWhiteTopCards((whiteTopCards) => newTopCards);
+    }, [currentGame, whiteTopCards]);
 
     const submit = (currentUser, gameId) => {
         // Si la cantidad de cartas no es la indicada, tira una alerta
@@ -57,46 +82,44 @@ export function GameProvider(props) {
         setWhiteTopCards(whiteTopCards.slice(0, whiteTopCards.length - 1)); // Actualiza el estado de las cartas blancas de arriba
     };
 
-    const { userLanguage } = useLanguageContext();
-    const [whiteCardsInit, blackCardsInit] = initializeGame(userLanguage); // Se inicializan las cartas
-    const [whiteCards, setWhiteCards] = useState(whiteCardsInit);
-    const [playerCards, setPlayerCards] = useState(() => { // Se inicializan las cartas del jugador
-        const whiteCardsCopy = [...whiteCards];
-        setWhiteCards(whiteCardsCopy.slice(consts.maxPlayerCards));
-        return whiteCards.slice(0, consts.maxPlayerCards);
-    });
-    const [blackCards, setBlackCards] = useState(blackCardsInit);
-    const [blackCardTop, setBlackCardTop] = useState(() => { // Se inicializa la carta negra
-        const blackCardsCopy = [...blackCards];
-        setBlackCards(blackCardsCopy.slice(1));
-        return blackCards[0];
-    });
-    const [whiteTopCards, setWhiteTopCards] = useState([]); // Se inicializan las cartas blancas de arriba
-
-    const updateWhiteTopCards = (item) => { // Funcion para agregarle una carta blanca a las cartas de arriba
-        const topWhiteCards = playerCards.filter(card => card.id === item.id);
-        setWhiteTopCards((whiteTopCards) => [...whiteTopCards, ...topWhiteCards]);
-    };
-
     useEffect(() => { // Cada vez que se actualizan las cartas de arriba, sacarla de las cartas del jugador
-        setPlayerCards(playerCards.filter(card => !whiteTopCards.includes(card)));
+        if (!currentGame) return;
+        console.log(currentGame);
+        const sentCardsArray = [];
+        currentGame.sentCards.forEach(myCards => {
+            myCards.cards.forEach(card => {
+                sentCardsArray.push(card);
+            });
+        });
+        const whiteTopCardsId = whiteTopCards.map(card => card.id);
+        const newBottomCardsArray = sentCardsArray.filter(card => !whiteTopCardsId.includes(card.id));
+        if (sentCardsArray.length === 0) {
+            const newPlayerCards = playerCards.filter(card => !whiteTopCardsId.includes(card.id));
+            setPlayerCards(newPlayerCards);
+        } else {
+            console.log(sentCardsArray.filter(card => !whiteTopCardsId.includes(card.id)));
+            const newSentCards = currentGame.sentCards.filter(user => user.cards.some(card => newBottomCardsArray.some(cardArray => cardArray.id === card.id)));
+            setBottomSentCards(newSentCards);
+        }
     }, [whiteTopCards]);
 
-    const value = useMemo(() => {
-        return ({
-            updateWhiteTopCards,
-            whiteTopCards,
-            setWhiteTopCards,
-            blackCardTop,
-            setBlackCardTop,
-            playerCards,
-            setPlayerCards,
-            undo,
-            submit,
-            wrongAmoutCards,
-            setWrongAmoutCards,
-        });
-    }, [whiteTopCards, blackCardTop, playerCards, wrongAmoutCards]);
+    const value = useMemo(() => ({
+        updateWhiteTopCards,
+        whiteTopCards,
+        setWhiteTopCards,
+        blackCardTop,
+        setBlackCardTop,
+        playerCards,
+        setPlayerCards,
+        undo,
+        submit,
+        wrongAmoutCards,
+        setWrongAmoutCards,
+        currentGame,
+        setCurrentGame,
+        bottomSentCards,
+        setBottomSentCards,
+    }), [currentGame, whiteTopCards, blackCardTop, playerCards, bottomSentCards]);
 
     return <GameContext.Provider value={value} {...props} />;
 }

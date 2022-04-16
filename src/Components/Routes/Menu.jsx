@@ -13,7 +13,7 @@ function Menu({ page }) {
     const { changeUsernameAlert, setChangeUsernameAlert, wrongPasswordAlert, setWrongPasswordAlert, notLoggedInAlert, setNotLoggedInAlert, gameNotFoundAlert, setGameNotFoundAlert, gameIsStartedAlert, setGameIsStartedAlert } = useAlertsContext();
 
     useEffect(() => {
-        console.log('game alert changed', gameNotFoundAlert);
+
     }, [gameNotFoundAlert]);
 
     return (

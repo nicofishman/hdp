@@ -37,7 +37,6 @@ export function FirebaseAuthProvider(props) {
         signInWithPopup(auth, googleProvider)
             .then((result) => {
                 const user = result.user;
-                console.log('GOOGLE USER', user);
                 setUser(user);
             }).catch((error) => {
                 console.log(error);
@@ -51,7 +50,6 @@ export function FirebaseAuthProvider(props) {
         signInWithPopup(auth, twitterProvider)
             .then((result) => {
                 const user = result.user;
-                console.log('TWITTER USER', user);
                 setUser(user);
             }).catch((error) => {
                 console.log(error);
@@ -99,7 +97,6 @@ export function FirebaseAuthProvider(props) {
     };
 
     const changeDisplayName = async (displayName) => {
-        console.log(auth.currentUser.uid);
         await updateProfile(auth.currentUser, {
             displayName: displayName
         }).then(() => {

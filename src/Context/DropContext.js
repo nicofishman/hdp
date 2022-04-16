@@ -6,7 +6,7 @@ const DropContext = createContext(undefined);
 
 export function DropProvider(props) {
     // Maneja todo el drop
-    const { updateWhiteTopCards, whiteTopCards } = useGame();
+    const { updateWhiteTopCards } = useGame();
     const [, drop] = useDrop(() => ({
         accept: 'white-card',
         drop: (item) => {
@@ -15,7 +15,7 @@ export function DropProvider(props) {
         collect: (monitor) => ({
             isOver: !!monitor.isOver(),
         }),
-    }), [whiteTopCards]);
+    }), [updateWhiteTopCards]);
 
     // Devuelve los valores para que sean usados por otros componentes/contexts
     const value = useMemo(() => {
